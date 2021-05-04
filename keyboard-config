@@ -1,36 +1,4 @@
 #!/bin/bash
-#
-# I have found that the usability of a keyboard increases immensely with the
-# following settings:
-#
-# 1. Keeping CapsLock pressed turns it into a Super modifier. I use this key 
-#    to control my window manager.
-# 2. Tapping CapsLock triggers Escape. This is useful for vim-style
-#    keybindings.
-# 3. Tapping Right Alt switches the keyboard group. On the second group, a
-#    numpad is overlayed on the right half and navigation keys on the left half
-#    of the keyboard. Holding it should switch it temporarily. TODO
-# 4. Right Alt is set to the Compose key. This way, you would type special
-#    characters by typing intuitive keys in succession (e.g. RAlt+'+e → é). See
-#    the compose table by running `less /usr/share/X11/locale/$LANG/Compose`.
-# 5. Shift + Right Alt is set to the Greek key (e.g. Shift+RAlt+f → φ).
-# 6. Keeping Tab pressed makes it act like a mode switch, which allows for a
-#    third modifier layer above shift.
-#
-# The same tweaks can also be achieved with `github.com/david-janssen/kmonad`,
-# but that approach (while certainly easier to understand) needs an additional
-# binary that isn't in the standard repositories.
-#
-# Thanks for inspiration to:
-# - https://www.charvolant.org/doug/xkb/
-# - https://github.com/alols/xcape
-# - https://github.com/altercation/dotfiles-tilingwm
-# - https://www.semicomplete.com/projects/keynav/
-# - https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html
-# - https://ultimatehackingkeyboard.com/blog/2015/09/09/ansi-or-iso-which-keyboard-layout-is-more-ergonomic
-# - https://wiki.archlinux.org/index.php/X_keyboard_extension
-# - http://www.pixelbeat.org/docs/xkb_remap/
-# - https://askubuntu.com/questions/1187610/reassigning-modifier-keys-with-xkb
 
 #export DISPLAY=:0
 XKBDIR=/tmp/xkb
