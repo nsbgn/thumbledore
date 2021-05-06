@@ -27,14 +27,21 @@ This has the following benefits:
 - Layers are useful, but don't go overboard. To keep it easy to remember, there is only *one* layer.
 
 
-## Inspiration
+## Related software
 
-- https://www.charvolant.org/doug/xkb/
-- https://github.com/altercation/dotfiles-tilingwm
-- https://github.com/alols/xcape
-- https://www.semicomplete.com/projects/keynav/
-- https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html
-- https://ultimatehackingkeyboard.com/blog/2015/09/09/ansi-or-iso-which-keyboard-layout-is-more-ergonomic
-- https://wiki.archlinux.org/index.php/X_keyboard_extension
-- http://www.pixelbeat.org/docs/xkb_remap/
+- [kmonad](https://github.com/david-janssen/kmonad)
+- [xcape](https://github.com/alols/xcape)
+- [caps2esc](https://gitlab.com/interception/linux/plugins/caps2esc)
+- [klfc](https://github.com/39aldo39/klfc)
+- [keynav](https://www.semicomplete.com/projects/keynav/)
+
+
+## Related reading
+
+- <https://wiki.archlinux.org/index.php/X_keyboard_extension>
+- <https://www.charvolant.org/doug/xkb/>
+- <https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html>
+- <http://www.pixelbeat.org/docs/xkb_remap/>
+
 - https://askubuntu.com/questions/1187610/reassigning-modifier-keys-with-xkb
+- https://github.com/altercation/dotfiles-tilingwm
