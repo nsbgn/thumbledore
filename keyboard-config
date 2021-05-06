@@ -1,13 +1,46 @@
 #!/bin/bash
 
-#export DISPLAY=:0
+if [ -z "${DISPLAY}" ]; then
+    echo "\$DISPLAY not set" >&2
+    exit 1
+fi
+
 XKBDIR=/tmp/xkb
 mkdir -p ${XKBDIR}/{keymap,symbols,types}
 
 # Generate a basic keymap.
 setxkbmap -option -option caps:super -print \
     | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
+    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
     > ${XKBDIR}/keymap/custom.xkb
+
+# Generate type map
+tee > ${XKBDIR}/types/custom << EOF
+default xkb_types "special" {
+    virtual_modifiers LevelThree;
+    type "NONE_SHIFT_ALT_ALTGR" {
+        modifiers = LevelThree+Alt+Shift;
+        map[None] = Level1;
+        map[Shift] = Level2;
+        map[Alt] = Level3;
+        map[Alt+Shift] = Level3;
+        map[LevelThree] = Level4;
+        map[LevelThree+Shift] = Level4;
+        map[LevelThree+Alt] = Level4;
+        map[LevelThree+Alt+Shift] = Level4;
+        preserve[Alt] = Alt;
+        preserve[Alt+Shift] = Alt+Shift;
+        preserve[LevelThree+Shift] = Shift;
+        preserve[LevelThree+Alt] = Alt;
+        preserve[LevelThree+Alt+Shift] = Alt+Shift;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Alt";
+        level_name[Level4] = "AltGr";
+    };
+};
+EOF
+
 
 # Add customisations to its `xkb_symbols`. We assign Tab to some weird key so
 # that `xcape` won't get confused. We use the ISO_Level3_Shift key for mode
@@ -21,7 +54,8 @@ xkb_symbols "special" {
 
     modifier_map Mod4 { <LALT> };
 
-    # Unused keys that must be present for xcape to work with
+    # When keys are used by xcape, they must be still mapped. I assign them to
+    # these unused keys to deal with that.
     key <I252> { [ Tab ] };
     key <I253> { [ Escape ] };
     key <I254> { [ ISO_Next_Group ] };
@@ -29,7 +63,11 @@ xkb_symbols "special" {
     key <RTSH> { [ Mode_switch ] };
 
     key  <TAB> { [ ISO_Level3_Shift ] };
-    key <RALT> { [ Multi_key, dead_greek ] };
+
+    key <LALT> { [ Hyper_L ] };
+    key <RALT> { [ Hyper_R ] };
+
+    #key <RALT> { [ Multi_key, dead_greek ] };
 
     #replace key <RALT> { [ ISO_Level3_Shift ] };
     #key <LALT> { [ Alt_L, Alt_L, Multi_key, dead_greek ] };
@@ -38,15 +76,8 @@ xkb_symbols "special" {
 
     key <ESC>  { [ asciitilde, grave ] };
     key <BKSP> { [ BackSpace, BackSpace, Delete ] };
-    key <SPCE> { [ space, space, BackSpace ] };
     key <AC11> { [ apostrophe, quotedbl, grave ] };
 
-    key <AC01> { [ a, A, Left ], [Left, Home] };
-    key <AC02> { [ s, S, Down ], [Down, Next] };
-    key <AC03> { [ d, D, Right ], [Right, End]};
-    key <AD01> { [ q, Q, BackSpace ], [BackSpace] };
-    key <AD02> { [ w, W, Up ], [Up, Prior] };
-    key <AD03> { [ e, E, Delete ], [Delete] };
 
     key <AE07> { [ 7, ampersand ], [7] };
     key <AE08> { [ 8, asterisk ], [8] };
@@ -67,6 +98,20 @@ xkb_symbols "special" {
     key <AB08> { [ comma, less, Home ], [parenleft] };
     key <AB09> { [ period, greater, End ], [parenright] };
     key <AB10> { [ slash, question ], [backslash] };
+
+    key.type[Group1] = "NONE_SHIFT_ALT_ALTGR";
+    key <SPCE> {
+        [ space, space, BackSpace, Delete, VoidSymbol ],
+        actions[Group1] = [ NoAction(), Redirect(key=<SPCE>,clearMods=Shift), Redirect(key=<BKSP>,clearMods=Alt), Redirect(key=<DELE>,clearMods=LevelThree) ]
+    };
+    key <AC01> { [ a, A, Left, Left, Home ] };
+    key <AC02> { [ s, S, Down, Down, Next ] };
+    key <AC03> { [ d, D, Right, Right, End ] };
+    key <AD02> { [ w, W, Up, Up, Prior ] };
+    key <AD01> { [ q, Q, Prior, Prior, Prior ] };
+    key <AD03> { [ e, E, Next, Next, Next ] };
+
+
 };
 EOF
 
