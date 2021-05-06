@@ -1,0 +1,73 @@
+#!/bin/bash
+
+if [ -z "${DISPLAY}" ]; then
+    echo "\$DISPLAY not set" >&2
+    exit 1
+fi
+
+XKBDIR=/tmp/xkb
+mkdir -p ${XKBDIR}/{keymap,symbols,types}
+
+# Generate a basic keymap.
+setxkbmap -option -option caps:super -print \
+    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
+    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
+    > ${XKBDIR}/keymap/custom.xkb
+
+# Generate type map
+tee > ${XKBDIR}/types/custom << EOF
+default xkb_types "special" {
+
+    type "NONE_SHIFT_LALT_RALT" {
+
+        modifiers = Shift+Alt+Mod5;
+        map[None] = Level1;
+        map[Shift] = Level2;
+        map[Alt] = Level3;
+        map[Alt+Shift] = Level3;
+        map[Mod5] = Level4;
+        map[Mod5+Shift] = Level4;
+        map[Mod5+Alt] = Level4;
+        map[Mod5+Alt+Shift] = Level4;
+
+        preserve[Alt] = Alt;
+        preserve[Alt+Shift] = Alt+Shift;
+        preserve[Mod5+Shift] = Shift;
+        preserve[Mod5+Alt] = Alt;
+        preserve[Mod5+Alt+Shift] = Alt+Shift;
+
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Alt_L";
+        level_name[Level4] = "Alt_R";
+    };
+};
+EOF
+
+
+# Add customisations to its `xkb_symbols`. We assign Tab to some weird key so
+# that `xcape` won't get confused. We use the ISO_Level3_Shift key for mode
+# switching, because we can then just add our special keys as level 3 syms.
+# Check out /usr/share/X11/xkb for codes and /usr/include/X11/keysymdef.h for
+# symbols. Use `xev` for inspection.
+tee > ${XKBDIR}/symbols/custom << EOF
+default partial modifier_keys
+partial
+xkb_symbols "special" {
+
+    key <RALT> { [ISO_Level3_Shift ] };
+    modifier_map Mod5 { ISO_Level3_Shift };
+
+    key.type[Group1] = "NONE_SHIFT_LALT_RALT";
+    key <SPCE> { [ space, space, BackSpace, Delete ] };
+
+};
+EOF
+
+# Compile the new xkbmap
+xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/custom.xkb ${DISPLAY}
+
+# (Re)start xcape, to make sure we can still use the original keys by tapping
+# the respective modifiers.
+pkill xcape
+xcape -e 'Super_L=Escape;Alt_L=Return;ISO_Level3_Shift=Return' -t 150ms

@@ -1,4 +1,4 @@
-# xkb-ergonomics
+# xkb-ergo
 
 Besides promoting bad posture, the layout of standard keyboards is hardly optimal. The most glaring problem is, in my opinion, the lack of a split spacebar, which forces one of your thumbs to idle around while your weakest finger contorts to reach Control, Backspace and Enter. The addition of a secondary thumb key on keyboards would be an easy fix, with massive potential benefit.
 
@@ -10,9 +10,9 @@ But alas, we have to work with what we've got. Although I have been enticed by e
 Within the constraints imposed on us by standard keyboards, I think the following tweaks *make sense*:
 
 1. `Alt_L + space` is `BackSpace`, while `Alt_R + space` is `Delete`. Notice how the movement of your thumbs mirrors the direction of the removal.
+2. *Tapping* `Alt_L` or `Alt_R` on their own triggers an `Enter`.
 2. *Tapping* `Alt_R` while holding `Alt_L` triggers the `Compose` key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`.
 3. *Tapping* `Alt_L` while holding `Alt_R` triggers the `dead_greek` key. This is a dead key similar to the `Compose` key, but for easily typing Greek characters (e.g. `f` → `φ`).
-4. *Tapping* `Alt_L` or `Alt_R` on their own triggers an `Enter`.
 5. In general, *holding* `Alt_L` or `Alt_R` exposes a secondary layer on the keyboard that contains a numpad, arrow keys, home keys and function keys. The `Enter` key can be used to latch this secondary layer in place.
 6. *Holding* `CapsLock` turns it into a `Super` modifier. This is convenient for controlling a window manager: it's the single key for all non-application-specific keybindings.
 7. *Tapping* `CapsLock` triggers `Escape`, for modal applications like `vim`.
@@ -32,6 +32,7 @@ This has the following benefits:
 - [kmonad](https://github.com/david-janssen/kmonad)
 - [xcape](https://github.com/alols/xcape)
 - [caps2esc](https://gitlab.com/interception/linux/plugins/caps2esc)
+- [space2ctrl](https://github.com/r0adrunner/Space2Ctrl)
 - [klfc](https://github.com/39aldo39/klfc)
 - [keynav](https://www.semicomplete.com/projects/keynav/)
 
@@ -43,5 +44,5 @@ This has the following benefits:
 - <https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html>
 - <http://www.pixelbeat.org/docs/xkb_remap/>
 
-- https://askubuntu.com/questions/1187610/reassigning-modifier-keys-with-xkb
-- https://github.com/altercation/dotfiles-tilingwm
+- <https://askubuntu.com/questions/1187610/reassigning-modifier-keys-with-xkb>
+- <https://github.com/altercation/dotfiles-tilingwm>
