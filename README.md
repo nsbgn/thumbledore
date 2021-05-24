@@ -36,6 +36,10 @@ This has the following benefits:
 - [space2ctrl](https://github.com/r0adrunner/Space2Ctrl)
 - [klfc](https://github.com/39aldo39/klfc)
 - [keynav](https://www.semicomplete.com/projects/keynav/)
+- [map2](https://github.com/shiro/map2)
+- [at-home-modifier-evdev](https://gitlab.com/at-home-modifier/at-home-modifier-evdev)
+- [evscript](https://github.com/unrelentingtech/evscript)
+- [evcape](https://github.com/wbolster/evcape)
 
 
 ## Related reading
