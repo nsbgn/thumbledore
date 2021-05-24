@@ -57,58 +57,70 @@ EOF
 # Add customisations to its `xkb_symbols`. We assign Tab to some weird key so
 # that `xcape` won't get confused. We use the ISO_Level3_Shift key for mode
 # switching, because we can then just add our special keys as level 3 syms.
-# Check out /usr/share/X11/xkb for codes and /usr/include/X11/keysymdef.h for
-# symbols. Use `xev` for inspection. Use `xmodmap` to see which modifiers are
-# bound to which keys.
+# Check out /usr/share/X11/xkb for codes and /usr/include/X11/keysymdef.h (from
+# x11proto-dev) for symbols. Use `xev` for inspection. Use `xmodmap` to see
+# which modifiers are bound to which keys.
+# https://bbs.archlinux.org/viewtopic.php?id=248080
 tee > ${XKBDIR}/symbols/custom << EOF
 default partial modifier_keys
 partial
 xkb_symbols "special" {
 
     # Modifier keys themselves
-    key <LWIN> { [ Alt_L ] };
-    key <LALT> { [ Hyper_L ] };
-    key <RALT> { [ Hyper_R ] };
+    replace key <LWIN> { [ Alt_L, Meta_L ] };
+    replace key <LALT> { [ Hyper_L ] };
+    replace key <RALT> { [ Hyper_R ] };
 
-    modifier_map Mod1 { Alt_L };
-    modifier_map Mod3 { Hyper_L };
+    modifier_map Mod1 { <LWIN> };
+    modifier_map Mod3 { <LALT> };
+    modifier_map Mod5 { <RALT> };
     # modifier_map Mod4 { Super_L };
-    modifier_map Mod5 { Hyper_R };
 
     key.type[Group1] = "NONE_SHIFT_LALT_RALT";
 
-    key <RTRN> { [ Return, Return, Multi_key, dead_greek ] };
+    # Perhaps turn plain Return into menu key?
+    key <RTRN> { [ Return, Return, equal, equal  ] };
+
+    key <RSHT> { [ Multi_key, dead_greek, dead_greek, dead_greek ] };
+
+    key <AD01> { [ q, Q, Home, Home ] };
+    key <AD02> { [ w, W, Up, Up ] };
+    key <AD03> { [ e, E, End, End ] };
+    key <AD04> { [ r, R, Prior, Prior ] };
+    key <AD05> { [ t, T, numbersign, numbersign ] };
+    key <AD06> { [ y, Y, at, at ] };
+    key <AD07> { [ u, U, 7, 7 ] };
+    key <AD08> { [ i, I, 8, 8 ] };
+    key <AD09> { [ o, O, 9, 9 ] };
+    key <AD10> { [ p, P, plus, plus ] };
+    key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
+    key <AD12> { [ bracketright, braceright, dollar, dollar ] };
+
+    key <AC01> { [ a, A, Left, Left ] };
+    key <AC02> { [ s, S, Down, Down ] };
+    key <AC03> { [ d, D, Right, Right ] };
+    key <AC04> { [ f, F, Prior, Prior ] };
+    key <AC05> { [ g, G, asciitilde, asciitilde ] };
+    key <AC06> { [ h, H, asterisk, asterisk ] };
+    key <AC07> { [ j, J, 4, 4 ] };
+    key <AC08> { [ k, K, 5, 5 ] };
+    key <AC09> { [ l, L, 6, 6 ] };
+    key <AC10> { [ semicolon, colon, minus, minus ] };
+    key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
+
+    key <AB01> { [ z, Z, bar, bar ] };
+    key <AB02> { [ x, X, underscore, underscore ] };
+    key <AB03> { [ c, C, parenleft, parenleft ] };
+    key <AB04> { [ v, V, parenright, parenright ] };
+    key <AB05> { [ b, B, ampersand, ampersand ] };
+    key <AB06> { [ n, N, 0, 0 ] };
+    key <AB07> { [ m, M, 1, 1 ] };
+    key <AB08> { [ comma, less, 2, 2 ] };
+    key <AB09> { [ period, greater, 3, 3 ] };
+    key <AB10> { [ slash, question, exclam, exclam ] };
 
     # Thumb cluster
     key <SPCE> { [ space, space, BackSpace, Delete ] };
-
-    # Arrow block
-    key <AC01> { [ a, A, Left, Home ] };
-    key <AC03> { [ d, D, Right, End ] };
-    key <AD02> { [ w, W, Up, Prior ] };
-    key <AC02> { [ s, S, Down, Next ] };
-
-    # Numpad
-    key <AE07> { [ 7, ampersand, 7, 7] };
-    key <AE08> { [ 8, asterisk , 8, 8] };
-    key <AE09> { [ 9, parenleft, 9, 9] };
-    key <AE10> { [ 0, parenright, equal, equal] };
-    key <AD06> { [ y, Y, asterisk, asterisk] };
-    key <AD07> { [ u, U, 4, 4] };
-    key <AD08> { [ i, I, 5, 5] };
-    key <AD09> { [ o, O, 6, 6] };
-    key <AD10> { [ p, P, slash, slash] };
-    key <AC06> { [ h, H, plus, plus]};
-    key <AC07> { [ j, J, 1, 1]};
-    key <AC08> { [ k, K, 2, 2] };
-    key <AC09> { [ l, L, 3, 3] };
-    key <AC10> { [ semicolon, colon, minus, minus]};
-    key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
-    key <AB06> { [ n, N, period, period] };
-    key <AB07> { [ m, M, 0, 0] };
-    key <AB08> { [ comma, less, parenleft, parenleft] };
-    key <AB09> { [ period, greater, parenright, parenright] };
-    key <AB10> { [ slash, question, backslash, backslash] };
 };
 EOF
 
