@@ -1,4 +1,4 @@
-# xkb-ergo
+# thumbledore
 
 > This script is a work-in-progress --- it doesn't yet work *quite* the way it should. Full disclosure: I do not know what I am doing.
 
