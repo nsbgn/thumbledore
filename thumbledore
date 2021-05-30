@@ -10,32 +10,13 @@ mkdir -p ${XKBDIR}/{keymap,symbols,types,compat}
 
 # Generate a basic keymap.
 setxkbmap -option -option caps:super -print \
-    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
-    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
-    | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+custom(special)\2/g' \
-    > ${XKBDIR}/keymap/custom.xkb
-
-# Generate compatibility map
-tee > ${XKBDIR}/compat/custom << EOF
-xkb_compatibility "special" {
-
-   # interpret space+Exactly(Mod5) {
-   #     action=RedirectKey(keycode=<DELE>, clearMods=Mod5);
-   # };
-
-   #interpret Alt_L { action= SetMods(modifiers=Mod1); };
-   #interpret Alt_R { action= SetMods(modifiers=Mod1); };
-
-   #interpret Super_L { action= SetMods(modifiers=Mod4); };
-
-   #interpret Hyper_L { action= SetMods(modifiers=Mod5); };
-   #interpret Hyper_R { action= SetMods(modifiers=Mod5+Shift); };
-};
-EOF
+    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
+    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
+    > ${XKBDIR}/keymap/thumbledore.xkb
 
 # Generate type map
-tee > ${XKBDIR}/types/custom << EOF
-default xkb_types "special" {
+tee > ${XKBDIR}/types/thumbledore << EOF
+default xkb_types "td" {
 
     type "NONE_SHIFT_LALT_RALT" {
 
@@ -54,32 +35,18 @@ default xkb_types "special" {
 EOF
 
 
-# Add customisations to its `xkb_symbols`. We assign Tab to some weird key so
-# that `xcape` won't get confused. We use the ISO_Level3_Shift key for mode
-# switching, because we can then just add our special keys as level 3 syms.
-# Check out /usr/share/X11/xkb for codes and /usr/include/X11/keysymdef.h (from
-# x11proto-dev) for symbols. Use `xev` for inspection. Use `xmodmap` to see
-# which modifiers are bound to which keys.
-# https://bbs.archlinux.org/viewtopic.php?id=248080
-tee > ${XKBDIR}/symbols/custom << EOF
+tee > ${XKBDIR}/symbols/thumbledore << EOF
 default partial modifier_keys
 partial
-xkb_symbols "special" {
-
-    #modifier_map Mod1 { Alt_L, Alt_R };
-    #modifier_map Mod5 { ISO_Level3_Shift };
+xkb_symbols "td" {
 
     # Modifier keys themselves
     replace key <LWIN> { [ Alt_L, Alt_R ] };
     replace key <LALT> { [ Hyper_L, Hyper_L ]};
-    replace key <RALT> { [ Hyper_R, Hyper_R ], actions[Group1]= [SetMods(mods=Shift+Mod5), SetMods(mods=Shift+Mod5)]};
+    replace key <RALT> { [ Hyper_R, Hyper_R ], actions[Group1]=
+        [ SetMods(mods=Shift+Mod5)
+        , SetMods(mods=Shift+Mod5) ] };
 
-    #modifier_map Shift { Shift_L, Hyper_R };
-    #modifier_map Lock {};
-    #modifier_map Control { Control_L, Control_R };
-    #modifier_map Mod1 { Alt_L, Alt_R };
-    #modifier_map Mod3 {};
-    #modifier_map Mod4 { Super_L };
     modifier_map Mod5 { Hyper_L, Hyper_R };
 
     key.type[Group1] = "NONE_SHIFT_LALT_RALT";
@@ -127,13 +94,17 @@ xkb_symbols "special" {
     key <AB10> { [ slash, question, exclam, exclam ] };
 
     # Thumb cluster
-    key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = [
-    NoAction(), Redirect(key=<SPCE>,clearMods=Shift), Redirect(key=<BKSP>,clearMods=Mod5), Redirect(key=<DELE>,clearMods=Mod5+Shift) ] };
+    key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
+        [ NoAction()
+        , Redirect(key=<SPCE>, clearMods=Shift)
+        , Redirect(key=<BKSP>,clearMods=Mod5)
+        , Redirect(key=<DELE>,clearMods=Mod5+Shift) ]
+    };
 };
 EOF
 
 # Compile the new xkbmap
-xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/custom.xkb ${DISPLAY}
+xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.

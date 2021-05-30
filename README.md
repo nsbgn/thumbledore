@@ -13,11 +13,11 @@ Within the constraints imposed on us by standard keyboards, I think the followin
 
 1. *Holding* `Alt_L` or `Alt_R` exposes a secondary layer on the keyboard that contains a numpad and some extra symbols. To keep things simple, it doesn't matter whether you press the right or left one, except:
 2. `Alt_L + space` is `BackSpace`, while `Alt_R + space` is `Delete`. Notice how the movement of your thumbs mirrors the direction of the removal.
-3. *Tapping* `Alt_R` on its own triggers an `Enter`. `Alt_R` would be a `Tab`.
-4. The original `Tab` triggers the `Compose` key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. On the secondary layer, `Tab` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`).
+3. *Tapping* either `Alt` on its own triggers an `Enter`
+4. `Shift_R` triggers the `Compose` key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. On the secondary layer, `Shift_L + Shift_R` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`).
 5. *Holding* `CapsLock` turns it into a `Super` modifier. This is convenient for controlling a window manager: it's the single key for all non-application-specific keybindings.
 6. *Tapping* `CapsLock` triggers `Escape`, for modal applications like `vim`.
-7. `Ctrl` stays where it is, while `Alt_L` swaps places with the `Super` key. `Alt` and `Control` are often used by applications that prefer key chording for shortcuts (rather than modes): let's put them cozily together in the bottom left corner.
+7. `Ctrl` stays where it is, while the original `Alt_L` swaps places with the `Super` key. `Alt` and `Control` are often used by applications that prefer key chording for shortcuts (rather than modes): let's put them cozily together in the bottom left corner.
 
 
 This has the following benefits:
@@ -25,6 +25,7 @@ This has the following benefits:
 - Achievable using any run-of-the-mill keyboard.
 - Only uses standard tools. The tweaks I propose here could also be achieved with the excellent [kmonad](github.com/david-janssen/kmonad), but that approach — while certainly easier to understand once it is up and running — isn't as plug-and-play.
 - Encourages using only keys that would be available on any 65% keyboard. Fumbling around for special function keys is no good.
+
 
 
 ## Related software
@@ -40,6 +41,8 @@ This has the following benefits:
 - [evscript](https://github.com/unrelentingtech/evscript)
 - [evcape](https://github.com/wbolster/evcape)
 - [ergo](https://github.com/lcarsos/ergo)
+
+Check out `/usr/share/X11/xkb` for codes and `/usr/include/X11/keysymdef.h` (from `x11proto-dev`) for symbols. Use `xev` for inspection. Use `xmodmap` to see which modifiers are bound to which keys.
 
 
 ## Related reading
