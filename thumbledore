@@ -18,6 +18,12 @@ setxkbmap -option -option caps:super -print \
 # Generate compatibility map
 tee > ${XKBDIR}/compat/custom << EOF
 xkb_compatibility "special" {
+
+   interpret Alt_L { action= SetMods(modifiers=Mod1); };
+   interpret Alt_R { action= SetMods(modifiers=Mod1); };
+
+   interpret Super_L { action= SetMods(modifiers=Mod4); };
+
    interpret Hyper_L { action= SetMods(modifiers=Mod3); };
    interpret Hyper_R { action= SetMods(modifiers=Mod5); };
 };
@@ -67,21 +73,25 @@ partial
 xkb_symbols "special" {
 
     # Modifier keys themselves
-    replace key <LWIN> { [ Alt_L, Meta_L ] };
-    replace key <LALT> { [ Hyper_L ] };
-    replace key <RALT> { [ Hyper_R ] };
+    key <LWIN> { [ Alt_L, Super_L ] };
+    key <LALT> { [ Hyper_L ] };
+    key <RALT> { [ Hyper_R ] };
 
-    modifier_map Mod1 { <LWIN> };
-    modifier_map Mod3 { <LALT> };
-    modifier_map Mod5 { <RALT> };
-    # modifier_map Mod4 { Super_L };
+    modifier_map Shift { Shift_L };
+    #modifier_map Lock {};
+    modifier_map Control { Control_L, Control_R };
+    modifier_map Mod1 { Alt_L, Alt_R };
+    #modifier_map Mod3 {};
+    modifier_map Mod4 { Super_L };
+    #modifier_map Mod5 { 0x42 };
 
     key.type[Group1] = "NONE_SHIFT_LALT_RALT";
 
     # Perhaps turn plain Return into menu key?
     key <RTRN> { [ Return, Return, equal, equal  ] };
 
-    key <RSHT> { [ Multi_key, dead_greek, dead_greek, dead_greek ] };
+    # Perhaps use tab key?
+    key <RTSH> { [ Multi_key, dead_greek, dead_greek, dead_greek ] };
 
     key <AD01> { [ q, Q, Home, Home ] };
     key <AD02> { [ w, W, Up, Up ] };
@@ -93,8 +103,8 @@ xkb_symbols "special" {
     key <AD08> { [ i, I, 8, 8 ] };
     key <AD09> { [ o, O, 9, 9 ] };
     key <AD10> { [ p, P, plus, plus ] };
-    key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
-    key <AD12> { [ bracketright, braceright, dollar, dollar ] };
+    key <AD11> { [ braceleft, VoidSymbol, asciicircum, asciicircum ] };
+    key <AD12> { [ braceright, ampersand, dollar, dollar ] };
 
     key <AC01> { [ a, A, Left, Left ] };
     key <AC02> { [ s, S, Down, Down ] };
@@ -108,11 +118,11 @@ xkb_symbols "special" {
     key <AC10> { [ semicolon, colon, minus, minus ] };
     key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
 
-    key <AB01> { [ z, Z, bar, bar ] };
-    key <AB02> { [ x, X, underscore, underscore ] };
+    key <AB01> { [ z, Z, bracketleft, bracketleft ] };
+    key <AB02> { [ x, X, bracketright, bracketright ] };
     key <AB03> { [ c, C, parenleft, parenleft ] };
     key <AB04> { [ v, V, parenright, parenright ] };
-    key <AB05> { [ b, B, ampersand, ampersand ] };
+    key <AB05> { [ b, B, underscore, underscore ] };
     key <AB06> { [ n, N, 0, 0 ] };
     key <AB07> { [ m, M, 1, 1 ] };
     key <AB08> { [ comma, less, 2, 2 ] };
@@ -130,4 +140,4 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/custom.xkb ${DISPLAY}
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-xcape -e 'Super_L=Escape;Hyper_L=Return;Hyper_R=Return' -t 150ms
+xcape -e 'Super_L=Escape;Hyper_L=Tab;Hyper_R=Return' -t 150ms
