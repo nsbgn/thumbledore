@@ -19,13 +19,17 @@ setxkbmap -option -option caps:super -print \
 tee > ${XKBDIR}/compat/custom << EOF
 xkb_compatibility "special" {
 
+   # interpret space+Exactly(Mod5) {
+   #     action=RedirectKey(keycode=<DELE>, clearMods=Mod5);
+   # };
+
    #interpret Alt_L { action= SetMods(modifiers=Mod1); };
    #interpret Alt_R { action= SetMods(modifiers=Mod1); };
 
    #interpret Super_L { action= SetMods(modifiers=Mod4); };
 
-   #interpret Hyper_L+Any { action= SetMods(modifiers=Mod5); };
-   #interpret Hyper_R+Any { action= SetMods(modifiers=Mod5+Shift); };
+   #interpret Hyper_L { action= SetMods(modifiers=Mod5); };
+   #interpret Hyper_R { action= SetMods(modifiers=Mod5+Shift); };
 };
 EOF
 
@@ -65,22 +69,20 @@ xkb_symbols "special" {
     #modifier_map Mod1 { Alt_L, Alt_R };
     #modifier_map Mod5 { ISO_Level3_Shift };
 
-    key <I252> { [ ISO_Level3_Shift ] };
-
     # Modifier keys themselves
     replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
-    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
+    replace key <LALT> { [ Hyper_L, Hyper_L ]};
+    replace key <RALT> { [ Hyper_R, Hyper_R ], actions[Group1]= [SetMods(mods=Shift+Mod5), SetMods(mods=Shift+Mod5)]};
 
-    #modifier_map Shift { Shift_L };
+    #modifier_map Shift { Shift_L, Hyper_R };
     #modifier_map Lock {};
     #modifier_map Control { Control_L, Control_R };
     #modifier_map Mod1 { Alt_L, Alt_R };
     #modifier_map Mod3 {};
     #modifier_map Mod4 { Super_L };
-    #modifier_map Mod5 { Hyper_L, Hyper_R };
+    modifier_map Mod5 { Hyper_L, Hyper_R };
 
-    #key.type[Group1] = "NONE_SHIFT_LALT_RALT";
+    key.type[Group1] = "NONE_SHIFT_LALT_RALT";
 
     # Perhaps turn plain Return into menu key?
     key <RTRN> { [ Return, Return, equal, equal  ] };
@@ -98,13 +100,13 @@ xkb_symbols "special" {
     key <AD08> { [ i, I, 8, 8 ] };
     key <AD09> { [ o, O, 9, 9 ] };
     key <AD10> { [ p, P, plus, plus ] };
-    key <AD11> { [ braceleft, VoidSymbol, asciicircum, asciicircum ] };
-    key <AD12> { [ braceright, ampersand, dollar, dollar ] };
+    key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
+    key <AD12> { [ bracketright, braceright, dollar, dollar ] };
 
     key <AC01> { [ a, A, Left, Left ] };
     key <AC02> { [ s, S, Down, Down ] };
     key <AC03> { [ d, D, Right, Right ] };
-    key <AC04> { [ f, F, Prior, Prior ] };
+    key <AC04> { [ f, F, Next, Next ] };
     key <AC05> { [ g, G, asciitilde, asciitilde ] };
     key <AC06> { [ h, H, asterisk, asterisk ] };
     key <AC07> { [ j, J, 4, 4 ] };
@@ -113,11 +115,11 @@ xkb_symbols "special" {
     key <AC10> { [ semicolon, colon, minus, minus ] };
     key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
 
-    key <AB01> { [ z, Z, bracketleft, bracketleft ] };
-    key <AB02> { [ x, X, bracketright, bracketright ] };
+    key <AB01> { [ z, Z, bar, bar ] };
+    key <AB02> { [ x, X, underscore, underscore ] };
     key <AB03> { [ c, C, parenleft, parenleft ] };
     key <AB04> { [ v, V, parenright, parenright ] };
-    key <AB05> { [ b, B, underscore, underscore ] };
+    key <AB05> { [ b, B, ampersand, ampersand ] };
     key <AB06> { [ n, N, 0, 0 ] };
     key <AB07> { [ m, M, 1, 1 ] };
     key <AB08> { [ comma, less, 2, 2 ] };
@@ -125,8 +127,8 @@ xkb_symbols "special" {
     key <AB10> { [ slash, question, exclam, exclam ] };
 
     # Thumb cluster
-    key <SPCE> { [ space, space, BackSpace, Delete ],
-        actions[Group1] = [ NoAction(), Redirect(key=<SPCE>,clearMods=Shift), Redirect(key=<BKSP>,clearMods=Alt), Redirect(key=<DELE>,clearMods=LevelThree) ] };
+    key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = [
+    NoAction(), Redirect(key=<SPCE>,clearMods=Shift), Redirect(key=<BKSP>,clearMods=Mod5), Redirect(key=<DELE>,clearMods=Mod5+Shift) ] };
 };
 EOF
 
@@ -136,4 +138,4 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/custom.xkb ${DISPLAY}
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-xcape -e 'Super_L=Escape;Hyper_L=Tab;Hyper_R=Return' -t 150ms
+xcape -e 'Super_L=Escape;Hyper_L=Return;Hyper_R=Return' -t 150ms
