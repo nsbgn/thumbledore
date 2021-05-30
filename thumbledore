@@ -11,28 +11,7 @@ mkdir -p ${XKBDIR}/{keymap,symbols,types,compat}
 # Generate a basic keymap.
 setxkbmap -option -option caps:super -print \
     | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
-    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
     > ${XKBDIR}/keymap/thumbledore.xkb
-
-# Generate type map
-tee > ${XKBDIR}/types/thumbledore << EOF
-default xkb_types "td" {
-
-    type "NONE_SHIFT_LALT_RALT" {
-
-        modifiers = Shift+Mod5;
-        map[None] = Level1;
-        map[Shift] = Level2;
-        map[Mod5] = Level3;
-        map[Mod5+Shift] = Level4;
-
-        level_name[Level1] = "Base";
-        level_name[Level2] = "Shift";
-        level_name[Level3] = "Alt_L";
-        level_name[Level4] = "Alt_R";
-    };
-};
-EOF
 
 tee > ${XKBDIR}/symbols/thumbledore << EOF
 default partial modifier_keys
@@ -45,8 +24,6 @@ xkb_symbols "td" {
     replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
         [ SetMods(mods=Shift+Mod5)
         , SetMods(mods=Shift+Mod5) ] };
-
-    key.type[Group1] = "NONE_SHIFT_LALT_RALT";
 
     # Perhaps turn plain Return into menu key?
     key <RTRN> { [ Return, Return, equal, equal  ] };
@@ -94,8 +71,8 @@ xkb_symbols "td" {
     key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
         [ NoAction()
         , Redirect(key=<SPCE>, clearMods=Shift)
-        , Redirect(key=<BKSP>,clearMods=Mod5)
-        , Redirect(key=<DELE>,clearMods=Mod5+Shift) ]
+        , Redirect(key=<BKSP>, clearMods=Mod5)
+        , Redirect(key=<DELE>, clearMods=Mod5+Shift) ]
     };
 };
 EOF
