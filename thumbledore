@@ -34,7 +34,10 @@ xkb_symbols "td" {
     key <AD01> { [ q, Q, Home, Home ] };
     key <AD02> { [ w, W, Up, Up ] };
     key <AD03> { [ e, E, End, End ] };
-    key <AD04> { [ r, R, Prior, Prior ] };
+    key <AD04> { [ r, R, Prior, Prior ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ]
+    };
     key <AD05> { [ t, T, numbersign, numbersign ] };
     key <AD06> { [ y, Y, at, at ] };
     key <AD07> { [ u, U, 7, 7 ] };
@@ -47,7 +50,9 @@ xkb_symbols "td" {
     key <AC01> { [ a, A, Left, Left ] };
     key <AC02> { [ s, S, Down, Down ] };
     key <AC03> { [ d, D, Right, Right ] };
-    key <AC04> { [ f, F, Next, Next ] };
+    key <AC04> { [ f, F, Next, Next ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
     key <AC05> { [ g, G, asciitilde, asciitilde ] };
     key <AC06> { [ h, H, asterisk, asterisk ] };
     key <AC07> { [ j, J, 4, 4 ] };
