@@ -31,9 +31,15 @@ xkb_symbols "td" {
     # Perhaps use tab key?
     key <RTSH> { [ Multi_key, dead_greek, dead_greek, dead_greek ] };
 
-    key <AD01> { [ q, Q, Home, Home ] };
-    key <AD02> { [ w, W, Up, Up ] };
-    key <AD03> { [ e, E, End, End ] };
+    key <AD01> { [ q, Q, Home, Home ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<HOME>, clearMods=Mod5+Shift) ] };
+    key <AD02> { [ w, W, Up, Up ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<UP>, clearMods=Mod5+Shift) ] };
+    key <AD03> { [ e, E, End, End ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<END>, clearMods=Mod5+Shift) ] };
     key <AD04> { [ r, R, Prior, Prior ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ]
@@ -47,9 +53,15 @@ xkb_symbols "td" {
     key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
     key <AD12> { [ bracketright, braceright, dollar, dollar ] };
 
-    key <AC01> { [ a, A, Left, Left ] };
-    key <AC02> { [ s, S, Down, Down ] };
-    key <AC03> { [ d, D, Right, Right ] };
+    key <AC01> { [ a, A, Left, Left ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<LEFT>, clearMods=Mod5+Shift) ] };
+    key <AC02> { [ s, S, Down, Down ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<DOWN>, clearMods=Mod5+Shift) ] };
+    key <AC03> { [ d, D, Right, Right ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
     key <AC04> { [ f, F, Next, Next ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
