@@ -9,7 +9,7 @@ Within the constraints imposed on us by standard keyboards, `thumbledore` adds t
 1. *Holding* `Alt_L` or `Alt_R` exposes a secondary layer on the keyboard that contains a numpad, an arrow cluster and some extra symbols. To keep things simple, it doesn't matter whether you press the right or left one, except:
 2. `Alt_L + space` is `BackSpace`, while `Alt_R + space` is `Delete`. Notice how the movement of your thumbs mirrors the direction of the removal.
 3. *Tapping* either `Alt` on its own triggers an `Enter`.
-4. `Shift_R` triggers the `Compose` key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. `Shift_L + Shift_R` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`).
+4. *Tapping* `Control_L` triggers the `Compose` key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. `Shift_L + Control_L` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`).
 5. *Holding* `CapsLock` turns it into a `Super` modifier. This is convenient for controlling a window manager: it's the single key for all non-application-specific keybindings.
 6. *Tapping* `CapsLock` triggers `Escape`, for modal applications like `vim`.
 7. `Ctrl` stays where it is, while the original `Alt_L` swaps places with the `Super` key. `Alt` and `Control` are often used by applications that prefer key chording for shortcuts (rather than modes): let's put them cozily together in the bottom left corner.
