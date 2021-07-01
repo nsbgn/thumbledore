@@ -101,12 +101,14 @@ xkb_symbols "td" {
     key <AB10> { [ slash, question, exclam, exclam ] };
 
     # Thumb cluster
-    key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
-        [ NoAction()
-        , Redirect(key=<SPCE>, clearMods=Shift)
-        , Redirect(key=<BKSP>, clearMods=Mod5)
-        , Redirect(key=<DELE>, clearMods=Mod5+Shift) ]
-    };
+    # key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
+    #     [ NoAction()
+    #     , Redirect(key=<SPCE>, clearMods=Shift)
+    #     , Redirect(key=<BKSP>, clearMods=Mod5)
+    #     , Redirect(key=<DELE>, clearMods=Mod5+Shift) ]
+    # };
+    key <SPCE> { [ space, space, Return, Return ] };
+
 };
 EOF
 
