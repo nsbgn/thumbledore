@@ -13,6 +13,7 @@ Within the constraints imposed on us by standard keyboards, `thumbledore` adds t
 5. *Holding* `CapsLock` turns it into a `Super` modifier. This is convenient for controlling a window manager: it's the single key for all non-application-specific keybindings.
 6. *Tapping* `CapsLock` triggers `Escape`, for modal applications like `vim`.
 7. `Ctrl` stays where it is, while the original `Alt_L` swaps places with the `Super` key. `Alt` and `Control` are often used by applications that prefer key chording for shortcuts (rather than modes): let's put them cozily together in the bottom left corner.
+8.  Tapping the `Shift` button triggers `CapsLock`.
 
 
 This has the following benefits:

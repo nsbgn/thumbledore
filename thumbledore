@@ -20,6 +20,7 @@ xkb_symbols "td" {
 
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
+    key <I254> { [ Caps_Lock ] };
 
     # Modifier keys themselves
     replace key <LWIN> { [ Alt_L, Alt_R ] };
@@ -29,7 +30,7 @@ xkb_symbols "td" {
         , SetMods(mods=Shift+Mod5) ] };
 
     # Perhaps turn plain Return into menu key?
-    key <RTRN> { [ Return, Return, equal, equal  ] };
+    key <RTRN> { [ Return, Return, at, at  ] };
 
     key <AD01> { [ q, Q, Home, Home ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
@@ -45,7 +46,7 @@ xkb_symbols "td" {
         , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ]
     };
     key <AD05> { [ t, T, numbersign, numbersign ] };
-    key <AD06> { [ y, Y, at, at ] };
+    key <AD06> { [ y, Y, equal, equal ] };
     key <AD07> { [ u, U, 7, 7 ] };
     key <AD08> { [ i, I, 8, 8 ] };
     key <AD09> { [ o, O, 9, 9 ] };
@@ -100,4 +101,4 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-xcape -e 'Super_L=Escape;ISO_Level3_Shift=Return;Control_L=Multi_key;Control_R=dead_greek' -t 150ms
+xcape -e 'Super_L=Escape;ISO_Level3_Shift=Return;Control_L=Multi_key;Control_R=dead_greek;Shift_L=Caps_Lock;Shift_R=Caps_Lock' -t 150ms
