@@ -45,7 +45,7 @@ xkb_symbols "td" {
     #     , SetMods(mods=Shift+Mod5) ] };
 
     # Perhaps turn plain Return into menu key?
-    key <RTRN> { [ Return, Return, at, at  ] };
+    # key <RTRN> { [ Return, Return, at, at  ] };
 
     key <AD01> { [ q, Q, Home, Home ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
@@ -62,9 +62,9 @@ xkb_symbols "td" {
     };
     key <AD05> { [ t, T, numbersign, numbersign ] };
     key <AD06> { [ y, Y, equal, equal ] };
-    key <AD07> { [ u, U, 7, 7 ] };
-    key <AD08> { [ i, I, 8, 8 ] };
-    key <AD09> { [ o, O, 9, 9 ] };
+    key <AD07> { [ u, U, bracketleft, 7 ] };
+    key <AD08> { [ i, I, bracketright, 8 ] };
+    key <AD09> { [ o, O, braceright, 9 ] };
     key <AD10> { [ p, P, plus, plus ] };
     key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
     key <AD12> { [ bracketright, braceright, dollar, dollar ] };
@@ -83,9 +83,9 @@ xkb_symbols "td" {
         , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
     key <AC05> { [ g, G, asciitilde, asciitilde ] };
     key <AC06> { [ h, H, asterisk, asterisk ] };
-    key <AC07> { [ j, J, 4, 4 ] };
-    key <AC08> { [ k, K, 5, 5 ] };
-    key <AC09> { [ l, L, 6, 6 ] };
+    key <AC07> { [ j, J, parenleft, 4 ] };
+    key <AC08> { [ k, K, parenright, 5 ] };
+    key <AC09> { [ l, L, braceleft, 6 ] };
     key <AC10> { [ semicolon, colon, minus, minus ] };
     key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
 
@@ -94,10 +94,10 @@ xkb_symbols "td" {
     key <AB03> { [ c, C, parenleft, parenleft ] };
     key <AB04> { [ v, V, parenright, parenright ] };
     key <AB05> { [ b, B, ampersand, ampersand ] };
-    key <AB06> { [ n, N, 0, 0 ] };
-    key <AB07> { [ m, M, 1, 1 ] };
-    key <AB08> { [ comma, less, 2, 2 ] };
-    key <AB09> { [ period, greater, 3, 3 ] };
+    key <AB06> { [ n, N, at, 0 ] };
+    key <AB07> { [ m, M, bar, 1 ] };
+    key <AB08> { [ comma, less, less, 2 ] };
+    key <AB09> { [ period, greater, greater, 3 ] };
     key <AB10> { [ slash, question, exclam, exclam ] };
 
     # Thumb cluster
