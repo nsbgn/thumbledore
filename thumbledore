@@ -30,7 +30,7 @@ xkb_symbols "td" {
         , SetMods(mods=Shift+Mod5) ] };
 
     # Perhaps turn plain Return into menu key?
-    key <RTRN> { [ Return, Return, at, at  ] };
+    # key <RTRN> { [ Return, Return, at, at  ] };
 
     key <AD01> { [ q, Q, Home, Home ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
@@ -79,7 +79,7 @@ xkb_symbols "td" {
     key <AB03> { [ c, C, parenleft, parenleft ] };
     key <AB04> { [ v, V, parenright, parenright ] };
     key <AB05> { [ b, B, ampersand, ampersand ] };
-    key <AB06> { [ n, N, 0, 0 ] };
+    key <AB06> { [ n, N, at, 0 ] };
     key <AB07> { [ m, M, bar, 1 ] };
     key <AB08> { [ comma, less, less, 2 ] };
     key <AB09> { [ period, greater, greater, 3 ] };
