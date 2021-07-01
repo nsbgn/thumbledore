@@ -30,7 +30,7 @@ default partial modifier_keys
 partial
 xkb_symbols "td" {
 
-    key <RALT> { [ BackSpace ] };
+    key <BKSP> { [ BackSpace, BackSpace, Delete, Delete ] };
 
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
@@ -38,6 +38,7 @@ xkb_symbols "td" {
 
     # Modifier keys themselves
     replace key <LWIN> { [ Alt_L, Alt_R ] };
+    replace key <RALT> { [ BackSpace ] };
     replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
     # replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
     #     [ SetMods(mods=Shift+Mod5)
