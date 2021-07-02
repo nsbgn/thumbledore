@@ -37,9 +37,11 @@ xkb_symbols "td" {
     key <I254> { [ Caps_Lock ] };
 
     # Modifier keys themselves
-    replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <RALT> { [ BackSpace ] };
-    replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
+    replace key <RCTL> { [ Alt_L, Alt_R ] };
+    # replace key <LWIN> { [ Alt_L, Alt_R ] };
+    replace key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    replace key <LALT> { [ BackSpace ] };
+    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
     # replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
     #     [ SetMods(mods=Shift+Mod5)
     #     , SetMods(mods=Shift+Mod5) ] };
@@ -56,11 +58,9 @@ xkb_symbols "td" {
     key <AD03> { [ e, E, End, End ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<END>, clearMods=Mod5+Shift) ] };
-    key <AD04> { [ r, R, Prior, Prior ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ]
+    key <AD04> { [ r, R, bracketleft, bracketleft ] ]
     };
-    key <AD05> { [ t, T, numbersign, numbersign ] };
+    key <AD05> { [ t, T, bracketright, bracketright ] };
     key <AD06> { [ y, Y, equal, equal ] };
     key <AD07> { [ u, U, bracketleft, 7 ] };
     key <AD08> { [ i, I, bracketright, 8 ] };
@@ -78,10 +78,8 @@ xkb_symbols "td" {
     key <AC03> { [ d, D, Right, Right ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
-    key <AC04> { [ f, F, Next, Next ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
-    key <AC05> { [ g, G, asciitilde, asciitilde ] };
+    key <AC04> { [ f, F, parenleft, parenleft] };
+    key <AC05> { [ g, G, parenright, parenright ] };
     key <AC06> { [ h, H, asterisk, asterisk ] };
     key <AC07> { [ j, J, parenleft, 4 ] };
     key <AC08> { [ k, K, parenright, 5 ] };
@@ -89,11 +87,15 @@ xkb_symbols "td" {
     key <AC10> { [ semicolon, colon, minus, minus ] };
     key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
 
-    key <AB01> { [ z, Z, bar, bar ] };
-    key <AB02> { [ x, X, underscore, underscore ] };
-    key <AB03> { [ c, C, parenleft, parenleft ] };
-    key <AB04> { [ v, V, parenright, parenright ] };
-    key <AB05> { [ b, B, ampersand, ampersand ] };
+    key <AB01> { [ z, Z ] };
+    key <AB02> { [ x, X, Prior, Prior ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGUP>, clearMods=Mod5+Shift)] };
+    key <AB03> { [ c, C, Next, Next ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
+    key <AB04> { [ v, V, braceleft, braceleft ] };
+    key <AB05> { [ b, B, braceright, braceright ] };
     key <AB06> { [ n, N, at, 0 ] };
     key <AB07> { [ m, M, bar, 1 ] };
     key <AB08> { [ comma, less, less, 2 ] };
