@@ -58,8 +58,7 @@ xkb_symbols "td" {
     key <AD03> { [ e, E, End, End ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<END>, clearMods=Mod5+Shift) ] };
-    key <AD04> { [ r, R, bracketleft, bracketleft ] ]
-    };
+    key <AD04> { [ r, R, bracketleft, bracketleft ] };
     key <AD05> { [ t, T, bracketright, bracketright ] };
     key <AD06> { [ y, Y, equal, equal ] };
     key <AD07> { [ u, U, bracketleft, 7 ] };
@@ -90,7 +89,7 @@ xkb_symbols "td" {
     key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X, Prior, Prior ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGUP>, clearMods=Mod5+Shift)] };
+        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ] };
     key <AB03> { [ c, C, Next, Next ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
