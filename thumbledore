@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# XF86RotateWindows XF86ApplicationLeft XF86ApplicationRight XF86AudioPause XF86Terminal 
+
 if [ -z "${DISPLAY}" ]; then
     echo "\$DISPLAY not set" >&2
     exit 1
@@ -21,6 +23,11 @@ xkb_compatibility "td" {
         repeat= True;
         action= Redirect(key=<BKSP>);
     };
+    interpret Return+AnyOfOrNone(all) {
+        repeat= True;
+        action= Redirect(key=<RTRN>);
+    };
+
 };
 EOF
 
@@ -31,20 +38,21 @@ partial
 xkb_symbols "td" {
 
     key <BKSP> { [ BackSpace, BackSpace, Delete, Delete ] };
+    key <RTRN> { [ Return, Return, Return, Return ] };
 
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
-    key <I254> { [ Caps_Lock ] };
+    key <I254> { [ ISO_Level3_Latch ] };
 
     # Modifier keys themselves
     replace key <RCTL> { [ Alt_L, Alt_R ] };
-    # replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    replace key <LWIN> { [ Alt_L, Alt_R ] };
+    # replace key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LALT> { [ BackSpace ] };
-    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ]};
-    # replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
-    #     [ SetMods(mods=Shift+Mod5)
-    #     , SetMods(mods=Shift+Mod5) ] };
+    # replace key <RALT> { [ Return ]};
+    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
+        [ SetMods(mods=Shift+Mod5)
+        , SetMods(mods=Shift+Mod5) ] };
 
     # Perhaps turn plain Return into menu key?
     # key <RTRN> { [ Return, Return, at, at  ] };
@@ -58,9 +66,11 @@ xkb_symbols "td" {
     key <AD03> { [ e, E, End, End ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<END>, clearMods=Mod5+Shift) ] };
-    key <AD04> { [ r, R, bracketleft, bracketleft ] };
-    key <AD05> { [ t, T, bracketright, bracketright ] };
-    key <AD06> { [ y, Y, equal, equal ] };
+    key <AD04> { [ r, R, Prior, Prior ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ] };
+    key <AD05> { [ t, T, bracketleft, bracketright ] };
+    key <AD06> { [ y, Y, slash, backslash ] };
     key <AD07> { [ u, U, bracketleft, 7 ] };
     key <AD08> { [ i, I, bracketright, 8 ] };
     key <AD09> { [ o, O, braceright, 9 ] };
@@ -77,24 +87,22 @@ xkb_symbols "td" {
     key <AC03> { [ d, D, Right, Right ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
-    key <AC04> { [ f, F, parenleft, parenleft] };
-    key <AC05> { [ g, G, parenright, parenright ] };
+    key <AC04> { [ f, F, Next, Next ], actions[Group1] =
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
+    key <AC05> { [ g, G, parenleft, parenright ] };
     key <AC06> { [ h, H, asterisk, asterisk ] };
     key <AC07> { [ j, J, parenleft, 4 ] };
     key <AC08> { [ k, K, parenright, 5 ] };
     key <AC09> { [ l, L, braceleft, 6 ] };
-    key <AC10> { [ semicolon, colon, minus, minus ] };
+    key <AC10> { [ semicolon, colon, minus, equal ] };
     key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
 
-    key <AB01> { [ z, Z ] };
-    key <AB02> { [ x, X, Prior, Prior ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ] };
-    key <AB03> { [ c, C, Next, Next ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
-    key <AB04> { [ v, V, braceleft, braceleft ] };
-    key <AB05> { [ b, B, braceright, braceright ] };
+    key <AB01> { [ z, Z, asciitilde, exclam ] };
+    key <AB02> { [ x, X ] };
+    key <AB03> { [ c, C ] };
+    key <AB04> { [ v, V, braceleft, braceright ] };
+    key <AB05> { [ b, B ] };
     key <AB06> { [ n, N, at, 0 ] };
     key <AB07> { [ m, M, bar, 1 ] };
     key <AB08> { [ comma, less, less, 2 ] };
@@ -108,7 +116,7 @@ xkb_symbols "td" {
     #     , Redirect(key=<BKSP>, clearMods=Mod5)
     #     , Redirect(key=<DELE>, clearMods=Mod5+Shift) ]
     # };
-    key <SPCE> { [ space, space, Return, Return ] };
+    # key <SPCE> { [ space, space, ISO_Level3_Lock, ISO_Level3_Lock ] };
 
 };
 EOF
@@ -119,4 +127,5 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-xcape -e 'Super_L=Escape;ISO_Level3_Shift=Return;Control_L=Multi_key;Control_R=dead_greek;Shift_L=Caps_Lock;Shift_R=Caps_Lock' -t 150ms
+xcape -e 'Super_L=Escape;ISO_Level3_Shift=Return;Control_L=Multi_key;Control_R=dead_greek;Shift_L=ISO_Level3_Latch' -t 150ms
+# ;Shift_L=Caps_Lock;
