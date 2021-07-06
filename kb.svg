@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="880" height="240" version="1.1" viewBox="0 0 88 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+    <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+            <dc:title/>
+        </cc:Work>
+    </rdf:RDF>
+</metadata>
+<defs>
+<style type="text/css"><![CDATA[
+rect {
+    fill: #000;
+    stroke: #000;
+    stroke-width: 1.5;
+}
+text {
+    font-size: 1.1px;
+    font-family: sans-serif;
+    fill: #fff;
+}
+.tl { text-anchor: start; dominant-baseline: hanging; }
+.tr { text-anchor: end; dominant-baseline: hanging; }
+.bl { text-anchor: start; dominant-baseline: no-change; }
+.br { text-anchor: end; dominant-baseline: no-change; }
+]]></style>
+</defs>
+<rect class="Tab" x="1" y="1" width="6" height="4" ry=".5"/>
+<rect class="Q" x="9" y="1" width="4" height="4" ry=".5"/>
+<rect class="W" x="15" y="1" width="4" height="4" ry=".5"/>
+<rect class="E" x="21" y="1" width="4" height="4" ry=".5"/>
+<rect class="R" x="27" y="1" width="4" height="4" ry=".5"/>
+<rect class="T" x="33" y="1" width="4" height="4" ry=".5"/>
+<rect class="Y" x="39" y="1" width="4" height="4" ry=".5"/>
+<rect class="U" x="45" y="1" width="4" height="4" ry=".5"/>
+<rect class="I" x="51" y="1" width="4" height="4" ry=".5"/>
+<rect class="O" x="57" y="1" width="4" height="4" ry=".5"/>
+<rect class="P" x="63" y="1" width="4" height="4" ry=".5"/>
+<rect class="braceleft" x="69" y="1" width="4" height="4" ry=".5"/>
+<rect class="braceright" x="75" y="1" width="4" height="4" ry=".5"/>
+<rect class="backslash" x="81" y="1" width="6" height="4" ry=".5"/>
+<rect class="CapsLock" x="1" y="7" width="8" height="4" ry=".5"/>
+
+<rect class="A" x="11" y="7" width="4" height="4" ry=".5"/>
+<text class="A tl" x="11" y="7">a</text>
+<text class="A bl" x="11" y="11">A</text>
+<text class="A tr" x="15" y="7">←</text>
+<text class="A br" x="15" y="11">?</text>
+
+<rect class="S" x="17" y="7" width="4" height="4" ry=".5"/>
+<rect class="D" x="23" y="7" width="4" height="4" ry=".5"/>
+<rect class="F" x="29" y="7" width="4" height="4" ry=".5"/>
+<rect class="G" x="35" y="7" width="4" height="4" ry=".5"/>
+<rect class="H" x="41" y="7" width="4" height="4" ry=".5"/>
+<rect class="J" x="47" y="7" width="4" height="4" ry=".5"/>
+<rect class="K" x="53" y="7" width="4" height="4" ry=".5"/>
+<rect class="L" x="59" y="7" width="4" height="4" ry=".5"/>
+<rect class="semicolon" x="65" y="7" width="4" height="4" ry=".5"/>
+<rect class="apostrophe" x="71" y="7" width="4" height="4" ry=".5"/>
+<rect class="Return" x="77" y="7" width="10" height="4" ry=".5"/>
+<rect class="Shift_L" x="1" y="13" width="12" height="4" ry=".5"/>
+<rect class="Z" x="15" y="13" width="4" height="4" ry=".5"/>
+<rect class="X" x="21" y="13" width="4" height="4" ry=".5"/>
+<rect class="C" x="27" y="13" width="4" height="4" ry=".5"/>
+<rect class="V" x="33" y="13" width="4" height="4" ry=".5"/>
+<rect class="B" x="39" y="13" width="4" height="4" ry=".5"/>
+<rect class="N" x="45" y="13" width="4" height="4" ry=".5"/>
+<rect class="M" x="51" y="13" width="4" height="4" ry=".5"/>
+<rect class="comma" x="57" y="13" width="4" height="4" ry=".5"/>
+<rect class="dot" x="63" y="13" width="4" height="4" ry=".5"/>
+<rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
+<rect class="Shift_R" x="75" y="13" width="12" height="4" ry=".5"/>
+<rect class="Control_L" x="1" y="19" width="8" height="4" ry=".5"/>
+<rect class="Super_L" x="11" y="19" width="5" height="4" ry=".5"/>
+<rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
+<rect class="space" x="25" y="19" width="38" height="4" ry=".5"/>
+<rect class="Alt_R" x="65" y="19" width="5" height="4" ry=".5"/>
+<rect class="Super_L" x="72" y="19" width="5" height="4" ry=".5"/>
+<rect class="Control_R" x="79" y="19" width="8" height="4" ry=".5"/>
+</svg>
