@@ -143,7 +143,7 @@ text {
 <rect class="h" x="41" y="7" width="4" height="4" ry=".5"/>
 <text class="h tl" x="41" y="7">h</text>
 <text class="h bl" x="41" y="11">H</text>
-<text class="h tr" x="45" y="7">/</text>
+<text class="h tr" x="45" y="7">.</text>
 <text class="h br" x="45" y="11">~</text>
 
 <rect class="j homerow" x="47" y="7" width="4" height="4" ry=".5"/>
@@ -162,13 +162,13 @@ text {
 <text class="l tl" x="59" y="7">l</text>
 <text class="l bl" x="59" y="11">L</text>
 <text class="l tr" x="63" y="7">6</text>
-<text class="l br" x="63" y="11">[</text>
+<text class="l br" x="63" y="11">&lt;</text>
 
 <rect class="semicolon homerow" x="65" y="7" width="4" height="4" ry=".5"/>
 <text class="semicolon tl" x="65" y="7">;</text>
 <text class="semicolon bl" x="65" y="11">:</text>
 <text class="semicolon tr" x="69" y="7">-</text>
-<text class="semicolon br" x="69" y="11">]</text>
+<text class="semicolon br" x="69" y="11">&gt;</text>
 
 <rect class="apostrophe" x="71" y="7" width="4" height="4" ry=".5"/>
 <text class="apostrophe tl" x="71" y="7">'</text>
@@ -226,24 +226,24 @@ text {
 <text class="m tl" x="51" y="13">m</text>
 <text class="m bl" x="51" y="17">M</text>
 <text class="m tr" x="55" y="13">1</text>
-<text class="m br" x="55" y="17">|</text>
+<text class="m br" x="55" y="17">[</text>
 
 <rect class="comma" x="57" y="13" width="4" height="4" ry=".5"/>
 <text class="comma tl" x="57" y="13">,</text>
 <text class="comma bl" x="57" y="17">!</text>
 <text class="comma tr" x="61" y="13">2</text>
-<text class="comma br" x="61" y="17">&lt;</text>
+<text class="comma br" x="61" y="17">]</text>
 
 <rect class="dot" x="63" y="13" width="4" height="4" ry=".5"/>
 <text class="dot tl" x="63" y="13">.</text>
 <text class="dot bl" x="63" y="17">?</text>
 <text class="dot tr" x="67" y="13">3</text>
-<text class="dot br" x="67" y="17">&gt;</text>
+<text class="dot br" x="67" y="17">|</text>
 
 <rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
 <text class="slash tl" x="69" y="13">/</text>
 <text class="slash bl" x="69" y="17">\</text>
-<text class="slash tr" x="73" y="13">.</text>
+<text class="slash tr" x="73" y="13">/</text>
 <text class="slash br" x="73" y="17">_</text>
 
 
@@ -256,7 +256,7 @@ text {
 <text class="Control_L mid" x="5" y="21">Control</text>
 
 <rect class="Super_L" x="11" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_L tl" x="11" y="19">App</text>
+<text class="Super_L tl" x="11" y="19">Open<!--Xf86Open--></text>
 <text class="Super_L mid" x="13.5" y="21">Alt</text>
 
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
@@ -272,7 +272,7 @@ text {
 <text class="Alt_R mid" x="67.5" y="21">Super</text>
 
 <rect class="Super_R" x="72" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_R tl" x="72" y="19">App</text>
+<text class="Super_R tl" x="72" y="19">Open<!--Xf86Open--></text>
 <text class="Super_R mid" x="74.5" y="21">Alt</text>
 
 <rect class="Control_R" x="79" y="19" width="8" height="4" ry=".5"/>
