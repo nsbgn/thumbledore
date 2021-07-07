@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="880" height="240" version="1.1" viewBox="0 0 88 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg width="1320" height="360" version="1.1" viewBox="0 0 88 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <metadata>
     <rdf:RDF>
         <cc:Work rdf:about="">
@@ -17,66 +17,203 @@ rect {
     stroke-width: 1.5;
 }
 text {
-    font-size: 1.1px;
+    font-size: 0.9px;
     font-family: sans-serif;
     fill: #fff;
 }
+.homerow { fill: #400; stroke: #400; }
+.dim { fill: #ccc; stroke: #ccc; }
+.mid { text-anchor: middle; dominant-baseline: central; font-style: italic; font-size: 0.9px; font-weight: bold; }
 .tl { text-anchor: start; dominant-baseline: hanging; }
 .tr { text-anchor: end; dominant-baseline: hanging; }
 .bl { text-anchor: start; dominant-baseline: no-change; }
 .br { text-anchor: end; dominant-baseline: no-change; }
 ]]></style>
 </defs>
+
+
+<!--============================ ROW 1 =====================================-->
+
 <rect class="Tab" x="1" y="1" width="6" height="4" ry=".5"/>
-<rect class="Q" x="9" y="1" width="4" height="4" ry=".5"/>
-<rect class="W" x="15" y="1" width="4" height="4" ry=".5"/>
-<rect class="E" x="21" y="1" width="4" height="4" ry=".5"/>
-<rect class="R" x="27" y="1" width="4" height="4" ry=".5"/>
-<rect class="T" x="33" y="1" width="4" height="4" ry=".5"/>
-<rect class="Y" x="39" y="1" width="4" height="4" ry=".5"/>
-<rect class="U" x="45" y="1" width="4" height="4" ry=".5"/>
-<rect class="I" x="51" y="1" width="4" height="4" ry=".5"/>
-<rect class="O" x="57" y="1" width="4" height="4" ry=".5"/>
-<rect class="P" x="63" y="1" width="4" height="4" ry=".5"/>
-<rect class="braceleft" x="69" y="1" width="4" height="4" ry=".5"/>
-<rect class="braceright" x="75" y="1" width="4" height="4" ry=".5"/>
-<rect class="backslash" x="81" y="1" width="6" height="4" ry=".5"/>
+<text class="Tab tl" x="1" y="1">Tab</text>
+<text class="Tab mid" x="4" y="3">Shift4</text>
+
+<rect class="q" x="9" y="1" width="4" height="4" ry=".5"/>
+<text class="q tl" x="9" y="1">q</text>
+<text class="q bl" x="9" y="5">Q</text>
+
+<rect class="w" x="15" y="1" width="4" height="4" ry=".5"/>
+<text class="w tl" x="15" y="1">w</text>
+<text class="w bl" x="15" y="5">W</text>
+
+<rect class="e" x="21" y="1" width="4" height="4" ry=".5"/>
+<text class="e tl" x="21" y="1">e</text>
+<text class="e bl" x="21" y="5">E</text>
+
+<rect class="r" x="27" y="1" width="4" height="4" ry=".5"/>
+<text class="r tl" x="27" y="1">r</text>
+<text class="r bl" x="27" y="5">R</text>
+
+<rect class="t" x="33" y="1" width="4" height="4" ry=".5"/>
+<text class="t tl" x="33" y="1">t</text>
+<text class="t bl" x="33" y="5">T</text>
+
+<rect class="y" x="39" y="1" width="4" height="4" ry=".5"/>
+<text class="y tl" x="39" y="1">y</text>
+<text class="y bl" x="39" y="5">Y</text>
+
+<rect class="u" x="45" y="1" width="4" height="4" ry=".5"/>
+<text class="u tl" x="45" y="1">u</text>
+<text class="u bl" x="45" y="5">U</text>
+
+<rect class="i" x="51" y="1" width="4" height="4" ry=".5"/>
+<text class="i tl" x="51" y="1">i</text>
+<text class="i bl" x="51" y="5">I</text>
+
+<rect class="o" x="57" y="1" width="4" height="4" ry=".5"/>
+<text class="o tl" x="57" y="1">o</text>
+<text class="o bl" x="57" y="5">O</text>
+
+<rect class="p" x="63" y="1" width="4" height="4" ry=".5"/>
+<text class="p tl" x="63" y="1">p</text>
+<text class="p bl" x="63" y="5">P</text>
+
+<rect class="braceleft dim" x="69" y="1" width="4" height="4" ry=".5"/>
+
+<rect class="braceright dim" x="75" y="1" width="4" height="4" ry=".5"/>
+
+<rect class="backslash dim" x="81" y="1" width="6" height="4" ry=".5"/>
+
+<!--============================ ROW 2 =====================================-->
+
 <rect class="CapsLock" x="1" y="7" width="8" height="4" ry=".5"/>
+<text class="CapsLock tl" x="1" y="7">Esc</text>
+<text class="CapsLock mid" x="5" y="9">Shift3</text>
 
-<rect class="A" x="11" y="7" width="4" height="4" ry=".5"/>
-<text class="A tl" x="11" y="7">a</text>
-<text class="A bl" x="11" y="11">A</text>
-<text class="A tr" x="15" y="7">←</text>
-<text class="A br" x="15" y="11">?</text>
+<rect class="a homerow" x="11" y="7" width="4" height="4" ry=".5"/>
+<text class="a tl" x="11" y="7">a</text>
+<text class="a bl" x="11" y="11">A</text>
+<text class="a tr" x="15" y="7">←</text>
+<text class="a br" x="15" y="11"></text>
 
-<rect class="S" x="17" y="7" width="4" height="4" ry=".5"/>
-<rect class="D" x="23" y="7" width="4" height="4" ry=".5"/>
-<rect class="F" x="29" y="7" width="4" height="4" ry=".5"/>
-<rect class="G" x="35" y="7" width="4" height="4" ry=".5"/>
-<rect class="H" x="41" y="7" width="4" height="4" ry=".5"/>
-<rect class="J" x="47" y="7" width="4" height="4" ry=".5"/>
-<rect class="K" x="53" y="7" width="4" height="4" ry=".5"/>
-<rect class="L" x="59" y="7" width="4" height="4" ry=".5"/>
-<rect class="semicolon" x="65" y="7" width="4" height="4" ry=".5"/>
+<rect class="s homerow" x="17" y="7" width="4" height="4" ry=".5"/>
+<text class="s tl" x="17" y="7">s</text>
+<text class="s bl" x="17" y="11">S</text>
+<text class="s tr" x="21" y="7">↓</text>
+<text class="s br" x="21" y="11"></text>
+
+<rect class="d homerow" x="23" y="7" width="4" height="4" ry=".5"/>
+<text class="d tl" x="23" y="7">d</text>
+<text class="d bl" x="23" y="11">D</text>
+
+<rect class="f homerow" x="29" y="7" width="4" height="4" ry=".5"/>
+<text class="f tl" x="29" y="7">f</text>
+<text class="f bl" x="29" y="11">F</text>
+
+<rect class="g" x="35" y="7" width="4" height="4" ry=".5"/>
+<text class="g tl" x="35" y="7">g</text>
+<text class="g bl" x="35" y="11">G</text>
+
+<rect class="h" x="41" y="7" width="4" height="4" ry=".5"/>
+<text class="h tl" x="41" y="7">h</text>
+<text class="h bl" x="41" y="11">H</text>
+
+<rect class="j homerow" x="47" y="7" width="4" height="4" ry=".5"/>
+<text class="j tl" x="47" y="7">j</text>
+<text class="j bl" x="47" y="11">J</text>
+
+<rect class="k homerow" x="53" y="7" width="4" height="4" ry=".5"/>
+<text class="k tl" x="53" y="7">k</text>
+<text class="k bl" x="53" y="11">K</text>
+
+<rect class="l homerow" x="59" y="7" width="4" height="4" ry=".5"/>
+<text class="l tl" x="59" y="7">l</text>
+<text class="l bl" x="59" y="11">L</text>
+
+<rect class="semicolon homerow" x="65" y="7" width="4" height="4" ry=".5"/>
+<text class="semicolon tl" x="65" y="7">;</text>
+<text class="semicolon bl" x="65" y="11">:</text>
+
 <rect class="apostrophe" x="71" y="7" width="4" height="4" ry=".5"/>
-<rect class="Return" x="77" y="7" width="10" height="4" ry=".5"/>
+<text class="apostrophe tl" x="71" y="7">'</text>
+<text class="apostrophe bl" x="71" y="11">"</text>
+
+<rect class="Return dim" x="77" y="7" width="10" height="4" ry=".5"/>
+
+
+<!--============================ ROW 3 =====================================-->
+
+
 <rect class="Shift_L" x="1" y="13" width="12" height="4" ry=".5"/>
-<rect class="Z" x="15" y="13" width="4" height="4" ry=".5"/>
-<rect class="X" x="21" y="13" width="4" height="4" ry=".5"/>
-<rect class="C" x="27" y="13" width="4" height="4" ry=".5"/>
-<rect class="V" x="33" y="13" width="4" height="4" ry=".5"/>
-<rect class="B" x="39" y="13" width="4" height="4" ry=".5"/>
-<rect class="N" x="45" y="13" width="4" height="4" ry=".5"/>
-<rect class="M" x="51" y="13" width="4" height="4" ry=".5"/>
+<text class="Shift_L tl" x="1" y="13">Latch4</text>
+<text class="Shift_L mid" x="7" y="15">Shift2</text>
+
+<rect class="z" x="15" y="13" width="4" height="4" ry=".5"/>
+<text class="z tl" x="15" y="13">z</text>
+<text class="z bl" x="15" y="17">Z</text>
+
+<rect class="x" x="21" y="13" width="4" height="4" ry=".5"/>
+<text class="x tl" x="21" y="13">x</text>
+<text class="x bl" x="21" y="17">X</text>
+
+<rect class="c" x="27" y="13" width="4" height="4" ry=".5"/>
+<text class="c tl" x="27" y="13">c</text>
+<text class="c bl" x="27" y="17">C</text>
+
+<rect class="v" x="33" y="13" width="4" height="4" ry=".5"/>
+<text class="v tl" x="33" y="13">v</text>
+<text class="v bl" x="33" y="17">V</text>
+
+<rect class="b" x="39" y="13" width="4" height="4" ry=".5"/>
+<text class="b tl" x="39" y="13">b</text>
+<text class="b bl" x="39" y="17">B</text>
+
+<rect class="n" x="45" y="13" width="4" height="4" ry=".5"/>
+<text class="n tl" x="45" y="13">n</text>
+<text class="n bl" x="45" y="17">N</text>
+
+<rect class="m" x="51" y="13" width="4" height="4" ry=".5"/>
+<text class="m tl" x="51" y="13">m</text>
+<text class="m bl" x="51" y="17">M</text>
+
 <rect class="comma" x="57" y="13" width="4" height="4" ry=".5"/>
+<text class="comma tl" x="57" y="13">,</text>
+<text class="comma bl" x="57" y="17">&lt;</text>
+
 <rect class="dot" x="63" y="13" width="4" height="4" ry=".5"/>
-<rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
-<rect class="Shift_R" x="75" y="13" width="12" height="4" ry=".5"/>
+<text class="dot tl" x="63" y="13">.</text>
+<text class="dot bl" x="63" y="17">&gt;</text>
+
+<rect class="slash dim" x="69" y="13" width="4" height="4" ry=".5"/>
+
+<rect class="Shift_R dim" x="75" y="13" width="12" height="4" ry=".5"/>
+
+<!--============================ ROW 4 =====================================-->
+
 <rect class="Control_L" x="1" y="19" width="8" height="4" ry=".5"/>
+<text class="Control_L tl" x="1" y="19">Compose</text>
+<text class="Control_L mid" x="5" y="21">Control</text>
+
 <rect class="Super_L" x="11" y="19" width="5" height="4" ry=".5"/>
+<text class="Super_L tl" x="11" y="19">App</text>
+<text class="Super_L mid" x="13.5" y="21">Alt</text>
+
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
-<rect class="space" x="25" y="19" width="38" height="4" ry=".5"/>
+<text class="Alt_L tl" x="18" y="19">backspace<!--&#x232b;--></text>
+
+<rect class="space homerow" x="25" y="19" width="38" height="4" ry=".5"/>
+<text class="space tl" x="25" y="19">space</text>
+
 <rect class="Alt_R" x="65" y="19" width="5" height="4" ry=".5"/>
-<rect class="Super_L" x="72" y="19" width="5" height="4" ry=".5"/>
+<text class="Alt_R tl" x="65" y="19">enter<!--&#x23ce;--></text>
+<text class="Alt_R mid" x="67.5" y="21">Shift3</text>
+
+<rect class="Super_R" x="72" y="19" width="5" height="4" ry=".5"/>
+<text class="Super_R tl" x="72" y="19">App</text>
+<text class="Super_R mid" x="74.5" y="21">Alt</text>
+
 <rect class="Control_R" x="79" y="19" width="8" height="4" ry=".5"/>
+<text class="Control_R tl" x="79" y="19">Greek</text>
+<text class="Control_R mid" x="83" y="21">Control</text>
+
 </svg>
