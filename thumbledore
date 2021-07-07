@@ -57,26 +57,28 @@ xkb_symbols "td" {
     # Perhaps turn plain Return into menu key?
     # key <RTRN> { [ Return, Return, at, at  ] };
 
-    key <AD01> { [ q, Q, Home, Home ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<HOME>, clearMods=Mod5+Shift) ] };
+    key <AD01> { [ q, Q, Home, asciicircum ], actions[Group1] =
+        [ NoAction()
+        , NoAction()
+        , Redirect(key=<HOME>, clearMods=Mod5)
+        , NoAction() ] };
+
     key <AD02> { [ w, W, Up, Up ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<UP>, clearMods=Mod5+Shift) ] };
-    key <AD03> { [ e, E, End, End ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<END>, clearMods=Mod5+Shift) ] };
-    key <AD04> { [ r, R, Prior, Prior ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGUP>, clearMods=Mod5+Shift) ] };
-    key <AD05> { [ t, T, bracketleft, bracketright ] };
-    key <AD06> { [ y, Y, slash, backslash ] };
-    key <AD07> { [ u, U, bracketleft, 7 ] };
-    key <AD08> { [ i, I, bracketright, 8 ] };
-    key <AD09> { [ o, O, braceright, 9 ] };
-    key <AD10> { [ p, P, plus, plus ] };
-    key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
-    key <AD12> { [ bracketright, braceright, dollar, dollar ] };
+        [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=Mod5)
+        , Redirect(key=<UP>, clearMods=Mod5+Shift)
+        ] };
+    key <AD03> { [ e, E, End, dollar ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<END>, clearMods=Mod5) ] };
+    key <AD04> { [ r, R, Prior ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=Mod5) ] };
+    key <AD05> { [ t, T ] };
+    key <AD06> { [ y, Y, asterisk, at ] };
+    key <AD07> { [ u, U, 7, braceleft ] };
+    key <AD08> { [ i, I, 8, braceright] };
+    key <AD09> { [ o, O, 9, numbersign ] };
+    key <AD10> { [ p, P, plus, percent ] };
+    # key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
+    # key <AD12> { [ bracketright, braceright, dollar, dollar ] };
 
     key <AC01> { [ a, A, Left, Left ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
@@ -90,24 +92,24 @@ xkb_symbols "td" {
     key <AC04> { [ f, F, Next, Next ], actions[Group1] =
         [ NoAction(), NoAction(), NoAction()
         , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
-    key <AC05> { [ g, G, parenleft, parenright ] };
-    key <AC06> { [ h, H, asterisk, asterisk ] };
-    key <AC07> { [ j, J, parenleft, 4 ] };
-    key <AC08> { [ k, K, parenright, 5 ] };
-    key <AC09> { [ l, L, braceleft, 6 ] };
-    key <AC10> { [ semicolon, colon, minus, equal ] };
-    key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
+    key <AC05> { [ g, G ] };
+    key <AC06> { [ h, H, period, asciitilde ] };
+    key <AC07> { [ j, J, 4, parenleft ] };
+    key <AC08> { [ k, K, 5, parenright ] };
+    key <AC09> { [ l, L, 6, less ] };
+    key <AC10> { [ semicolon, colon, minus, greater ] };
+    key <AC11> { [ apostrophe, quotedbl, equal, grave ] };
 
-    key <AB01> { [ z, Z, asciitilde, exclam ] };
+    key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X ] };
     key <AB03> { [ c, C ] };
-    key <AB04> { [ v, V, braceleft, braceright ] };
+    key <AB04> { [ v, V ] };
     key <AB05> { [ b, B ] };
-    key <AB06> { [ n, N, at, 0 ] };
-    key <AB07> { [ m, M, bar, 1 ] };
-    key <AB08> { [ comma, less, less, 2 ] };
-    key <AB09> { [ period, greater, greater, 3 ] };
-    key <AB10> { [ slash, question, exclam, exclam ] };
+    key <AB06> { [ n, N, 0, ampersand ] };
+    key <AB07> { [ m, M, 1, bracketleft ] };
+    key <AB08> { [ comma, exclam, 2, bracketright ] };
+    key <AB09> { [ period, question, greater, 3 ] };
+    key <AB10> { [ slash, backslash, slash, underscore ] };
 
     # Thumb cluster
     # key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
