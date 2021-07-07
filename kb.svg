@@ -48,7 +48,7 @@ text {
 <text class="w tl" x="15" y="1">w</text>
 <text class="w bl" x="15" y="5">W</text>
 <text class="w tr" x="19" y="1">↑</text>
-<text class="w br" x="19" y="5">@</text>
+<text class="w br" x="19" y="5"></text>
 
 <rect class="e" x="21" y="1" width="4" height="4" ry=".5"/>
 <text class="e tl" x="21" y="1">e</text>
@@ -72,7 +72,7 @@ text {
 <text class="y tl" x="39" y="1">y</text>
 <text class="y bl" x="39" y="5">Y</text>
 <text class="y tr" x="43" y="1">*</text>
-<text class="y br" x="43" y="5">\</text>
+<text class="y br" x="43" y="5">@</text>
 
 <rect class="u" x="45" y="1" width="4" height="4" ry=".5"/>
 <text class="u tl" x="45" y="1">u</text>
@@ -240,7 +240,12 @@ text {
 <text class="dot tr" x="67" y="13">3</text>
 <text class="dot br" x="67" y="17">&gt;</text>
 
-<rect class="slash dim" x="69" y="13" width="4" height="4" ry=".5"/>
+<rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
+<text class="slash tl" x="69" y="13">/</text>
+<text class="slash bl" x="69" y="17">\</text>
+<text class="slash tr" x="73" y="13">.</text>
+<text class="slash br" x="73" y="17">_</text>
+
 
 <rect class="Shift_R dim" x="75" y="13" width="12" height="4" ry=".5"/>
 
