@@ -183,7 +183,7 @@ text {
 
 
 <rect class="Shift_L" x="1" y="13" width="12" height="4" ry=".5"/>
-<text class="Shift_L tl" x="1" y="13">Latch4</text>
+<text class="Shift_L tl" x="1" y="13">Open</text>
 <text class="Shift_L mid" x="7" y="15">Shift2</text>
 
 <rect class="z" x="15" y="13" width="4" height="4" ry=".5"/>
@@ -261,11 +261,11 @@ text {
 
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
 <text class="Alt_L tl" x="18" y="19">bksp<!--&#x232b;--></text>
-<text class="Alt_L tr" x="23" y="19">del<!--&#x232b;--></text>
+<text class="Alt_L br" x="23" y="23">del<!--&#x232b;--></text>
 
 <rect class="space homerow" x="25" y="19" width="38" height="4" ry=".5"/>
 <text class="space tl" x="25" y="19">space</text>
-<text class="space tr" x="63" y="19">fullscreen</text>
+<text class="space tr" x="63" y="19"></text>
 
 <rect class="Alt_R" x="65" y="19" width="5" height="4" ry=".5"/>
 <text class="Alt_R tl" x="65" y="19">enter<!--&#x23ce;--></text>

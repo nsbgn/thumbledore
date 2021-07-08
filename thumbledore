@@ -11,7 +11,7 @@ XKBDIR=/tmp/xkb
 mkdir -p ${XKBDIR}/{keymap,symbols,types,compat}
 
 # Generate a basic keymap.
-setxkbmap -option -option caps:super -print \
+setxkbmap -option -print \
     | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
     | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
     > ${XKBDIR}/keymap/thumbledore.xkb
@@ -37,31 +37,28 @@ default partial modifier_keys
 partial
 xkb_symbols "td" {
 
-    key <BKSP> { [ BackSpace, BackSpace, Delete, Delete ] };
+    key <BKSP> { [ BackSpace, BackSpace, BackSpace, Delete ] };
     key <RTRN> { [ Return, Return, Return, Return ] };
 
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
-    key <I254> { [ ISO_Level3_Latch ] };
+    key <I254> { [ Tab ] };
+    key <I255> { [ Escape ] };
 
     # Modifier keys themselves
-    replace key <RCTL> { [ Alt_L, Alt_R ] };
+    replace key <TAB> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
+         [ SetMods(mods=Shift+Mod5)
+         , SetMods(mods=Shift+Mod5) ] };
+    replace key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
-    # replace key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LALT> { [ BackSpace ] };
-    # replace key <RALT> { [ Return ]};
-    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
-        [ SetMods(mods=Shift+Mod5)
-        , SetMods(mods=Shift+Mod5) ] };
-
-    # Perhaps turn plain Return into menu key?
-    # key <RTRN> { [ Return, Return, at, at  ] };
+    replace key <RALT> { [ Super_R ] };
 
     key <AD01> { [ q, Q, Home, asciicircum ], actions[Group1] =
         [ NoAction()
         , NoAction()
         , Redirect(key=<HOME>, clearMods=Mod5)
-        , NoAction() ] };
+        , NoAction()] };
 
     key <AD02> { [ w, W, Up, Up ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=Mod5)
@@ -108,7 +105,7 @@ xkb_symbols "td" {
     key <AB06> { [ n, N, 0, ampersand ] };
     key <AB07> { [ m, M, 1, bracketleft ] };
     key <AB08> { [ comma, exclam, 2, bracketright ] };
-    key <AB09> { [ period, question, greater, 3 ] };
+    key <AB09> { [ period, question, 3, bar ] };
     key <AB10> { [ slash, backslash, slash, underscore ] };
 
     # Thumb cluster
@@ -129,5 +126,11 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-xcape -e 'Super_L=Escape;ISO_Level3_Shift=Return;Control_L=Multi_key;Control_R=dead_greek;Shift_L=ISO_Level3_Latch' -t 150ms
-# ;Shift_L=Caps_Lock;
+tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
+ISO_Level5_Shift=Tab
+ISO_Level3_Shift=Escape
+Shift_L=XF86Open
+Super_R=Return
+Control_L=Multi_key
+Control_R=dead_greek
+EOF
