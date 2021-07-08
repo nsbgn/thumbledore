@@ -129,8 +129,8 @@ pkill xcape
 tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
 ISO_Level5_Shift=Tab
 ISO_Level3_Shift=Escape
-Shift_L=XF86Open
+Shift_L=Multi_key
 Super_R=Return
-Control_L=Multi_key
+Control_L=XF86Open
 Control_R=dead_greek
 EOF

@@ -18,8 +18,8 @@ Within the constraints imposed on us by standard keyboards, `thumbledore` adds t
 
     - You can still trigger *Tab* by simply tapping it.
     - Tapping `Caps_Lock` triggers `Escape`, for modal applications like `vim`.
-    - Tapping `Shift_L` triggers `XF86Open`, for menu actions.
-    - `Control_L` triggers the `Compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`.
+    - Tapping `Control_L` triggers `XF86Open`, for menu actions.
+    - `Shift_L` triggers the `Compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`.
     - `Control_L` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`).
 
 ![The Thumbledore keyboard layout.](kb.svg)

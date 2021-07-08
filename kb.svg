@@ -183,7 +183,7 @@ text {
 
 
 <rect class="Shift_L" x="1" y="13" width="12" height="4" ry=".5"/>
-<text class="Shift_L tl" x="1" y="13">Open</text>
+<text class="Shift_L tl" x="1" y="13">Compose</text>
 <text class="Shift_L mid" x="7" y="15">Shift2</text>
 
 <rect class="z" x="15" y="13" width="4" height="4" ry=".5"/>
@@ -252,11 +252,11 @@ text {
 <!--============================ ROW 4 =====================================-->
 
 <rect class="Control_L" x="1" y="19" width="8" height="4" ry=".5"/>
-<text class="Control_L tl" x="1" y="19">Compose</text>
+<text class="Control_L tl" x="1" y="19">Open</text>
 <text class="Control_L mid" x="5" y="21">Control</text>
 
 <rect class="Super_L" x="11" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_L tl" x="11" y="19">Open<!--Xf86Open--></text>
+<text class="Super_L tl" x="11" y="19"></text>
 <text class="Super_L mid" x="13.5" y="21">Alt</text>
 
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
@@ -272,7 +272,7 @@ text {
 <text class="Alt_R mid" x="67.5" y="21">Super</text>
 
 <rect class="Super_R" x="72" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_R tl" x="72" y="19">Open<!--Xf86Open--></text>
+<text class="Super_R tl" x="72" y="19"></text>
 <text class="Super_R mid" x="74.5" y="21">Alt</text>
 
 <rect class="Control_R" x="79" y="19" width="8" height="4" ry=".5"/>
