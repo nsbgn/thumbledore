@@ -12,12 +12,17 @@ mkdir -p ${XKBDIR}/{keymap,symbols,types,compat}
 
 # Generate a basic keymap.
 setxkbmap -option -print \
-    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
-    | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore(td)\2/g' \
+    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
+    | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
     > ${XKBDIR}/keymap/thumbledore.xkb
 
+setxkbmap -option -print \
+    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore+thumbledore(space2bksp)\2/g' \
+    | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
+    > ${XKBDIR}/keymap/thumbledore-left.xkb
 
 tee > ${XKBDIR}/compat/thumbledore << EOF
+default
 xkb_compatibility "td" {
     interpret BackSpace+AnyOfOrNone(all) {
         repeat= True;
@@ -30,7 +35,6 @@ xkb_compatibility "td" {
 
 };
 EOF
-
 
 tee > ${XKBDIR}/symbols/thumbledore << EOF
 default partial modifier_keys
@@ -119,10 +123,23 @@ xkb_symbols "td" {
     # key <SPCE> { [ space, space, ISO_Level3_Lock, ISO_Level3_Lock ] };
 
 };
+
+partial xkb_symbols "space2bksp" {
+    key <SPCE> { [ BackSpace ] };
+};
 EOF
+
+
+# Find the keyboard IDs of the left and right parts of the R-Go Split keyboard
+LEFT="$(xinput list | sed -n 's/.*HID 0911:2188\s\+id=\([0-9]\+\).*/\1/p')"
+# RIGHT=$(xinput list | sed -n 's/.*Hantick USB Keyboard\s\+id=\([0-9]\+\).*/\1/p')
 
 # Compile the new xkbmap
 xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
+
+if [ ! -z "$LEFT" ]; then
+    xkbcomp -synch -w3 -I${XKBDIR} -i "$LEFT" ${XKBDIR}/keymap/thumbledore-left.xkb ${DISPLAY}
+fi
 
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
@@ -135,3 +152,5 @@ ISO_Level3_Shift=Return
 Control_L=Multi_key
 Control_R=dead_greek
 EOF
+
+echo hello
