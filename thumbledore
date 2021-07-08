@@ -40,6 +40,7 @@ xkb_symbols "td" {
     key <BKSP> { [ BackSpace, BackSpace, BackSpace, Delete ] };
     key <RTRN> { [ Return, Return, Return, Return ] };
 
+    key <I251> { [ XF86Open ] };
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
     key <I254> { [ Tab ] };
@@ -49,10 +50,10 @@ xkb_symbols "td" {
     replace key <TAB> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
          [ SetMods(mods=Shift+Mod5)
          , SetMods(mods=Shift+Mod5) ] };
-    replace key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
     replace key <LALT> { [ BackSpace ] };
-    replace key <RALT> { [ Super_R ] };
+    replace key <CAPS> { [ Super_R ] };
 
     key <AD01> { [ q, Q, Home, asciicircum ], actions[Group1] =
         [ NoAction()
@@ -68,7 +69,7 @@ xkb_symbols "td" {
         [ NoAction(), NoAction(), Redirect(key=<END>, clearMods=Mod5) ] };
     key <AD04> { [ r, R, Prior ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=Mod5) ] };
-    key <AD05> { [ t, T ] };
+    key <AD05> { [ t, T, XF86Terminal ] };
     key <AD06> { [ y, Y, asterisk, at ] };
     key <AD07> { [ u, U, 7, braceleft ] };
     key <AD08> { [ i, I, 8, braceright] };
@@ -98,7 +99,7 @@ xkb_symbols "td" {
     key <AC11> { [ apostrophe, quotedbl, equal, grave ] };
 
     key <AB01> { [ z, Z ] };
-    key <AB02> { [ x, X ] };
+    key <AB02> { [ x, X, XF86Close ] };
     key <AB03> { [ c, C ] };
     key <AB04> { [ v, V ] };
     key <AB05> { [ b, B ] };
@@ -128,9 +129,9 @@ xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 pkill xcape
 tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
 ISO_Level5_Shift=Tab
-ISO_Level3_Shift=Escape
-Shift_L=Multi_key
-Super_R=Return
-Control_L=XF86Open
+Super_R=Escape
+Shift_L=XF86Open
+ISO_Level3_Shift=Return
+Control_L=Multi_key
 Control_R=dead_greek
 EOF
