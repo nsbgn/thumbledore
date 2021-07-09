@@ -17,9 +17,9 @@ setxkbmap -option -print \
     > ${XKBDIR}/keymap/thumbledore.xkb
 
 setxkbmap -option -print \
-    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore+thumbledore(space2bksp)\2/g' \
+    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore+thumbledore(space2fn)\2/g' \
     | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
-    > ${XKBDIR}/keymap/thumbledore-left.xkb
+    > ${XKBDIR}/keymap/thumbledore-right.xkb
 
 tee > ${XKBDIR}/compat/thumbledore << EOF
 default
@@ -54,8 +54,8 @@ xkb_symbols "td" {
     replace key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
          [ SetMods(mods=Shift+Mod5)
          , SetMods(mods=Shift+Mod5) ] };
-    # replace key <LALT> { [ BackSpace ] };
-    replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    replace key <LALT> { [ BackSpace ] };
+    # replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
     replace key <CAPS> { [ Super_R ] };
 
@@ -123,6 +123,10 @@ xkb_symbols "td" {
 partial xkb_symbols "space2bksp" {
     key <SPCE> { [ BackSpace ] };
 };
+
+partial xkb_symbols "space2fn" {
+    key <SPCE> { [ ISO_Level3_Shift ] };
+};
 EOF
 
 # Find the keyboard IDs of the left and right parts of the R-Go Split keyboard
@@ -132,8 +136,8 @@ RIGHT=$(xinput list | sed -n 's/.*Hantick USB Keyboard\s\+id=\([0-9]\+\).*/\1/p'
 # Compile the new xkbmap
 xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
 
-if [ ! -z "$LEFT" ]; then
-    xkbcomp -synch -w3 -I${XKBDIR} -i "$LEFT" ${XKBDIR}/keymap/thumbledore-left.xkb ${DISPLAY}
+if [ ! -z "$RIGHT" ]; then
+    xkbcomp -synch -w3 -I${XKBDIR} -i "$RIGHT" ${XKBDIR}/keymap/thumbledore-right.xkb ${DISPLAY}
 fi
 
 # (Re)start xcape, to make sure we can still use the original keys by tapping
@@ -141,8 +145,6 @@ fi
 pkill xcape
 tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
 Super_R=Escape
-Shift_L=XF86Open
-ISO_Level3_Shift=Escape
 ISO_Level5_Shift=Return
 Control_L=Multi_key
 Control_R=dead_greek
@@ -150,4 +152,3 @@ EOF
 
 # ISO_Level3_Shift=ISO_Level3_Latch
 # ISO_Level5_Shift=Tab
-echo hello
