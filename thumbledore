@@ -47,71 +47,67 @@ xkb_symbols "td" {
     key <I251> { [ XF86Open ] };
     key <I252> { [ Multi_key ] };
     key <I253> { [ dead_greek ] };
-    key <I254> { [ Tab ] };
+    key <I254> { [ ISO_Level3_Latch ] };
     key <I255> { [ Escape ] };
 
     # Modifier keys themselves
-    replace key <TAB> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
+    replace key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
          [ SetMods(mods=Shift+Mod5)
          , SetMods(mods=Shift+Mod5) ] };
-    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    # replace key <LALT> { [ BackSpace ] };
+    replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <LALT> { [ BackSpace ] };
     replace key <CAPS> { [ Super_R ] };
 
-    key <AD01> { [ q, Q, Home, asciicircum ], actions[Group1] =
+    key <AD01> { [ q, Q, Home, asterisk ], actions[Group1] =
         [ NoAction()
         , NoAction()
         , Redirect(key=<HOME>, clearMods=Mod5)
         , NoAction()] };
 
-    key <AD02> { [ w, W, Up, Up ], actions[Group1] =
+    key <AD02> { [ w, W, Up, apostrophe ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=Mod5)
-        , Redirect(key=<UP>, clearMods=Mod5+Shift)
+        , NoAction()
         ] };
-    key <AD03> { [ e, E, End, dollar ], actions[Group1] =
+    key <AD03> { [ e, E, End, equal ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<END>, clearMods=Mod5) ] };
-    key <AD04> { [ r, R, Prior ], actions[Group1] =
+    key <AD04> { [ r, R, Prior, at ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=Mod5) ] };
     key <AD05> { [ t, T, XF86Terminal ] };
-    key <AD06> { [ y, Y, asterisk, at ] };
-    key <AD07> { [ u, U, 7, braceleft ] };
-    key <AD08> { [ i, I, 8, braceright] };
-    key <AD09> { [ o, O, 9, numbersign ] };
-    key <AD10> { [ p, P, plus, percent ] };
+    key <AD06> { [ y, Y, asterisk ] };
+    key <AD07> { [ u, U, 7, percent ] };
+    key <AD08> { [ i, I, 8, numbersign ] };
+    key <AD09> { [ o, O, 9, quotedbl ] };
+    key <AD10> { [ p, P, plus, plus ] };
     # key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
     # key <AD12> { [ bracketright, braceright, dollar, dollar ] };
 
-    key <AC01> { [ a, A, Left, Left ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<LEFT>, clearMods=Mod5+Shift) ] };
-    key <AC02> { [ s, S, Down, Down ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<DOWN>, clearMods=Mod5+Shift) ] };
-    key <AC03> { [ d, D, Right, Right ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
-    key <AC04> { [ f, F, Next, Next ], actions[Group1] =
-        [ NoAction(), NoAction(), NoAction()
-        , Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
-    key <AC05> { [ g, G ] };
-    key <AC06> { [ h, H, period, asciitilde ] };
-    key <AC07> { [ j, J, 4, parenleft ] };
-    key <AC08> { [ k, K, 5, parenright ] };
-    key <AC09> { [ l, L, 6, less ] };
+    key <AC01> { [ a, A, Left, less ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=Mod5+Shift) ] };
+    key <AC02> { [ s, S, Down, braceleft ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<DOWN>, clearMods=Mod5+Shift) ] };
+    key <AC03> { [ d, D, Right, bracketleft ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
+    key <AC04> { [ f, F, Next, parenleft ], actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
+    key <AC05> { [ g, G, VoidSymbol, slash ] };
+    key <AC06> { [ h, H, slash, asciitilde ] };
+    key <AC07> { [ j, J, 4, parenright ] };
+    key <AC08> { [ k, K, 5, bracketright ] };
+    key <AC09> { [ l, L, 6, braceright ] };
     key <AC10> { [ semicolon, colon, minus, greater ] };
     key <AC11> { [ apostrophe, quotedbl, equal, grave ] };
 
     key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X, XF86Close ] };
-    key <AB03> { [ c, C ] };
-    key <AB04> { [ v, V ] };
-    key <AB05> { [ b, B ] };
+    key <AB03> { [ c, C, VoidSymbol, asciicircum ] };
+    key <AB04> { [ v, V, VoidSymbol, underscore ] };
+    key <AB05> { [ b, B, VoidSymbol, bar ] };
     key <AB06> { [ n, N, 0, ampersand ] };
-    key <AB07> { [ m, M, 1, bracketleft ] };
-    key <AB08> { [ comma, exclam, 2, bracketright ] };
-    key <AB09> { [ period, question, 3, bar ] };
-    key <AB10> { [ slash, backslash, slash, underscore ] };
+    key <AB07> { [ m, M, 1, minus ] };
+    key <AB08> { [ comma, exclam, 2, dollar ] };
+    key <AB09> { [ period, question, 3 ] };
+    key <AB10> { [ slash, backslash, period ] };
 
     # Thumb cluster
     # key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
@@ -129,10 +125,9 @@ partial xkb_symbols "space2bksp" {
 };
 EOF
 
-
 # Find the keyboard IDs of the left and right parts of the R-Go Split keyboard
 LEFT="$(xinput list | sed -n 's/.*HID 0911:2188\s\+id=\([0-9]\+\).*/\1/p')"
-# RIGHT=$(xinput list | sed -n 's/.*Hantick USB Keyboard\s\+id=\([0-9]\+\).*/\1/p')
+RIGHT=$(xinput list | sed -n 's/.*Hantick USB Keyboard\s\+id=\([0-9]\+\).*/\1/p')
 
 # Compile the new xkbmap
 xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
@@ -145,12 +140,14 @@ fi
 # the respective modifiers.
 pkill xcape
 tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
-ISO_Level5_Shift=Tab
 Super_R=Escape
 Shift_L=XF86Open
-ISO_Level3_Shift=Return
+ISO_Level3_Shift=Escape
+ISO_Level5_Shift=Return
 Control_L=Multi_key
 Control_R=dead_greek
 EOF
 
+# ISO_Level3_Shift=ISO_Level3_Latch
+# ISO_Level5_Shift=Tab
 echo hello
