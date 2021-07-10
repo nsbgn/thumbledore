@@ -32,7 +32,9 @@ xkb_compatibility "td" {
         repeat= True;
         action= Redirect(key=<RTRN>);
     };
-
+    interpret ISO_Level3_Latch+AnyOfOrNone(all) {
+        action= LatchMods(modifiers=LevelThree+Mod5+Shift,clearLocks,latchToLock);
+    };
 };
 EOF
 
@@ -51,22 +53,22 @@ xkb_symbols "td" {
     key <I255> { [ Escape ] };
 
     # Modifier keys themselves
-    replace key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift ], actions[Group1]=
-         [ SetMods(mods=Shift+Mod5)
-         , SetMods(mods=Shift+Mod5) ] };
     replace key <LALT> { [ BackSpace ] };
-    # replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
+         [ SetMods(mods=Mod5)
+         , SetMods(mods=Mod5+Shift) ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <CAPS> { [ Super_R ] };
+    replace key <CAPS> { [ Super_L ] };
 
-    key <AD01> { [ q, Q, Home, asterisk ], actions[Group1] =
-        [ NoAction()
-        , NoAction()
+    key <AD01> { [ q, Q, asterisk, Home ], actions[Group1] =
+        [ NoAction() , NoAction()
         , Redirect(key=<HOME>, clearMods=Mod5)
-        , NoAction()] };
+        , NoAction()
+        ] };
 
-    key <AD02> { [ w, W, Up, apostrophe ], actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=Mod5)
+    key <AD02> { [ w, W, apostrophe, Up ], actions[Group1] =
+        [ NoAction(), NoAction()
+        , Redirect(key=<UP>, clearMods=Mod5)
         , NoAction()
         ] };
     key <AD03> { [ e, E, End, equal ], actions[Group1] =
@@ -101,10 +103,10 @@ xkb_symbols "td" {
     key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X, XF86Close ] };
     key <AB03> { [ c, C, VoidSymbol, asciicircum ] };
-    key <AB04> { [ v, V, VoidSymbol, underscore ] };
+    key <AB04> { [ v, V, VoidSymbol, minus ] };
     key <AB05> { [ b, B, VoidSymbol, bar ] };
     key <AB06> { [ n, N, 0, ampersand ] };
-    key <AB07> { [ m, M, 1, minus ] };
+    key <AB07> { [ m, M, 1, underscore ] };
     key <AB08> { [ comma, exclam, 2, dollar ] };
     key <AB09> { [ period, question, 3 ] };
     key <AB10> { [ slash, backslash, period ] };
@@ -143,12 +145,12 @@ fi
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
-tr '\n' ';' | xargs -I{} xcape -t 150ms -e {} << EOF
-Super_R=Escape
-ISO_Level5_Shift=Return
-Control_L=Multi_key
-Control_R=dead_greek
+TAP=$(tr -d '[:space:]' << EOF
+    Super_L=Escape;
+    Shift_L=ISO_Level3_Latch;
+    ISO_Level3_Shift=Return;
+    Control_L=Multi_key;
+    Control_R=dead_greek
 EOF
-
-# ISO_Level3_Shift=ISO_Level3_Latch
-# ISO_Level5_Shift=Tab
+)
+xcape -t 150ms -e "${TAP}"
