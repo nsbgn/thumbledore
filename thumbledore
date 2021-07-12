@@ -53,12 +53,13 @@ xkb_symbols "td" {
     key <I255> { [ Escape ] };
 
     # Modifier keys themselves
-    replace key <LALT> { [ BackSpace ] };
-    replace key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
+    replace key <LALT> { [ BackSpace, BackSpace, Shift_L ] };
+    replace key <RALT> { [ Super_R ] };
+
+    replace key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
          [ SetMods(mods=Mod5)
          , SetMods(mods=Mod5+Shift) ] };
     replace key <LWIN> { [ Alt_L, Alt_R ] };
-    replace key <CAPS> { [ Super_L ] };
 
     key <AD01> { [ q, Q, asterisk, Home ], actions[Group1] =
         [ NoAction() , NoAction()
@@ -76,7 +77,7 @@ xkb_symbols "td" {
     key <AD04> { [ r, R, Prior, at ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=Mod5) ] };
     key <AD05> { [ t, T, XF86Terminal ] };
-    key <AD06> { [ y, Y, asterisk ] };
+    key <AD06> { [ y, Y, asciitilde ] };
     key <AD07> { [ u, U, 7, percent ] };
     key <AD08> { [ i, I, 8, numbersign ] };
     key <AD09> { [ o, O, 9, quotedbl ] };
@@ -92,8 +93,8 @@ xkb_symbols "td" {
         [ NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=Mod5+Shift) ] };
     key <AC04> { [ f, F, Next, parenleft ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=Mod5+Shift) ] };
-    key <AC05> { [ g, G, VoidSymbol, slash ] };
-    key <AC06> { [ h, H, slash, asciitilde ] };
+    key <AC05> { [ g, G, VoidSymbol, minus ] };
+    key <AC06> { [ h, H, slash, asterisk ] };
     key <AC07> { [ j, J, 4, parenright ] };
     key <AC08> { [ k, K, 5, bracketright ] };
     key <AC09> { [ l, L, 6, braceright ] };
@@ -111,14 +112,7 @@ xkb_symbols "td" {
     key <AB09> { [ period, question, 3 ] };
     key <AB10> { [ slash, backslash, period ] };
 
-    # Thumb cluster
-    # key <SPCE> { [ space, space, BackSpace, Delete ], actions[Group1] = 
-    #     [ NoAction()
-    #     , Redirect(key=<SPCE>, clearMods=Shift)
-    #     , Redirect(key=<BKSP>, clearMods=Mod5)
-    #     , Redirect(key=<DELE>, clearMods=Mod5+Shift) ]
-    # };
-    # key <SPCE> { [ space, space, ISO_Level3_Lock, ISO_Level3_Lock ] };
+    key <SPCE> { [ space, space, ISO_Level3_Latch, ISO_Level3_Latch ] };
 
 };
 
@@ -146,9 +140,9 @@ fi
 # the respective modifiers.
 pkill xcape
 TAP=$(tr -d '[:space:]' << EOF
-    Super_L=Escape;
+    Super_R=Return;
     Shift_L=ISO_Level3_Latch;
-    ISO_Level3_Shift=Return;
+    ISO_Level3_Shift=Escape;
     Control_L=Multi_key;
     Control_R=dead_greek
 EOF
