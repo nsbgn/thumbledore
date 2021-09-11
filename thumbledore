@@ -14,16 +14,11 @@ mkdir -p ${XKBDIR}/{keymap,symbols,types,compat}
 setxkbmap -option -print \
     | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
     | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
+    | sed 's/\(\s*xkb_types\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
     > ${XKBDIR}/keymap/thumbledore.xkb
 
-setxkbmap -option -print \
-    | sed 's/\(\s*xkb_symbols\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore+thumbledore(space2fn)\2/g' \
-    | sed 's/\(\s*xkb_compat\s*{\s*include\s*".*\)\("\s*};\s*\)/\1+thumbledore\2/g' \
-    > ${XKBDIR}/keymap/thumbledore-right.xkb
-
 tee > ${XKBDIR}/compat/thumbledore << EOF
-default
-xkb_compatibility "td" {
+default xkb_compatibility "td" {
     interpret BackSpace+AnyOfOrNone(all) {
         repeat= True;
         action= Redirect(key=<BKSP>);
@@ -38,6 +33,21 @@ xkb_compatibility "td" {
 };
 EOF
 
+# Generate type map
+tee > ${XKBDIR}/types/thumbledore << EOF
+default xkb_types "td" {
+    type "NONE_SHIFT_SUPER" {
+        modifiers = Shift+Mod3;
+        map[None] = Level1;
+        map[Shift] = Level2;
+        map[Mod3] = Level3;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Super";
+    };
+};
+EOF
+
 tee > ${XKBDIR}/symbols/thumbledore << EOF
 default partial modifier_keys
 partial
@@ -45,20 +55,27 @@ xkb_symbols "td" {
 
     key <BKSP> { [ BackSpace, BackSpace, BackSpace, Delete ] };
     key <RTRN> { [ Return, Return, Return, Return ] };
+    key <SPCE> { [ space, space, space ] };
 
-    key <I251> { [ XF86Open ] };
-    key <I252> { [ Multi_key ] };
-    key <I253> { [ dead_greek ] };
-    key <I254> { [ ISO_Level3_Latch ] };
+    key <I253> { [ Multi_key ] };
+    key <I254> { [ dead_greek ] };
     key <I255> { [ Escape ] };
 
-    # Modifier keys themselves
-    replace key <LALT> { [ BackSpace, BackSpace, Shift_L ] };
-    replace key <RALT> { [ Super_R ] };
+    # key.type[Group1] = "NONE_SHIFT_SUPER";
 
-    replace key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
+    # Modifier keys themselves
+    replace key <CAPS> { [ BackSpace, BackSpace, Shift_L ] };
+
+    replace key <RALT> { [ Shift_R ], actions[Group1]= [SetMods(mods=Shift)] };
+
+    # replace key <RALT> {
+    #     [ Super_R ],
+    #     actions[Group1] = [ SetMods(mods=Mod3) ]};
+
+    replace key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift ], actions[Group1]=
          [ SetMods(mods=Mod5)
          , SetMods(mods=Mod5+Shift) ] };
+
     replace key <LWIN> { [ Alt_L, Alt_R ] };
 
     key <AD01> { [ q, Q, asterisk, Home ], actions[Group1] =
@@ -77,13 +94,25 @@ xkb_symbols "td" {
     key <AD04> { [ r, R, Prior, at ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=Mod5) ] };
     key <AD05> { [ t, T, XF86Terminal ] };
-    key <AD06> { [ y, Y, asciitilde ] };
-    key <AD07> { [ u, U, 7, percent ] };
-    key <AD08> { [ i, I, 8, numbersign ] };
-    key <AD09> { [ o, O, 9, quotedbl ] };
-    key <AD10> { [ p, P, plus, plus ] };
-    # key <AD11> { [ bracketleft, braceleft, asciicircum, asciicircum ] };
-    # key <AD12> { [ bracketright, braceright, dollar, dollar ] };
+    key <AD06> {
+        [ y, Y ],
+        [ asciitilde ]
+    };
+    key <AD07> {
+        [ u, U ],
+        [ 7, percent ]
+    };
+    key <AD08> {
+        [ i, I ],
+        [ numbersign ] };
+    key <AD09> {
+        [ o, O ],
+        [ 9, quotedbl ]
+    };
+    key <AD10> {
+        [ p, P ],
+        [ plus, plus ]
+    };
 
     key <AC01> { [ a, A, Left, less ], actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=Mod5+Shift) ] };
@@ -108,40 +137,22 @@ xkb_symbols "td" {
     key <AB05> { [ b, B, VoidSymbol, bar ] };
     key <AB06> { [ n, N, 0, ampersand ] };
     key <AB07> { [ m, M, 1, underscore ] };
-    key <AB08> { [ comma, exclam, 2, dollar ] };
-    key <AB09> { [ period, question, 3 ] };
-    key <AB10> { [ slash, backslash, period ] };
+    key <AB08> { [ comma, less, 2, dollar ] };
+    key <AB09> { [ period, greater, 3 ] };
+    key <AB10> { [ slash, question, period ] };
 
-    key <SPCE> { [ space, space, ISO_Level3_Latch, ISO_Level3_Latch ] };
 
-};
-
-partial xkb_symbols "space2bksp" {
-    key <SPCE> { [ BackSpace ] };
-};
-
-partial xkb_symbols "space2fn" {
-    key <SPCE> { [ ISO_Level3_Shift ] };
 };
 EOF
 
-# Find the keyboard IDs of the left and right parts of the R-Go Split keyboard
-LEFT="$(xinput list | sed -n 's/.*HID 0911:2188\s\+id=\([0-9]\+\).*/\1/p')"
-RIGHT=$(xinput list | sed -n 's/.*Hantick USB Keyboard\s\+id=\([0-9]\+\).*/\1/p')
-
 # Compile the new xkbmap
 xkbcomp -synch -w3 -I${XKBDIR} ${XKBDIR}/keymap/thumbledore.xkb ${DISPLAY}
-
-if [ ! -z "$RIGHT" ]; then
-    xkbcomp -synch -w3 -I${XKBDIR} -i "$RIGHT" ${XKBDIR}/keymap/thumbledore-right.xkb ${DISPLAY}
-fi
 
 # (Re)start xcape, to make sure we can still use the original keys by tapping
 # the respective modifiers.
 pkill xcape
 TAP=$(tr -d '[:space:]' << EOF
-    Super_R=Return;
-    Shift_L=ISO_Level3_Latch;
+    Shift_R=Return;
     ISO_Level3_Shift=Escape;
     Control_L=Multi_key;
     Control_R=dead_greek
