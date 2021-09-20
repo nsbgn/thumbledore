@@ -84,6 +84,7 @@ xkb_symbols "td" {
     replace key <LALT> {
         [ Super_L ], [at]
     , actions[Group1] = [SetMods(mods=Mod4)]
+    , actions[Group2] = [Redirect(key=<AE02>, modifiers=Shift)]
     };
 
     key.type[Group1] = "NONE_SUPER";
