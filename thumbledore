@@ -39,13 +39,28 @@ default xkb_types "td" {
         modifiers = Shift+LevelThree+Mod4;
         map[None] = Level1;
         map[Shift] = Level2;
-        # map[LevelThree] = Level3;
         map[Mod4] = Level3;
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";
-        # level_name[Level3] = "Symbol";
         level_name[Level3] = "Super";
     };
+
+    type "NONE_SUPER" {
+        modifiers = Mod4;
+        map[None] = Level1;
+        map[Mod4] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Super";
+    };
+
+    type "NONE_SYM" {
+        modifiers = LevelThree;
+        map[None] = Level1;
+        map[LevelThree] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Symbol";
+    };
+
 };
 EOF
 
@@ -57,7 +72,7 @@ xkb_symbols "td" {
 
     key <I253> { [ Multi_key ] };
     key <I254> { [ dead_greek ] };
-    key <I255> { [ Escape, Escape, at ] };
+    key <I255> { [ Escape ], [at] };
 
     # Modifier keys themselves
 
@@ -65,10 +80,18 @@ xkb_symbols "td" {
     modifier_map Mod4 { Super_L };
 
     replace key <LWIN> { [ Alt_L ] };
-    replace key <LALT> { [ Super_L ]
-    , actions[Group1] = [SetMods(mods=Mod4) ] };
-    replace key <RALT> { [ ISO_Level3_Shift ]
-    , actions[Group1]= [ SetGroup(group=2) ] };
+
+    replace key <LALT> {
+        [ Super_L ], [at]
+    , actions[Group1] = [SetMods(mods=Mod4)]
+    };
+
+    key.type[Group1] = "NONE_SUPER";
+
+    replace key <RALT> {
+        [ ISO_Level3_Shift, Super_L ]
+    , actions[Group1] = [ SetGroup(group=2), SetMods(mods=Mod4+Shift) ]
+    };
 
 
     key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
@@ -129,17 +152,17 @@ xkb_symbols "td" {
     key <AC05> {
         [ g, G, g ], [minus] };
     key <AC06> {
-        [ h, H, h ], [asciitilde] };
+        [ h, H, h ], [asciitilde, h] };
     key <AC07> {
-        [ j, J, j ], [4] };
+        [ j, J, j ], [4, j] };
     key <AC08> {
-        [ k, K, k ], [5] };
+        [ k, K, k ], [5, k] };
     key <AC09> {
-        [ l, L, l ], [6] };
+        [ l, L, l ], [6, l] };
     key <AC10> {
-        [ semicolon, colon, semicolon ], [asterisk] };
+        [ semicolon, colon, semicolon ], [asterisk, semicolon] };
     key <AC11> {
-        [ apostrophe, quotedbl, apostrophe ], [grave] };
+        [ apostrophe, quotedbl, apostrophe ], [grave, apostrophe] };
 
     # Row 3
 
