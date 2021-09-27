@@ -100,34 +100,34 @@ xkb_symbols "td" {
     # Row 1
 
     key <AD01> {
-        [ q, Q, Home ], [asciicircum]
+        [ q, Q, Home ], [greater]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<HOME>, clearMods=all) ] };
     key <AD02> {
-        [ w, W, Up ], [numbersign]
+        [ w, W, Up ], [braceright]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=all) ] };
     key <AD03> {
-        [ e, E, End ], [bracketleft]
+        [ e, E, End ], [bracketright]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<END>, clearMods=all) ] };
     key <AD04> {
-        [ r, R, Prior ], [bracketright]
+        [ r, R, Prior ], [parenright]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=all) ] };
     key <AD05> {
-        [ t, T, t ], [equal] };
+        [ t, T, t ], [numbersign] };
     key <AD06> {
-        [ y, Y, y ], [plus] };
+        [ y, Y, y ], [asciicircum] };
     key <AD07> {
-        [ u, U, u ], [7]
+        [ u, U, u ], [dollar]
     };
     key <AD08> {
-        [ i, I, i ], [8] };
+        [ i, I, i ], [7] };
     key <AD09> {
-        [ o, O, o ], [9] };
+        [ o, O, o ], [8] };
     key <AD10> {
-        [ p, P, p], [dollar] };
+        [ p, P, p], [9] };
 
 
     # Row 2
@@ -139,44 +139,44 @@ xkb_symbols "td" {
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=all)] };
     key <AC02> {
-        [ s, S, Down ], [greater]
+        [ s, S, Down ], [braceleft]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<DOWN>, clearMods=all) ] };
     key <AC03> {
-        [ d, D, Right ], [parenleft]
+        [ d, D, Right ], [bracketleft]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=all) ] };
     key <AC04> {
-        [ f, F, Next ], [parenright]
+        [ f, F, Next ], [parenleft]
     , actions[Group1] =
         [ NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=all) ] };
     key <AC05> {
-        [ g, G, g ], [minus] };
+        [ g, G, g ], [asterisk] };
     key <AC06> {
-        [ h, H, h ], [asciitilde, h] };
+        [ h, H, h ], [asciitilde] };
     key <AC07> {
-        [ j, J, j ], [4, j] };
+        [ j, J, j ], [equal] };
     key <AC08> {
-        [ k, K, k ], [5, k] };
+        [ k, K, k ], [4] };
     key <AC09> {
-        [ l, L, l ], [6, l] };
+        [ l, L, l ], [5] };
     key <AC10> {
-        [ semicolon, colon, semicolon ], [asterisk, semicolon] };
+        [ semicolon, colon, semicolon ], [6] };
     key <AC11> {
-        [ apostrophe, quotedbl, apostrophe ], [grave, apostrophe] };
+        [ apostrophe, quotedbl, apostrophe ], [grave] };
 
     # Row 3
 
     key <AB01> { [ z, Z, z ], [bar] };
     key <AB02> { [ x, X, x ], [ampersand] };
-    key <AB03> { [ c, C, c ], [braceleft] };
-    key <AB04> { [ v, V, v ], [braceright] };
+    key <AB03> { [ c, C, c ], [plus] };
+    key <AB04> { [ v, V, v ], [minus] };
     key <AB05> { [ b, B, b ], [underscore] };
-    key <AB06> { [ n, N, n ], [0] };
-    key <AB07> { [ m, M, m ], [1] };
-    key <AB08> { [ comma, question, comma ], [2] };
-    key <AB09> { [ period, exclam, period ], [3] };
-    key <AB10> { [ slash, backslash, slash], [percent] };
+    key <AB06> { [ n, N, n ], [percent] };
+    key <AB07> { [ m, M, m ], [0] };
+    key <AB08> { [ comma, question, comma ], [1] };
+    key <AB09> { [ period, exclam, period ], [2] };
+    key <AB10> { [ slash, backslash, slash], [3] };
 
 
 };
