@@ -77,25 +77,25 @@ text {
 <rect class="u" x="45" y="1" width="4" height="4" ry=".5"/>
 <text class="u tl" x="45" y="1">u</text>
 <text class="u bl" x="45" y="5">U</text>
-<text class="u tr" x="49" y="1">$</text>
+<text class="u tr" x="49" y="1">7</text>
 <text class="u br" x="49" y="5"></text>
 
 <rect class="i" x="51" y="1" width="4" height="4" ry=".5"/>
 <text class="i tl" x="51" y="1">i</text>
 <text class="i bl" x="51" y="5">I</text>
-<text class="i tr" x="55" y="1">7</text>
+<text class="i tr" x="55" y="1">8</text>
 <text class="i br" x="55" y="5"></text>
 
 <rect class="o" x="57" y="1" width="4" height="4" ry=".5"/>
 <text class="o tl" x="57" y="1">o</text>
 <text class="o bl" x="57" y="5">O</text>
-<text class="o tr" x="61" y="1">8</text>
+<text class="o tr" x="61" y="1">9</text>
 <text class="o br" x="61" y="5"></text>
 
 <rect class="p" x="63" y="1" width="4" height="4" ry=".5"/>
 <text class="p tl" x="63" y="1">p</text>
 <text class="p bl" x="63" y="5">P</text>
-<text class="p tr" x="67" y="1">9</text>
+<text class="p tr" x="67" y="1">$</text>
 <text class="p br" x="67" y="5"></text>
 
 <rect class="braceleft dim" x="69" y="1" width="4" height="4" ry=".5"/>
@@ -149,25 +149,25 @@ text {
 <rect class="j homerow" x="47" y="7" width="4" height="4" ry=".5"/>
 <text class="j tl" x="47" y="7">j</text>
 <text class="j bl" x="47" y="11">J</text>
-<text class="j tr" x="51" y="7">=</text>
+<text class="j tr" x="51" y="7">4</text>
 <text class="j br" x="51" y="11"></text>
 
 <rect class="k homerow" x="53" y="7" width="4" height="4" ry=".5"/>
 <text class="k tl" x="53" y="7">k</text>
 <text class="k bl" x="53" y="11">K</text>
-<text class="k tr" x="57" y="7">4</text>
+<text class="k tr" x="57" y="7">5</text>
 <text class="k br" x="57" y="11"></text>
 
 <rect class="l homerow" x="59" y="7" width="4" height="4" ry=".5"/>
 <text class="l tl" x="59" y="7">l</text>
 <text class="l bl" x="59" y="11">L</text>
-<text class="l tr" x="63" y="7">5</text>
+<text class="l tr" x="63" y="7">6</text>
 <text class="l br" x="63" y="11"></text>
 
 <rect class="semicolon homerow" x="65" y="7" width="4" height="4" ry=".5"/>
 <text class="semicolon tl" x="65" y="7">;</text>
 <text class="semicolon bl" x="65" y="11">:</text>
-<text class="semicolon tr" x="69" y="7">6</text>
+<text class="semicolon tr" x="69" y="7">=</text>
 <text class="semicolon br" x="69" y="11"></text>
 
 <rect class="apostrophe" x="71" y="7" width="4" height="4" ry=".5"/>
@@ -219,31 +219,31 @@ text {
 <rect class="n" x="45" y="13" width="4" height="4" ry=".5"/>
 <text class="n tl" x="45" y="13">n</text>
 <text class="n bl" x="45" y="17">N</text>
-<text class="n tr" x="49" y="13">%</text>
+<text class="n tr" x="49" y="13">0</text>
 <text class="n br" x="49" y="17"></text>
 
 <rect class="m" x="51" y="13" width="4" height="4" ry=".5"/>
 <text class="m tl" x="51" y="13">m</text>
 <text class="m bl" x="51" y="17">M</text>
-<text class="m tr" x="55" y="13">0</text>
+<text class="m tr" x="55" y="13">1</text>
 <text class="m br" x="55" y="17"></text>
 
 <rect class="comma" x="57" y="13" width="4" height="4" ry=".5"/>
 <text class="comma tl" x="57" y="13">,</text>
 <text class="comma bl" x="57" y="17">?</text>
-<text class="comma tr" x="61" y="13">1</text>
+<text class="comma tr" x="61" y="13">2</text>
 <text class="comma br" x="61" y="17"></text>
 
 <rect class="dot" x="63" y="13" width="4" height="4" ry=".5"/>
 <text class="dot tl" x="63" y="13">.</text>
 <text class="dot bl" x="63" y="17">!</text>
-<text class="dot tr" x="67" y="13">2</text>
+<text class="dot tr" x="67" y="13">3</text>
 <text class="dot br" x="67" y="17"></text>
 
 <rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
 <text class="slash tl" x="69" y="13">/</text>
 <text class="slash bl" x="69" y="17">\</text>
-<text class="slash tr" x="73" y="13">3</text>
+<text class="slash tr" x="73" y="13">percent</text>
 <text class="slash br" x="73" y="17"></text>
 
 

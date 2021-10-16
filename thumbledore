@@ -120,14 +120,14 @@ xkb_symbols "td" {
     key <AD06> {
         [ y, Y, y ], [asciicircum] };
     key <AD07> {
-        [ u, U, u ], [dollar]
+        [ u, U, u ], [7]
     };
     key <AD08> {
-        [ i, I, i ], [7] };
+        [ i, I, i ], [8] };
     key <AD09> {
-        [ o, O, o ], [8] };
+        [ o, O, o ], [9] };
     key <AD10> {
-        [ p, P, p], [9] };
+        [ p, P, p], [dollar] };
 
 
     # Row 2
@@ -155,13 +155,13 @@ xkb_symbols "td" {
     key <AC06> {
         [ h, H, h ], [asciitilde] };
     key <AC07> {
-        [ j, J, j ], [equal] };
+        [ j, J, j ], [4] };
     key <AC08> {
-        [ k, K, k ], [4] };
+        [ k, K, k ], [5] };
     key <AC09> {
-        [ l, L, l ], [5] };
+        [ l, L, l ], [6] };
     key <AC10> {
-        [ semicolon, colon, semicolon ], [6] };
+        [ semicolon, colon, semicolon ], [equal] };
     key <AC11> {
         [ apostrophe, quotedbl, apostrophe ], [grave] };
 
@@ -172,11 +172,11 @@ xkb_symbols "td" {
     key <AB03> { [ c, C, c ], [plus] };
     key <AB04> { [ v, V, v ], [minus] };
     key <AB05> { [ b, B, b ], [underscore] };
-    key <AB06> { [ n, N, n ], [percent] };
-    key <AB07> { [ m, M, m ], [0] };
-    key <AB08> { [ comma, question, comma ], [1] };
-    key <AB09> { [ period, exclam, period ], [2] };
-    key <AB10> { [ slash, backslash, slash], [3] };
+    key <AB06> { [ n, N, n ], [0] };
+    key <AB07> { [ m, M, m ], [1] };
+    key <AB08> { [ comma, question, comma ], [2] };
+    key <AB09> { [ period, exclam, period ], [3] };
+    key <AB10> { [ slash, backslash, slash], [percent] };
 
 
 };
