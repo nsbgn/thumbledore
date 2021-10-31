@@ -214,7 +214,7 @@ text {
 <text class="b tl" x="39" y="13">b</text>
 <text class="b bl" x="39" y="17">B</text>
 <text class="b tr" x="43" y="13">_</text>
-<text class="b br" x="43" y="17"></text>
+<text class="b br" x="43" y="17">@</text>
 
 <rect class="n" x="45" y="13" width="4" height="4" ry=".5"/>
 <text class="n tl" x="45" y="13">n</text>
@@ -262,7 +262,7 @@ text {
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
 <text class="Alt_L tl" x="18" y="19">esc</text>
 <text class="Alt_L mid" x="20.5" y="21">Super</text>
-<text class="Alt_L tr" x="23" y="19">@</text>
+<text class="Alt_L tr" x="23" y="19"></text>
 
 <rect class="space homerow" x="25" y="19" width="38" height="4" ry=".5"/>
 <text class="space tl" x="25" y="19">space</text>

@@ -82,9 +82,9 @@ xkb_symbols "td" {
     replace key <LWIN> { [ Alt_L ] };
 
     replace key <LALT> {
-        [ Super_L ], [at]
+        [ Super_L ], [ Super_L ]
     , actions[Group1] = [SetMods(mods=Mod4)]
-    , actions[Group2] = [Redirect(key=<AE02>, modifiers=Shift)]
+    , actions[Group2] = [SetMods(mods=Mod4+Shift)]
     };
 
     key.type[Group1] = "NONE_SUPER";
@@ -171,7 +171,10 @@ xkb_symbols "td" {
     key <AB02> { [ x, X, x ], [ampersand] };
     key <AB03> { [ c, C, c ], [plus] };
     key <AB04> { [ v, V, v ], [minus] };
-    key <AB05> { [ b, B, b ], [underscore] };
+    key <AB05> { [ b, B, at ], [underscore]
+    , actions[Group1] =
+        [ NoAction(), NoAction(), Redirect(key=<AE02>, modifiers=Shift,
+        clearMods=Mod4) ] };
     key <AB06> { [ n, N, n ], [0] };
     key <AB07> { [ m, M, m ], [1] };
     key <AB08> { [ comma, question, comma ], [2] };
