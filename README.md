@@ -2,11 +2,11 @@
 
 *A software-based keyboard layout. Have each finger travel one key at most, and let your thumbs pick up the slack.*
 
-The layout of the standard keyboard is hardly optimal. The most glaring problem is, in my opinion, that your thumbs idle while your weakest finger contorts to reach keys like `backspace`. Although I have been enticed by exotic keyboards like the Kinesis Advantage, what has held me back is portability: to avoid upsetting your muscle memory, you'd have to lug around a secondary keyboard wherever you go. Besides — let's not chuck any electronics in the landfill.
+The layout of the standard keyboard is hardly optimal. The most glaring problem is, in my opinion, that your thumbs idle while your weakest finger contorts to reach keys like `bksp`. Although I have been enticed by exotic keyboards like the Kinesis Advantage, what has held me back is portability: to avoid upsetting your muscle memory, you'd have to lug around a secondary keyboard wherever you go. Besides — let's not chuck any electronics in the landfill.
 
 Within the constraints imposed on us by the standard keyboard, `thumbledore` adds the following tweaks that put your thumbs to work:
 
-1. `alt_l` becomes multifunctional:
+1. `alt_l` switches places with `super`. The key where `alt_l` once was becomes multifunctional:
 
     -   Tapping it triggers `esc`. Especially useful for modal applications like vim.
 
@@ -24,7 +24,7 @@ Within the constraints imposed on us by the standard keyboard, `thumbledore` add
 
 4.  `caps` becomes `bksp`, avoiding the huge move your pinky would otherwise have to make. (I know that this is also a popular spot for the `ctrl` or `esc` keys, but for thematic consistency, those get handled by your thumbs. `bksp` now gets an intuitive spot to the left of the keys that could be backspaced.)
 
-5.  Additionally, `ctrl_l` triggers the `compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. `ctrl_r` triggers the `dead_greek` key. This is a similar dead key, but for easily typing Greek characters (e.g. `f` → `φ`). Note that the original `alt_l` goes in place of the `super` key. `alt` and `ctrl` are often used by applications that prefer key chording for shortcuts (rather than modes): let's put them cozily together in the bottom corners.
+5.  Additionally, tapping `ctrl` triggers the `compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. Tapping `alt` triggers the `dead_greek`, which does a similar thing for Greek characters (e.g. `f` → `φ`).
 
 
 ![The Thumbledore keyboard layout.](kb.svg)
