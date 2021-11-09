@@ -183,7 +183,7 @@ text {
 
 
 <rect class="Shift_L" x="1" y="13" width="12" height="4" ry=".5"/>
-<text class="Shift_L tl" x="1" y="13"></text>
+<text class="Shift_L tl" x="1" y="13">tab</text>
 <text class="Shift_L mid" x="7" y="15">Shift</text>
 
 <rect class="z" x="15" y="13" width="4" height="4" ry=".5"/>
@@ -243,7 +243,7 @@ text {
 <rect class="slash" x="69" y="13" width="4" height="4" ry=".5"/>
 <text class="slash tl" x="69" y="13">/</text>
 <text class="slash bl" x="69" y="17">\</text>
-<text class="slash tr" x="73" y="13">percent</text>
+<text class="slash tr" x="73" y="13">%</text>
 <text class="slash br" x="73" y="17"></text>
 
 
@@ -256,7 +256,7 @@ text {
 <text class="Control_L mid" x="5" y="21">Control</text>
 
 <rect class="Super_L" x="11" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_L tl" x="11" y="19"></text>
+<text class="Super_L tl" x="11" y="19">greek</text>
 <text class="Super_L mid" x="13.5" y="21">Alt</text>
 
 <rect class="Alt_L" x="18" y="19" width="5" height="4" ry=".5"/>
@@ -272,12 +272,8 @@ text {
 <text class="Alt_R tl" x="65" y="19">enter<!--&#x23ce;--></text>
 <text class="Alt_R mid" x="67.5" y="21">Symbol</text>
 
-<rect class="Super_R" x="72" y="19" width="5" height="4" ry=".5"/>
-<text class="Super_R tl" x="72" y="19"></text>
-<text class="Super_R mid" x="74.5" y="21">Alt</text>
+<rect class="Super_R dim" x="72" y="19" width="5" height="4" ry=".5"/>
 
-<rect class="Control_R" x="79" y="19" width="8" height="4" ry=".5"/>
-<text class="Control_R tl" x="79" y="19">greek</text>
-<text class="Control_R mid" x="83" y="21">Control</text>
+<rect class="Control_R dim" x="79" y="19" width="8" height="4" ry=".5"/>
 
 </svg>

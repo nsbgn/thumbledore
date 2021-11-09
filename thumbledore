@@ -81,21 +81,24 @@ xkb_symbols "td" {
 
     replace key <LWIN> { [ Alt_L ] };
 
+    key.type[Group1] = "NONE_SUPER";
+    key.type[Group2] = "NONE_SUPER";
+
     replace key <LALT> {
         [ Super_L ], [ Super_L ]
-    , actions[Group1] = [SetMods(mods=Mod4)]
-    , actions[Group2] = [SetMods(mods=Mod4+Shift)]
+    ,   actions[Group1] = [SetMods(mods=Mod4)]
+    ,   actions[Group2] = [SetMods(mods=Mod4+Shift)]
     };
 
-    key.type[Group1] = "NONE_SUPER";
-
     replace key <RALT> {
-        [ ISO_Level3_Shift, Super_L ]
+        [ ISO_Level3_Shift ], [ISO_Level3_Shift]
     , actions[Group1] = [ SetGroup(group=2), SetMods(mods=Mod4+Shift) ]
+    , actions[Group2] = [ SetGroup(group=1), SetMods(mods=Mod4+Shift) ]
     };
 
 
     key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
+    key.type[Group2] = "NONE_SHIFT_SYM_SUPER";
 
     # Row 1
 
@@ -195,7 +198,8 @@ TAP=$(tr -d '[:space:]' << EOF
     Super_L=Escape;
     ISO_Level3_Shift=Return;
     Control_L=Multi_key;
-    Control_R=dead_greek
+    Alt_L=dead_greek;
+    Shift_L=Tab
 EOF
 )
 xcape -t 150ms -e "${TAP}"
