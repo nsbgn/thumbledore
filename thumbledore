@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# XF86RotateWindows XF86ApplicationLeft XF86ApplicationRight XF86AudioPause XF86Terminal 
-
 if [ -z "${DISPLAY}" ]; then
     echo "\$DISPLAY not set" >&2
     exit 1
@@ -39,28 +37,13 @@ default xkb_types "td" {
         modifiers = Shift+LevelThree+Mod4;
         map[None] = Level1;
         map[Shift] = Level2;
-        map[Mod4] = Level3;
+        map[LevelThree] = Level3;
+        map[Mod4] = Level4;
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";
-        level_name[Level3] = "Super";
+        level_name[Level3] = "Symbol";
+        level_name[Level4] = "Super";
     };
-
-    type "NONE_SUPER" {
-        modifiers = Mod4;
-        map[None] = Level1;
-        map[Mod4] = Level2;
-        level_name[Level1] = "Base";
-        level_name[Level2] = "Super";
-    };
-
-    type "NONE_SYM" {
-        modifiers = LevelThree;
-        map[None] = Level1;
-        map[LevelThree] = Level2;
-        level_name[Level1] = "Base";
-        level_name[Level2] = "Symbol";
-    };
-
 };
 EOF
 
@@ -69,10 +52,9 @@ default partial modifier_keys
 partial
 xkb_symbols "td" {
 
-
     key <I253> { [ Multi_key ] };
     key <I254> { [ dead_greek ] };
-    key <I255> { [ Escape ], [at] };
+    key <I255> { [ Escape ] };
 
     # Modifier keys themselves
 
@@ -81,56 +63,65 @@ xkb_symbols "td" {
 
     replace key <LWIN> { [ Alt_L ] };
 
-    key.type[Group1] = "NONE_SUPER";
-    key.type[Group2] = "NONE_SUPER";
+    key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
 
     replace key <LALT> {
-        [ Super_L ], [ Super_L ]
-    ,   actions[Group1] = [SetMods(mods=Mod4)]
-    ,   actions[Group2] = [SetMods(mods=Mod4+Shift)]
+        [ Super_L, Super_L, Super_L, VoidSymbol ]
+    , actions[Group1] = [
+        SetMods(mods=Mod4),
+        SetMods(mods=Mod4+Shift),
+        SetMods(mods=Mod4+Shift),
+        NoAction()
+        ]
     };
 
     replace key <RALT> {
-        [ ISO_Level3_Shift ], [ISO_Level3_Shift]
-    , actions[Group1] = [ SetGroup(group=2), SetMods(mods=Mod4+Shift) ]
-    , actions[Group2] = [ SetGroup(group=1), SetMods(mods=Mod4+Shift) ]
+        [
+        ISO_Level3_Shift,
+        ISO_Level3_Shift,
+        VoidSymbol,
+        Super_L ]
+    , actions[Group1] = [
+        SetMods(mods=LevelThree),
+        SetMods(mods=LevelThree+Shift),
+        NoAction(),
+        SetMods(mods=Mod4+Shift)
+        ]
     };
 
 
-    key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
-    key.type[Group2] = "NONE_SHIFT_SYM_SUPER";
 
     # Row 1
 
     key <AD01> {
-        [ q, Q, Home ], [greater]
+        [ q, Q, greater, Home ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<HOME>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<HOME>, clearMods=all) ] };
     key <AD02> {
-        [ w, W, Up ], [braceright]
+        [ w, W, braceright, Up ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<UP>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<UP>, clearMods=all) ] };
     key <AD03> {
-        [ e, E, End ], [bracketright]
+        [ e, E, bracketright, End ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<END>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<END>, clearMods=all) ] };
     key <AD04> {
-        [ r, R, Prior ], [parenright]
+        [ r, R, parenright, Prior ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=all) ] };
     key <AD05> {
-        [ t, T, t ], [numbersign] };
+        [ t, T, numbersign, t ] };
     key <AD06> {
-        [ y, Y, y ], [asciicircum] };
+        [ y, Y, asciicircum, y ] };
     key <AD07> {
-        [ u, U, u ], [7]
+        [ u, U, 7, u ]
     };
     key <AD08> {
-        [ i, I, i ], [8] };
+        [ i, I, 8, i ] };
     key <AD09> {
-        [ o, O, o ], [9] };
+        [ o, O, 9, o ] };
     key <AD10> {
-        [ p, P, p], [dollar] };
+        [ p, P, dollar, p] };
 
 
     # Row 2
@@ -138,52 +129,51 @@ xkb_symbols "td" {
     replace key <CAPS> { [ BackSpace ] };
 
     key <AC01> {
-        [ a, A, Left ], [less]
+        [ a, A, less, Left ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=all)] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=all)] };
     key <AC02> {
-        [ s, S, Down ], [braceleft]
+        [ s, S, braceleft, Down ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<DOWN>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<DOWN>, clearMods=all) ] };
     key <AC03> {
-        [ d, D, Right ], [bracketleft]
+        [ d, D, bracketleft, Right ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=all) ] };
     key <AC04> {
-        [ f, F, Next ], [parenleft]
+        [ f, F, parenleft, Next ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=all) ] };
+        [ NoAction(), NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=all) ] };
     key <AC05> {
-        [ g, G, g ], [asterisk] };
+        [ g, G, asterisk, g ] };
     key <AC06> {
-        [ h, H, h ], [asciitilde] };
+        [ h, H, asciitilde, h ] };
     key <AC07> {
-        [ j, J, j ], [4] };
+        [ j, J, 4, j ] };
     key <AC08> {
-        [ k, K, k ], [5] };
+        [ k, K, 5, k ] };
     key <AC09> {
         [ l, L, l ], [6] };
     key <AC10> {
-        [ semicolon, colon, semicolon ], [equal] };
+        [ semicolon, colon, equal, semicolon ] };
     key <AC11> {
-        [ apostrophe, quotedbl, apostrophe ], [grave] };
+        [ apostrophe, quotedbl, grave, apostrophe ] };
 
     # Row 3
 
-    key <AB01> { [ z, Z, z ], [bar] };
-    key <AB02> { [ x, X, x ], [ampersand] };
-    key <AB03> { [ c, C, c ], [plus] };
-    key <AB04> { [ v, V, v ], [minus] };
-    key <AB05> { [ b, B, at ], [underscore]
+    key <AB01> { [ z, Z, bar, z ] };
+    key <AB02> { [ x, X, ampersand, x ] };
+    key <AB03> { [ c, C, plus, c ] };
+    key <AB04> { [ v, V, minus, v ] };
+    key <AB05> { [ b, B, underscore, at ]
     , actions[Group1] =
-        [ NoAction(), NoAction(), Redirect(key=<AE02>, modifiers=Shift,
-        clearMods=Mod4) ] };
-    key <AB06> { [ n, N, n ], [0] };
-    key <AB07> { [ m, M, m ], [1] };
-    key <AB08> { [ comma, question, comma ], [2] };
-    key <AB09> { [ period, exclam, period ], [3] };
-    key <AB10> { [ slash, backslash, slash], [percent] };
-
+        [ NoAction(), NoAction(), NoAction()
+        , Redirect(key=<AE02>, modifiers=Shift, clearMods=Mod4) ] };
+    key <AB06> { [ n, N, 0, n ] };
+    key <AB07> { [ m, M, 1, m ] };
+    key <AB08> { [ comma, question, 2, comma ] };
+    key <AB09> { [ period, exclam, 3, period ] };
+    key <AB10> { [ slash, backslash, percent, slash] };
 
 };
 EOF
