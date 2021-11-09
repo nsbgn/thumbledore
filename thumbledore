@@ -31,7 +31,7 @@ EOF
 # Generate type map
 tee > ${XKBDIR}/types/thumbledore << EOF
 default xkb_types "td" {
-    virtual_modifiers Symbol;
+    virtual_modifiers LevelThree;
 
     type "NONE_SHIFT_SYM_SUPER" {
         modifiers = Shift+LevelThree+Mod4;
@@ -66,12 +66,16 @@ xkb_symbols "td" {
     key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
 
     replace key <LALT> {
-        [ Super_L, Super_L, Super_L, VoidSymbol ]
+        [
+        Super_L,
+        Super_L,
+        Super_L,
+        Super_L ]
     , actions[Group1] = [
         SetMods(mods=Mod4),
         SetMods(mods=Mod4+Shift),
         SetMods(mods=Mod4+Shift),
-        NoAction()
+        SetMods(mods=Mod4+Shift)
         ]
     };
 
@@ -79,12 +83,12 @@ xkb_symbols "td" {
         [
         ISO_Level3_Shift,
         ISO_Level3_Shift,
-        VoidSymbol,
-        Super_L ]
+        ISO_Level3_Shift,
+        ISO_Level3_Shift ]
     , actions[Group1] = [
         SetMods(mods=LevelThree),
         SetMods(mods=LevelThree+Shift),
-        NoAction(),
+        SetMods(mods=LevelThree+Shift),
         SetMods(mods=Mod4+Shift)
         ]
     };
@@ -126,7 +130,13 @@ xkb_symbols "td" {
 
     # Row 2
 
-    replace key <CAPS> { [ BackSpace ] };
+    replace key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ],
+    actions[Group1] = [
+        NoAction(),
+        Redirect(key=<CAPS>, clearMods=all),
+        Redirect(key=<CAPS>, clearMods=all),
+        Redirect(key=<CAPS>, clearMods=all)
+    ]};
 
     key <AC01> {
         [ a, A, less, Left ]
@@ -153,7 +163,7 @@ xkb_symbols "td" {
     key <AC08> {
         [ k, K, 5, k ] };
     key <AC09> {
-        [ l, L, l ], [6] };
+        [ l, L, 6, l ] };
     key <AC10> {
         [ semicolon, colon, equal, semicolon ] };
     key <AC11> {
