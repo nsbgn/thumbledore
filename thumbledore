@@ -63,6 +63,9 @@ xkb_symbols "td" {
 
     replace key <LWIN> { [ Alt_L ] };
 
+    key <CAPS> { [ BackSpace ]};
+
+
     key.type[Group1] = "NONE_SHIFT_SYM_SUPER";
 
     replace key <LALT> {
@@ -130,13 +133,6 @@ xkb_symbols "td" {
 
     # Row 2
 
-    replace key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ],
-    actions[Group1] = [
-        NoAction(),
-        Redirect(key=<CAPS>, clearMods=all),
-        Redirect(key=<CAPS>, clearMods=all),
-        Redirect(key=<CAPS>, clearMods=all)
-    ]};
 
     key <AC01> {
         [ a, A, less, Left ]
