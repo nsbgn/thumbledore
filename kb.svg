@@ -41,25 +41,25 @@ text {
 <rect class="q" x="9" y="1" width="4" height="4" ry=".5"/>
 <text class="q tl" x="9" y="1">q</text>
 <text class="q bl" x="9" y="5">Q</text>
-<text class="q tr" x="13" y="1">&gt;</text>
+<text class="q tr" x="13" y="1">&lt;</text>
 <text class="q br" x="13" y="5">home</text>
 
 <rect class="w" x="15" y="1" width="4" height="4" ry=".5"/>
 <text class="w tl" x="15" y="1">w</text>
 <text class="w bl" x="15" y="5">W</text>
-<text class="w tr" x="19" y="1">}</text>
+<text class="w tr" x="19" y="1">{</text>
 <text class="w br" x="19" y="5">↑</text>
 
 <rect class="e" x="21" y="1" width="4" height="4" ry=".5"/>
 <text class="e tl" x="21" y="1">e</text>
 <text class="e bl" x="21" y="5">E</text>
-<text class="e tr" x="25" y="1">]</text>
+<text class="e tr" x="25" y="1">[</text>
 <text class="e br" x="25" y="5">end</text>
 
 <rect class="r" x="27" y="1" width="4" height="4" ry=".5"/>
 <text class="r tl" x="27" y="1">r</text>
 <text class="r bl" x="27" y="5">R</text>
-<text class="r tr" x="31" y="1">)</text>
+<text class="r tr" x="31" y="1">(</text>
 <text class="r br" x="31" y="5">pgup</text>
 
 <rect class="t" x="33" y="1" width="4" height="4" ry=".5"/>
@@ -113,25 +113,25 @@ text {
 <rect class="a homerow" x="11" y="7" width="4" height="4" ry=".5"/>
 <text class="a tl" x="11" y="7">a</text>
 <text class="a bl" x="11" y="11">A</text>
-<text class="a tr" x="15" y="7">&lt;</text>
+<text class="a tr" x="15" y="7">&gt;</text>
 <text class="a br" x="15" y="11">←</text>
 
 <rect class="s homerow" x="17" y="7" width="4" height="4" ry=".5"/>
 <text class="s tl" x="17" y="7">s</text>
 <text class="s bl" x="17" y="11">S</text>
-<text class="s tr" x="21" y="7">{</text>
+<text class="s tr" x="21" y="7">}</text>
 <text class="s br" x="21" y="11">↓</text>
 
 <rect class="d homerow" x="23" y="7" width="4" height="4" ry=".5"/>
 <text class="d tl" x="23" y="7">d</text>
 <text class="d bl" x="23" y="11">D</text>
-<text class="d tr" x="27" y="7">[</text>
+<text class="d tr" x="27" y="7">]</text>
 <text class="d br" x="27" y="11">→</text>
 
 <rect class="f homerow" x="29" y="7" width="4" height="4" ry=".5"/>
 <text class="f tl" x="29" y="7">f</text>
 <text class="f bl" x="29" y="11">F</text>
-<text class="f tr" x="33" y="7">(</text>
+<text class="f tr" x="33" y="7">)</text>
 <text class="f br" x="33" y="11">pgdn</text>
 
 <rect class="g" x="35" y="7" width="4" height="4" ry=".5"/>

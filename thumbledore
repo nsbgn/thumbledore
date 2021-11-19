@@ -101,19 +101,19 @@ xkb_symbols "td" {
     # Row 1
 
     key <AD01> {
-        [ q, Q, greater, Home ]
+        [ q, Q, less, Home ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<HOME>, clearMods=all) ] };
     key <AD02> {
-        [ w, W, braceright, Up ]
+        [ w, W, braceleft, Up ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<UP>, clearMods=all) ] };
     key <AD03> {
-        [ e, E, bracketright, End ]
+        [ e, E, bracketleft, End ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<END>, clearMods=all) ] };
     key <AD04> {
-        [ r, R, parenright, Prior ]
+        [ r, R, parenleft, Prior ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<PGUP>, clearMods=all) ] };
     key <AD05> {
@@ -135,19 +135,19 @@ xkb_symbols "td" {
 
 
     key <AC01> {
-        [ a, A, less, Left ]
+        [ a, A, greater, Left ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<LEFT>, clearMods=all)] };
     key <AC02> {
-        [ s, S, braceleft, Down ]
+        [ s, S, braceright, Down ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<DOWN>, clearMods=all) ] };
     key <AC03> {
-        [ d, D, bracketleft, Right ]
+        [ d, D, bracketright, Right ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<RGHT>, clearMods=all) ] };
     key <AC04> {
-        [ f, F, parenleft, Next ]
+        [ f, F, parenright, Next ]
     , actions[Group1] =
         [ NoAction(), NoAction(), NoAction(), Redirect(key=<PGDN>, clearMods=all) ] };
     key <AC05> {
