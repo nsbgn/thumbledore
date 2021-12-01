@@ -2,23 +2,23 @@
 
 *A software-based keyboard layout. Have each finger travel one key at most, and let your thumbs pick up the slack.*
 
-The layout of the standard keyboard is hardly optimal. The most glaring problem is, in my opinion, that your thumbs idle while your weakest finger contorts to reach keys like `bksp`. Although I have been enticed by exotic keyboards like the Kinesis Advantage, what has held me back is portability: to avoid upsetting your muscle memory, you'd have to lug around a secondary keyboard wherever you go. Besides — let's not chuck any electronics in the landfill.
+The layout of the standard keyboard is hardly optimal. The most glaring problem is that your thumbs idle while your weakest finger contorts to reach keys like `escape` or `backspace`. Exotic keyboards can remedy this, but lack portability: you'd have to lug around a keyboard wherever you go. Besides — let's not chuck any electronics in the landfill.
 
-Within the constraints imposed on us by the standard keyboard, `thumbledore` adds the following tweaks that put your thumbs to work:
+`thumbledore` consists of the following tweaks that put your thumbs to work within the constraints of a standard keyboard:
 
-1. `alt_l` switches places with `super`. The key where `alt_l` once was becomes multifunctional:
+1. For `alt_l`:
 
-    -   Tapping it triggers `esc`. Especially useful for modal applications like vim.
+    -   Tapping it triggers `escape`. Especially useful for modal applications like vim.
 
-    -   While holding it, you get a *navigational layer* in the top right cluster of keys (QWER/ASDF): arrows, `home`/`end`, and `pageup`/`pagedn`. It is placed so that you can control it with one hand.
+    -   While holding it, you get a *navigational layer* in the top right cluster of keys: arrows, `home`/`end`, and `pageup`/`pagedn`. It is placed so that you can control it with one hand.
 
     -   Combining it with any other key makes it act like a `super` modifier. This is convenient for controlling a window manager: it's the one key for all non-application-specific keybindings that you might want to set. For example, I set `super`+{`h`,`l`} for switching workspaces and `super`+{`j`,`k`} for switching windows.
 
-2. `alt_r` becomes similarly multifunctional:
+2. For `alt_r`:
 
-    -   Tapping it triggers `enter`, the logical counterpart to `esc`.
+    -   Tapping it triggers `enter`, the logical counterpart to `escape`.
 
-    -   Holding it exposes a *symbol layer*. This layer contains a numpad --- also placed so that it can be controlled with one hand --- and other symbols in easier-to-reach locations. In particular, brackets are on the left-hand home row.
+    -   Holding it exposes a *symbol layer*. This layer contains a numpad (also placed so that it can be controlled with one hand) and other symbols in easier-to-reach locations. In particular, brackets are on the left-hand home row.
 
 3.  When `alt_l` and `alt_r` are held simultaneously, it acts the same as `super`+`shift`. This is so that you may bind `super`+`shift` to actions logically related to non-shifted counterparts. For example, I set `super`+`shift`+{`h`,`l`} for *sending to* workspaces and `super`+`shift`+{`j`,`k`} for *swapping* focused windows.
 
@@ -33,18 +33,15 @@ This has the following benefits:
 
 -   Each key is accessible by moving your finger(s) *at most one key away*. No more fumbling around for special symbols and function keys.
 -   *Simple*: There are only two additional layers involved: one controlled by your left and the other by your right thumb.
--   Only uses *standard tools*. The tweaks I propose here could also be achieved with the excellent [kmonad](github.com/david-janssen/kmonad), but that approach — while certainly easier to understand once it is up and running — isn't as plug-and-play.
 -   Achievable using *any run-of-the-mill keyboard*.
 -   It *degrades gracefully*: even when you do have a good keyboard, you can keep the layout somewhat consistent if you're forced to work on another.  In particular, if you have a split spacebar, you could put `shift`/`tab` on the other space and keep everything else as it is. I also tried to make sure that users of a Corne or similar keyboard could additionally put `alt`/`dead_greek` and `ctrl`/`compose` on the two extra thumb keys.
 
 
 ## Usage
 
-To install, make sure that you have `xcape` and the `xkb` utilities. On Debian-derived systems:
+Install [keyd](https://github.com/rvaiya/keyd) and copy `keyd/default.cfg` to `/etc/keyd/`.
 
-    sudo apt install x11-xkb-utils xcape
-
-Then, simply run `thumbledore` at startup.
+If you prefer, you may instead use X-specific utilities (`sudo apt install x11-xkb-utils xcape` on Debian-based systems) and run `xkb/thumbledore.sh` at startup.
 
 
 ## Related software
@@ -61,6 +58,7 @@ Then, simply run `thumbledore` at startup.
 -   [map2](https://github.com/shiro/map2)
 -   [at-home-modifier-evdev](https://gitlab.com/at-home-modifier/at-home-modifier-evdev)
 -   [evscript](https://github.com/unrelentingtech/evscript)
+-   [evremap](https://github.com/wez/evremap)
 -   [evcape](https://github.com/wbolster/evcape)
 -   [ergo](https://github.com/lcarsos/ergo)
 

@@ -198,4 +198,7 @@ TAP=$(tr -d '[:space:]' << EOF
     Shift_L=Tab
 EOF
 )
-xcape -t 150ms -e "${TAP}"
+xcape -e "${TAP}"
+
+
+# -t 150ms 
