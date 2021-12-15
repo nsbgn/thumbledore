@@ -1,40 +1,53 @@
 # thumbledore
 
-*A software-based keyboard layout. Have each finger travel one key at most, and let your thumbs pick up the slack.*
+Typing on a standard keyboard is not a great experience. Your thumbs idle while your weakest finger contorts to reach keys like `escape` and `backspace`. Exotic keyboards can remedy this, but lack portability: you'd have to lug around an extra device wherever you go.
 
-The layout of the standard keyboard is hardly optimal. The most glaring problem is that your thumbs idle while your weakest finger contorts to reach keys like `escape` or `backspace`. Exotic keyboards can remedy this, but lack portability: you'd have to lug around a keyboard wherever you go. Besides — let's not chuck any electronics in the landfill.
-
-`thumbledore` consists of the following tweaks that put your thumbs to work within the constraints of a standard keyboard:
-
-1. For `alt_l`:
-
-    -   Tapping it triggers `escape`. Especially useful for modal applications like vim.
-
-    -   While holding it, you get a *navigational layer* in the top right cluster of keys: arrows, `home`/`end`, and `pageup`/`pagedn`. It is placed so that you can control it with one hand.
-
-    -   Combining it with any other key makes it act like a `super` modifier. This is convenient for controlling a window manager: it's the one key for all non-application-specific keybindings that you might want to set. For example, I set `super`+{`h`,`l`} for switching workspaces and `super`+{`j`,`k`} for switching windows.
-
-2. For `alt_r`:
-
-    -   Tapping it triggers `enter`, the logical counterpart to `escape`.
-
-    -   Holding it exposes a *symbol layer*. This layer contains a numpad (also placed so that it can be controlled with one hand) and other symbols in easier-to-reach locations. In particular, brackets are on the left-hand home row.
-
-3.  When `alt_l` and `alt_r` are held simultaneously, it acts the same as `super`+`shift`. This is so that you may bind `super`+`shift` to actions logically related to non-shifted counterparts. For example, I set `super`+`shift`+{`h`,`l`} for *sending to* workspaces and `super`+`shift`+{`j`,`k`} for *swapping* focused windows.
-
-4.  `caps` becomes `bksp`, avoiding the huge move your pinky would otherwise have to make. (I know that this is also a popular spot for the `ctrl` or `esc` keys, but for thematic consistency, those get handled by your thumbs. `bksp` now gets an intuitive spot to the left of the keys that could be backspaced.)
-
-5.  Additionally, tapping `ctrl` triggers the `compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`). See the compose table at `/usr/share/X11/locale/$LANG/Compose`. Tapping `alt` triggers the `dead_greek`, which does a similar thing for Greek characters (e.g. `f` → `φ`).
+`thumbledore` is a set of tweaks that fit within the constraints of the typical keyboard. **It has each finger travel one key at most. Your thumbs pick up the slack.** It aims to be *simple*: there's not even two additional layers to learn. And it *degrades gracefully*: even when you do have a good keyboard, you can keep the layout somewhat consistent if you're forced to work on another.
 
 
-![The Thumbledore keyboard layout.](kb.svg)
+## It works like this.
 
-This has the following benefits:
+Your eight fingers maneuver the symbol keys, while your thumbs control three *layers* over them. Don't worry, the symbol keys themselves are almost the same as QWERTY (or whatever layout you're used to). The only difference is that `capslock` becomes `backspace`, avoiding the huge move your pinky would otherwise make.^[1]
 
--   Each key is accessible by moving your finger(s) *at most one key away*. No more fumbling around for special symbols and function keys.
--   *Simple*: There are only two additional layers involved: one controlled by your left and the other by your right thumb.
--   Achievable using *any run-of-the-mill keyboard*.
--   It *degrades gracefully*: even when you do have a good keyboard, you can keep the layout somewhat consistent if you're forced to work on another.  In particular, if you have a split spacebar, you could put `shift`/`tab` on the other space and keep everything else as it is. I also tried to make sure that users of a Corne or similar keyboard could additionally put `alt`/`dead_greek` and `ctrl`/`compose` on the two extra thumb keys.
+    ↹ q w e r t  y u i o p
+    ⌫ a s d f g  h j k l ; '
+      z x c v b  n m , . /
+
+
+#### ⎇ Shift
+
+    ↹ Q W E R T  Y U I O P
+    ⌫ A S D F G  H J K L : "
+      Z X C V B  N M < > ?
+
+And you're already familiar with one of the layers, too: the one exposed by *shift*. Except now, you can also access it by having your thumb hold down `alt_r`.
+
+
+#### ⌘ Meta
+
+    ⬚ ↞ ↑ ↠ ↟ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
+    ⌦ ← ↓ → ↡ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚ ⬚
+      ⬚ ⬚ ⬚ ⬚ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
+
+Holding `alt_l` exposes the *meta layer*, which has a *navigational cluster* in the top right, placed so that you can control it with one hand. It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. Additionally, `backspace` becomes `delete`. The remaining keys act as if they were pressed with a `super` modifier. This is convenient as the one key for all non-application-specific shortcuts that you might want to set. For example, I set `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for focusing windows --- and the logically related actions of *switching to* workspaces and windows are bound to `super`+`shift`, holding both `alt`s.
+
+
+#### ◇ Symbols
+
+You can access the remaining symbols by holding down `space`.
+
+    ↹ ^ # - _ {  } @ + * $
+    ⌫ 8 7 6 5 (  ) 1 2 3 4 `
+      | & ~ 9 [  ] 0 € ! %
+
+
+#### Tapping the thumb keys
+
+Finally, the thumb keys have an additional function when you *tap* rather than hold them. Tapping `alt_l` triggers `escape`, useful for modal applications like vim. Its logical counterpart `enter` is under `alt_r`. And tapping `space` triggers, well, `space`. 
+
+While in the symbol layer, tapping `alt_l` presses `\\` and `alt_r` presses `=`.
+
+The `ctrl` and `alt` keys are tucked away in the bottom left corner. Additionally, tapping `ctrl` triggers the `compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`).
 
 
 ## Usage
@@ -54,6 +67,7 @@ If you prefer, you may instead use X-specific utilities (`sudo apt install x11-x
 -   [caps2esc](https://gitlab.com/interception/linux/plugins/caps2esc)
 -   [space2ctrl](https://github.com/r0adrunner/Space2Ctrl)
 -   [klfc](https://github.com/39aldo39/klfc)
+-   [autokey](https://github.com/autokey/autokey)
 -   [keynav](https://www.semicomplete.com/projects/keynav/)
 -   [map2](https://github.com/shiro/map2)
 -   [at-home-modifier-evdev](https://gitlab.com/at-home-modifier/at-home-modifier-evdev)
@@ -61,6 +75,9 @@ If you prefer, you may instead use X-specific utilities (`sudo apt install x11-x
 -   [evremap](https://github.com/wez/evremap)
 -   [evcape](https://github.com/wbolster/evcape)
 -   [ergo](https://github.com/lcarsos/ergo)
+-   [key-mapper](https://github.com/sezanzeb/key-mapper)
+-   [interception](https://gitlab.com/interception/linux/tools)
+-   [the state of key remapping in linux](https://medium.com/@canadaduane/key-remapping-in-linux-2021-edition-47320999d2aa)
 
 Check out `/usr/share/X11/xkb` for codes and `/usr/include/X11/keysymdef.h` (from `x11proto-dev`) for symbols. Use `xev` for inspection. Use `xmodmap` to see which modifiers are bound to which keys.
 
@@ -72,3 +89,6 @@ Check out `/usr/share/X11/xkb` for codes and `/usr/include/X11/keysymdef.h` (fro
 -   <https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html>
 -   <http://www.pixelbeat.org/docs/xkb_remap/>
 -   It's a bit radical, but perhaps a good idea to move around the alphabetic keys themselves. I'm enamoured by the <https://workmanlayout.org/> and will experiment with it later.
+
+
+1: I know that this is also a popular spot for the `ctrl` or `esc` keys, but for thematic consistency, those get handled by your thumbs.
