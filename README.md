@@ -2,52 +2,59 @@
 
 Typing on a standard keyboard is not a great experience. Your thumbs idle while your weakest finger contorts to reach keys like `escape` and `backspace`. Exotic keyboards can remedy this, but lack portability: you'd have to lug around an extra device wherever you go.
 
-`thumbledore` is a set of tweaks that fit within the constraints of the typical keyboard. **It has each finger travel one key at most. Your thumbs pick up the slack.** It aims to be *simple*: there's not even two additional layers to learn. And it *degrades gracefully*: even when you do have a good keyboard, you can keep the layout somewhat consistent if you're forced to work on another.
+`thumbledore` is a set of tweaks that fit within the constraints of the typical keyboard. **Each finger travels one key at most. Your thumbs pick up the slack.** It aims to be *easy to remember*. And it *degrades gracefully*: you can keep the layout somewhat consistent when you're stuck on another keyboard.
 
 
-## It works like this.
+### It works like this.
 
-Your eight fingers maneuver the symbol keys, while your thumbs control three *layers* over them. Don't worry, the symbol keys themselves are almost the same as QWERTY (or whatever layout you're used to). The only difference is that `capslock` becomes `backspace`, avoiding the huge move your pinky would otherwise make.^[1]
+Your eight fingers maneuver the letter keys, while your thumbs control three *layers* over them. Don't worry, the letter keys themselves are almost the same as QWERTY (or whatever layout you're used to). The only difference is that `capslock` becomes `backspace`, avoiding the huge move your pinky would otherwise make.
 
-    ↹ q w e r t  y u i o p
+      q w e r t  y u i o p
     ⌫ a s d f g  h j k l ; '
       z x c v b  n m , . /
 
+            ⎋ ␣  ␣ ⏎
 
-#### ⎇ Shift
+Moreover, thumb keys have an additional function when you *tap* rather than 
+hold them. Tapping `alt_l` triggers `escape`, useful for modal applications 
+like vim. Its logical counterpart `enter` is under `alt_r`.
 
-    ↹ Q W E R T  Y U I O P
+
+#### ⮸ Shift (↹)
+
+      Q W E R T  Y U I O P
     ⌫ A S D F G  H J K L : "
       Z X C V B  N M < > ?
 
-And you're already familiar with one of the layers, too: the one exposed by *shift*. Except now, you can also access it by having your thumb hold down `alt_r`.
+            ⎋ ␣  ␣ ⏎
+
+You're already familiar with one of the layers, too: the one exposed by *shift*. Except now, you can also access it by having your thumb hold down `tab`. This is so that, if you have a split spacebar, you can assign `tab` to one of the halves, and control all layers with your thumbs.
 
 
-#### ⌘ Meta
+#### ⌘ Meta (⎋)
 
-    ⬚ ↞ ↑ ↠ ↟ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
+      ↞ ↑ ↠ ↟ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
     ⌦ ← ↓ → ↡ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚ ⬚
-      ⬚ ⬚ ⬚ ⬚ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
+      ✲ ⎇ ✧ ⬚ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
 
-Holding `alt_l` exposes the *meta layer*, which has a *navigational cluster* in the top right, placed so that you can control it with one hand. It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. Additionally, `backspace` becomes `delete`. The remaining keys act as if they were pressed with a `super` modifier. This is convenient as the one key for all non-application-specific shortcuts that you might want to set. For example, I set `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for focusing windows --- and the logically related actions of *switching to* workspaces and windows are bound to `super`+`shift`, holding both `alt`s.
+            ▒▒▒  ⬚ ⬚
 
+Holding `alt_l` exposes the *meta layer*, which has a *navigational cluster* in the top right, placed so that you can control it with one hand. It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. Additionally, `backspace` becomes `delete`.
 
-#### ◇ Symbols
+The `ctrl` and `alt` keys are tucked away in the bottom left corner, together with the `compose` key. You would type special characters by typing intuitive keys in succession (e.g. `⌘c; '; e` → `é`).
 
-You can access the remaining symbols by holding down `space`.
-
-    ↹ ^ # - _ {  } @ + * $
-    ⌫ 8 7 6 5 (  ) 1 2 3 4 `
-      | & ~ 9 [  ] 0 € ! %
+The remaining keys act as if they were pressed with a `super` modifier. This is convenient as the one key for all non-application-specific shortcuts that you might want to set. For example, I set `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for focusing windows.
 
 
-#### Tapping the thumb keys
+#### ◇ Symbols (⏎)
 
-Finally, the thumb keys have an additional function when you *tap* rather than hold them. Tapping `alt_l` triggers `escape`, useful for modal applications like vim. Its logical counterpart `enter` is under `alt_r`. And tapping `space` triggers, well, `space`. 
+You can access the remaining symbols by holding down `alt_r`. Note that some of the thumb keys also get assigned a new character.
 
-While in the symbol layer, tapping `alt_l` presses `\\` and `alt_r` presses `=`.
+      ^ [ ( { #  % } ) ] $
+    ⌫ 1 2 3 4 5  6 7 8 9 0 `
+      | & + - ~  * = @ . !
 
-The `ctrl` and `alt` keys are tucked away in the bottom left corner. Additionally, tapping `ctrl` triggers the `compose` dead key. This way, you would type special characters by typing intuitive keys in succession (e.g. `" + e` → `ë`).
+            \ _  ▒▒▒
 
 
 ## Usage
@@ -76,6 +83,10 @@ If you prefer, you may instead use X-specific utilities (`sudo apt install x11-x
 -   [evcape](https://github.com/wbolster/evcape)
 -   [ergo](https://github.com/lcarsos/ergo)
 -   [key-mapper](https://github.com/sezanzeb/key-mapper)
+-   [xremap](https://github.com/k0kubun/xremap)
+-   [wayremap](https://github.com/acro5piano/wayremap)
+-   [lxhkd](https://github.com/lmburns/lxhkd)
+-   [triggerhappy](https://github.com/wertarbyte/triggerhappy)
 -   [interception](https://gitlab.com/interception/linux/tools)
 -   [the state of key remapping in linux](https://medium.com/@canadaduane/key-remapping-in-linux-2021-edition-47320999d2aa)
 
