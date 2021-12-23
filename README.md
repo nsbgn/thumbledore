@@ -13,31 +13,31 @@ Your eight fingers maneuver the letter keys, while your thumbs control three *la
     ⌫ a s d f g  h j k l ; '
       z x c v b  n m , . /
 
-            ⎋ ␣  ␣ ⏎
+            ␛ ␣  ␣ ⏎
 
 Moreover, thumb keys have an additional function when you *tap* rather than 
 hold them. Tapping `alt_l` triggers `escape`, useful for modal applications 
 like vim. Its logical counterpart `enter` is under `alt_r`.
 
 
-#### ⮸ Shift (↹)
+### ⮸ Shift ↹
 
       Q W E R T  Y U I O P
     ⌫ A S D F G  H J K L : "
       Z X C V B  N M < > ?
 
-            ⎋ ␣  ␣ ⏎
+            ␛ ␣  ␣ ⏎
 
 You're already familiar with one of the layers, too: the one exposed by *shift*. Except now, you can also access it by having your thumb hold down `tab`. This is so that, if you have a split spacebar, you can assign `tab` to one of the halves, and control all layers with your thumbs.
 
 
-#### ⌘ Meta (⎋)
+### ⌘ Meta ␛
 
       ↞ ↑ ↠ ↟ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
     ⌦ ← ↓ → ↡ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚ ⬚
-      ✲ ⎇ ✧ ⬚ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
+      ✲ ⌥ ✧ ⬚ ⬚  ⬚ ⬚ ⬚ ⬚ ⬚
 
-            ▒▒▒  ⬚ ⬚
+            ▂▂▂  ⬚ ⬚
 
 Holding `alt_l` exposes the *meta layer*, which has a *navigational cluster* in the top right, placed so that you can control it with one hand. It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. Additionally, `backspace` becomes `delete`.
 
@@ -46,7 +46,7 @@ The `ctrl` and `alt` keys are tucked away in the bottom left corner, together wi
 The remaining keys act as if they were pressed with a `super` modifier. This is convenient as the one key for all non-application-specific shortcuts that you might want to set. For example, I set `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for focusing windows.
 
 
-#### ◇ Symbols (⏎)
+### ◇ Symbols ⏎
 
 You can access the remaining symbols by holding down `alt_r`. Note that some of the thumb keys also get assigned a new character.
 
@@ -54,7 +54,7 @@ You can access the remaining symbols by holding down `alt_r`. Note that some of 
     ⌫ 1 2 3 4 5  6 7 8 9 0 `
       | & + - ~  * = @ . !
 
-            \ _  ▒▒▒
+            \ _  ▂▂▂
 
 
 ## Usage
