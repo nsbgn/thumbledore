@@ -22,7 +22,7 @@ Your eight fingers maneuver the letter keys, while your thumbs control three *la
 Meanwhile, your thumbs hover over `alt_l`, `space` and `alt_r`. The outermost of these have an additional function when you *tap* rather than hold them: pressing `alt_l` triggers `escape`, useful for modal applications like vim. Its logical counterpart `enter` is under `alt_r`.
 
 
-### ⇧ Shift ↹
+### ⇧ Shift
 
          Q   W   E   R   T       Y   U   I   O   P
     bsp  A   S   D   F   G       H   J   K   L   :   "
@@ -33,7 +33,7 @@ Meanwhile, your thumbs hover over `alt_l`, `space` and `alt_r`. The outermost of
 You're already familiar with one of the layers, too: the one exposed by *shift*. If you have a split spacebar, you might want to assign `tab` to one of the halves: it functions as `shift` when held.
 
 
-### ⌘ Meta ␛
+### ⌘ Meta
 
         hom  ↑  end pgu  ⬚        ⬚   ⬚   ⬚   ⬚   ⬚
     del  ←   ↓   →  pgd  ⬚        ⬚   ⬚   ⬚   ⬚   ⬚   ⬚
@@ -48,9 +48,9 @@ The remaining keys act as if they were pressed with a `super` modifier. This is 
 The original `alt` key is now where the `super` key was, tucked away in the bottom left corner with `ctrl`.
 
 
-### ◇ Symbol ⏎
+### ◇ Symbol
 
-You can access the remaining symbols by holding down `alt_r`. Tapping `alt_r` gives you a `backslash` in this layer.
+You can access the remaining symbols by holding down `alt_r`. Tapping `alt_l` gives you a `backslash` in this layer.
 
          ^   [   (   {   #       %   }   )   ]   $
     bsp  1   2   3   4   5       6   7   8   9   0   `
