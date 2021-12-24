@@ -6,7 +6,7 @@ Typing on a standard keyboard is not a great experience. Your thumbs idle while 
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Enables graceful degradation.** You can keep a somewhat consistent layout even when you're stuck on another keyboard.
--   **Easy to remember.** Barely one and a half additional layer.
+-   **Easy to remember.** Barely one and a half additional layer, and all extra keys stay available as always.
 
 It works like this:
 
