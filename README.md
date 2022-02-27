@@ -58,7 +58,7 @@ The original `alt` key is now where the `super` key was, tucked away in the bott
 You can access the remaining symbols by holding down `alt_r`. Where possible, a sense of symmetry is maintained.
 
          <   [   (   {   #       %   }   )   ]   >
-    bsp  ^   _   \   =   "       '   ⬚   /   *   $   `
+    bsp  ^   \   _   =   "       '   ⬚   *   /   $   `
          !   @   `   -   |       &   +   ~   ⬚   ?
 
                     esc     spc      ▨
