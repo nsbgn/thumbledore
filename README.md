@@ -18,7 +18,7 @@ keyboard.
 -   **Easy to remember.**
 
 It works like this: Your eight fingers maneuver the letter keys, while your 
-thumbs or feet handle power keys. There are six of them:
+thumbs (or feet!) handle power keys. There are six of them:
 
 1.  `space`. Do you use your right or your left thumb?
 2.  `meta/esc`. The `meta` key is useful for binding actions in your window 
@@ -68,20 +68,14 @@ You're already familiar with one of the layers, too: the one exposed by
 
 ### ◇ Symbol
 
-This layer holds the remaining symbols. Where possible, a sense of symmetry is 
-maintained.
+This layer has been crammed full with the remaining symbols. To make 
+space, the parentheses, brackets and braces have been put together, and 
+there's an extra right arrow to get back on track quickly.
 
-    tab  <   [   (   {   #       %   }   )   ]   >  del
-    bsp  ^   \   _   '   =       ~   "   `   /   $  XXX
-    shf  !   @   *   -   |       &   +   ;   :   ?  sym
+    tab  ^   []  ()  {}  #       %   7   8   9   $  del
+    bsp  ~   `   *   _   |       &   4   5   6   =   →
+    shf  !   @   +   -   \       0   1   2   3   /  sym
 
-### ① Number
-
-The number layer is exposed by holding or tapping *both* shift and symbol.
-
-        XXX XXX XXX XXX XXX      XXX XXX XXX XXX XXX
-    bsp  9   8   7   6   5        0   1   2   3   4  XXX
-        XXX XXX XXX XXX XXX      XXX XXX XXX XXX XXX
 
 ### ⌘ Meta
 
