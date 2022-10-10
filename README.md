@@ -17,44 +17,51 @@ keyboard.
     somewhat consistent layout even when you're stuck on a standard keyboard.
 -   **Easy to remember.**
 
-It works like this: Your eight fingers maneuver the letter keys, while your 
-thumbs (or feet!) handle power keys. There are six of them:
+It works like this: Your eight fingers maneuver the letter keys, while 
+your thumbs (or feet!) handle power keys. The left hand has overloaded 
+modifier keys:
 
-1.  `space`. Do you use your right or your left thumb?
-2.  `meta/esc`. The `meta` key is useful for binding actions in your window 
+1.  `meta/esc`. The `meta` key is useful for binding actions in your window 
     manager, and it is also used to get to the arrow keys. It gets an 
     additional function when you *tap* rather than hold it: it triggers 
     `escape`, useful for modal applications like `vim`.
+2.  `space`.
 3.  `alt/enter`. Tapping gets you `enter`, the logical counterpart to `escape`.
-4.  `ctrl/fn`. Tapping the control key allows you to access the function keys.
-5.  `shift`. When you tap it, it will be activated for the following keypress. 
-    The number keys are accessible when you combine it with `symbol`.
-6.  `symbol`. The remaining symbols are in this layer. It is a oneshot key, 
-    just like shift. Tapping it twice generates the `compose` key, allowing you 
-    to type special characters by typing intuitive keys in succession (e.g. 
-    `symbol symbol ' e` becomes `é`).
 
-The layers and finger keys are meant to be the same on every keyboard, while 
-the power keys move around based on what's convenient. On a standard laptop 
-keyboard, your thumbs hover over `alt_l`, `space` and `alt_r`, so it makes 
-sense, for easy access, to turn `alt_l` into `meta/esc` and `alt_r` into the 
-`symbol` key. The `shift` and `control` keys can stay where they are. Since 
-there is a dedicated `enter`, your `alt` can be tucked away in the bottom left 
-corner where the `super` key was, next to `ctrl`. A keyboard with a proper 
-thumb cluster, like a Corne, can put the keys in a more sensible position:
+On the right hand, there are oneshot modifiers: when you tap them, they 
+will be activated for the following keypress.
 
-    meta/esc  space  symbol     shift  alt/enter  ctrl/fn
+4.  `ctrl`. Double tapping it allows you to access the function keys, 
+    along with the meta keys that are covered by the navigational 
+    cluster.
+5.  `shift`. Double tapping activates it until you tap it again.
+6.  `symbol`. Double tapping has the same effect.
+
+Tapping `meta` and `symbol` together generates the `compose` key, 
+allowing you to type special characters by typing intuitive keys in 
+succession (e.g. `symbol symbol ' e` becomes `é`).
+
+The layers and finger keys are meant to be the same on every keyboard, 
+while the power keys move around based on what's convenient. On a 
+standard laptop keyboard, your thumbs hover over `alt_l`, `space` and 
+`alt_r`, so it makes sense, for easy access, to turn `alt_l` into 
+`meta/esc` and `alt_r` into the `symbol` key. The `shift` and `control` 
+keys can stay where they are. Since there is a dedicated `enter`, your 
+`alt` can be tucked away in the bottom left corner where the `super` key 
+was, next to `ctrl`. A keyboard with a proper thumb cluster, like a 
+Corne, can put the keys in a more sensible position:
 
 
 ### ✎ Default
 
-Don't worry, the letter keys themselves don't change from what you're used to. 
-The only difference is that `capslock` becomes `backspace`, avoiding the huge 
-move your pinky would usually make.
+Don't worry, the letter keys themselves don't change from what you're 
+used to (be it QWERTY or not). The only difference is that `capslock` 
+becomes `backspace`, avoiding the huge move your pinky would usually 
+make.
 
-    tab  q   w   e   r   t       y   u   i   o   p  del
+    tab  q   w   e   r   t       y   u   i   o   p
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-    shf  z   x   c   v   b       n   m   ,   .   /  sym
+    del  z   x   c   v   b       n   m   ,   .   /
 
 
 ### ⇧ Shift
@@ -62,22 +69,28 @@ move your pinky would usually make.
 You're already familiar with one of the layers, too: the one exposed by 
 *shift*.
 
-    tab  Q   W   E   R   T       Y   U   I   O   P  del
+    tab  Q   W   E   R   T       Y   U   I   O   P
     bsp  A   S   D   F   G       H   J   K   L   :   "
-    shf  Z   X   C   V   B       N   M   <   >   ?  sym
+    del  Z   X   C   V   B       N   M   <   >   ?
+
 
 ### ◇ Symbol
 
-This layer has been crammed full with the remaining symbols. To make 
-space, the parentheses, brackets and braces have been put together, and 
-there's an extra right arrow to get back on track quickly.
+This layer has been crammed full with the remaining symbols. If you 
+simultaneously press a pair of parentheses, brackets or braces, your 
+cursor is automatically put in the middle.
 
-    tab  ^   []  ()  {}  #       %   7   8   9   $  del
-    bsp  ~   `   *   _   |       &   4   5   6   =   →
-    shf  !   @   +   -   \       0   1   2   3   /  sym
+    tab  ^   [   ]   *   #       %   7   8   9   $   |
+    bsp  \   (   )   _   =       ~   4   5   6   @   `
+    del  !   {   }   -   +       0   1   2   3   /   &
 
 
 ### ⌘ Meta
+
+The meta modifier layer is split up into two parts.
+
+
+#### 🧭 Navigation
 
         hom  ↑  end pgu XXX      XXX XXX XXX XXX XXX
     del  ←   ↓   →  pgd XXX      XXX XXX XXX XXX XXX
@@ -91,13 +104,14 @@ key for all non-application-specific shortcuts that you might want to set. For
 example, I set `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} 
 for focusing windows.
 
-### ✲ Function
+#### ✲ Function
 
 Finally, there must be a way to reach the function keys.
 
-        f19 f18 f17 f16 f15      f10 f11 f12 f13 f14
-    bsp  f9  f8  f7  f6  f5      XXX f1  f2  f3  f4  XXX
-        XXX XXX XXX XXX XXX      XXX XXX XXX XXX XXX
+        XXX XXX XXX XXX XXX      XXX f7  f8  f9 f10
+    bsp XXX XXX XXX XXX XXX      XXX f4  f5  f6 f11 XXX
+        XXX XXX XXX XXX XXX      XXX f1  f2  f3 f12
+
 
 ## Usage
 
