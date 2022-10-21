@@ -77,10 +77,9 @@ This layer has been crammed full with the remaining symbols. If you
 simultaneously press a pair of parentheses, brackets or braces, your 
 cursor is automatically put in the middle.
 
-    tab  ^   [   ]   *   #       %   7   8   9   $   @
-    bsp  \   (   )   -   =       &   4   5   6   |   `
-    del  !   {   }   _   +       0   1   2   3   /   ~
-
+    tab  &   [   ]   *   #       %   7   8   9   ^   @
+    bsp  |   (   )   -   =       ~   4   5   6   $   `
+    del  !   {   }   _   +       0   1   2   3   /   \
 
 ### ⌘ Meta / 🧭 Navigation
 
