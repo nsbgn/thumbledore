@@ -20,7 +20,7 @@ the typical keyboard.
 Your eight fingers maneuver the letter keys, while your thumbs handle 
 power keys. These are:
 
-1.  On the left-hand side:
+1.  On the left-hand side, from left to right:
     1.  `meta/esc`. The `meta` key is useful for binding actions in your 
         window manager, and it is also used to get to the arrow keys. It 
         gets an additional function when you *tap* rather than hold it: 
@@ -30,14 +30,17 @@ power keys. These are:
         also allows you to access function keys.
     3.  `ctrl/enter`. Tapping gets you `enter`, the logical counterpart 
         to `escape`.
-2.  On the right hand:
-    4.  `alt`. Tapping it generates the `compose` key, allowing you to 
-        type special characters by typing intuitive keys in succession 
-        (e.g. `symbol symbol ' e` becomes `é`).
-    5.  `symbol`. This is a one-shot key: when you tap it, it will be 
+2.  On the right hand, from right to left:
+    1.  `shift`. This is a one-shot key: when you tap it, it will be 
         activated for the following keypress. Double tapping activates 
-        it until you tap it again.
-    6.  `shift`. Also a one-shot key.
+        it until you tap it again. In conjunction with `meta` or `ctrl`, 
+        you get `M-F1` or `C-F1`, for additional bindings.
+    2.  `symbol`. Also a one-shot key, and additional variants are 
+        `M-F2`/`C-F2`.
+    3.  `alt`. Tapping it generates the `compose` key, allowing you to 
+        type special characters by typing intuitive keys in succession 
+        (e.g. `symbol symbol ' e` becomes `é`). Additional variants are 
+        `M-F2`/`C-F2`.
 
 The layers and finger keys are meant to be the same on every keyboard, 
 while the power keys move around based on what's convenient. On a 
