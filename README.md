@@ -59,9 +59,9 @@ used to (be it QWERTY or something else). The major difference is that
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
 usually make.
 
-    tab  q   w   e   r   t       y   u   i   o   p
+    tab  q   w   e   r   t       y   u   i   o   p   \
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-    del  z   x   c   v   b       n   m   ,   .   /
+    del  z   x   c   v   b       n   m   ,   .   /  cmp
 
 
 ### ⇧ Shift
@@ -69,9 +69,9 @@ usually make.
 You're already familiar with one of the layers, too: the one exposed by 
 *shift*.
 
-    tab  Q   W   E   R   T       Y   U   I   O   P
+    tab  Q   W   E   R   T       Y   U   I   O   P   |
     bsp  A   S   D   F   G       H   J   K   L   :   "
-    del  Z   X   C   V   B       N   M   <   >   ?
+    del  Z   X   C   V   B       N   M   <   >   ?  cmp
 
 
 ### ◇ Symbol
@@ -80,9 +80,9 @@ This layer has been crammed full with the remaining symbols. If you
 simultaneously press a pair of parentheses, brackets or braces, your 
 cursor is automatically put in the middle.
 
-    tab  &   [   ]   *   #       %   7   8   9   ^   @
-    bsp  |   (   )   -   =       ~   4   5   6   $   `
-    del  !   {   }   _   +       0   1   2   3   /   \
+    tab  @   [   ]   *   #       %   7   8   9   ^   &
+    bsp  $   (   )   -   =       ~   4   5   6   0   `
+    del  !   {   }   _   |       +   1   2   3   /  cmp
 
 ### ⌘ Meta / 🧭 Navigation
 
