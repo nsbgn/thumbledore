@@ -32,9 +32,8 @@ power keys. These are:
         to `escape`.
 2.  On the right hand, from right to left:
     1.  `shift`. This is a one-shot key: when you tap it, it will be 
-        activated for the following keypress. Double tapping activates 
-        it until you tap it again. In conjunction with `meta` or `ctrl`, 
-        you get `M-F1` or `C-F1`, for additional bindings.
+        activated for the following keypress. In conjunction with `meta` 
+        or `ctrl`, you get `M-F1` or `C-F1`, for additional bindings.
     2.  `symbol`. Also a one-shot key, and additional variants are 
         `M-F2`/`C-F2`.
     3.  `alt`. Tapping it generates the `compose` key, allowing you to 
@@ -59,9 +58,9 @@ used to (be it QWERTY or something else). The major difference is that
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
 usually make.
 
-    tab  q   w   e   r   t       y   u   i   o   p   \
+    tab  q   w   e   r   t       y   u   i   o   p   os
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-    del  z   x   c   v   b       n   m   ,   .   /  cmp
+    del  z   x   c   v   b       n   m   ,   .   /   ~
 
 
 ### ⇧ Shift
@@ -69,27 +68,26 @@ usually make.
 You're already familiar with one of the layers, too: the one exposed by 
 *shift*.
 
-    tab  Q   W   E   R   T       Y   U   I   O   P   |
+    tab  Q   W   E   R   T       Y   U   I   O   P   os
     bsp  A   S   D   F   G       H   J   K   L   :   "
-    del  Z   X   C   V   B       N   M   <   >   ?  cmp
+    del  Z   X   C   V   B       N   M   <   >   ?   !
 
 
 ### ◇ Symbol
 
-This layer has been crammed full with the remaining symbols. If you 
-simultaneously press a pair of parentheses, brackets or braces, your 
-cursor is automatically put in the middle.
+This layer has been crammed full with the remaining symbols.
 
-    tab  @   [   ]   *   #       %   7   8   9   ^   &
-    bsp  $   (   )   -   =       ~   4   5   6   0   `
-    del  !   {   }   _   |       +   1   2   3   /  cmp
+    tab  ^   [   ]   *   #       %   1   2   3   $   os
+    bsp  \   (   )   -   =       +   4   5   6   0   `
+    del  @   {   }   _   |       &   7   8   9   /   .
+
 
 ### ⌘ Meta / 🧭 Navigation
 
 
     XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
-    XXX  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
-    XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
+    bsp  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
+    del XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
 
 The meta layer  has a *navigation cluster* in the top right, placed so 
 that you can control it with one hand. It contains directional keys, 
