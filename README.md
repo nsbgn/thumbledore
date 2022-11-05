@@ -77,9 +77,9 @@ You're already familiar with one of the layers, too: the one exposed by
 
 This layer has been crammed full with the remaining symbols.
 
-    tab  ^   [   ]   *   #       %   1   2   3   $   os
-    bsp  \   (   )   -   =       +   4   5   6   0   `
-    del  @   {   }   _   |       &   7   8   9   /   .
+    tab  |   [   ]   *   #       %   1   2   3   &   os
+    bsp  \   (   )   -   =       $   4   5   6   0   `
+    del  @   {   }   _   +       ^   7   8   9   /   .
 
 
 ### ⌘ Meta / 🧭 Navigation
