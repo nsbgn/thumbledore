@@ -58,9 +58,9 @@ used to (be it QWERTY or something else). The major difference is that
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
 usually make.
 
-    tab  q   w   e   r   t       y   u   i   o   p   os
+    tab  q   w   e   r   t       y   u   i   o   p   ~
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-    del  z   x   c   v   b       n   m   ,   .   /   ~
+    del  z   x   c   v   b       n   m   ,   .   /
 
 
 ### ⇧ Shift
@@ -68,18 +68,19 @@ usually make.
 You're already familiar with one of the layers, too: the one exposed by 
 *shift*.
 
-    tab  Q   W   E   R   T       Y   U   I   O   P   os
+    tab  Q   W   E   R   T       Y   U   I   O   P   !
     bsp  A   S   D   F   G       H   J   K   L   :   "
-    del  Z   X   C   V   B       N   M   <   >   ?   !
+    del  Z   X   C   V   B       N   M   <   >   ?
 
 
 ### ◇ Symbol
 
 This layer has been crammed full with the remaining symbols.
 
-    tab  |   [   ]   *   #       %   1   2   3   &   os
-    bsp  \   (   )   -   =       $   4   5   6   0   `
-    del  @   {   }   _   +       ^   7   8   9   /   .
+    tab  &   [   ]   *   #       %   4   5   6   .   @
+    bsp  \   (   )   -   =       $   1   2   3   0   `
+    del  |   {   }   _   +       ^   7   8   9   /
+
 
 
 ### ⌘ Meta / 🧭 Navigation
