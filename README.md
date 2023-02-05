@@ -7,8 +7,8 @@ Typing on a standard keyboard is not a great experience. Your thumbs
 idle while your weakest finger contorts to reach keys like `escape` and 
 `backspace`. Exotic keyboards can remedy this, but lack portability.
 
-`thumbledore` is a set of tweaks that are meant for exotic keyboards 
-with at least three keys per thumb, but that also fits within the 
+`thumbledore` is a set of tweaks that is meant for exotic keyboards with 
+at least three keys per thumb, but that *also* fits within the 
 constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
@@ -28,27 +28,27 @@ constraints of a laptop keyboard.
 
 The *power keys* are controlled with your two thumbs. Their location 
 depends on what's convenient based on your keyboard, your hands, and 
-your habits. The *alpha keys* remain consistent across keyboards and are 
-controlled with the remaining fingers.
+your habits. The *symbol keys* remain consistent across keyboards and 
+are controlled with the remaining fingers.
 
 
-## Alpha keys
+## Symbol keys
 
-There are 6x3 alpha keys for each hand --- minus two, because we leave 
-the bottom left and bottom right `shift` keys out of consideration for 
-now.
+There are 6x3 symbol keys for each hand.
 
 #### ✎ Default layer
 
-Don't worry, the alpha keys themselves don't change from what you're 
-used to (be it QWERTY or something else). The major difference is that 
+Don't worry, the default layer don't change much from what you're used 
+to (be it QWERTY or something else). The major difference is that 
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
-usually make. To make space for extra symbols, there is an asterisk 
-where `[` used to be.
+usually make. Left shift, for compatibility with standard keyboards, 
+will continue to function as `shift` when held, but it will emit the 
+`compose` key when tapped. Right space becomes `delete`. Finally, to 
+make space for extra symbols, there is an asterisk where `[` used to be.
 
     tab  q   w   e   r   t       y   u   i   o   p   *
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-         z   x   c   v   b       n   m   ,   .   /
+    cmp  z   x   c   v   b       n   m   ,   .   /  del
 
 #### ⇧ Shift
 
@@ -57,7 +57,7 @@ You're already familiar with one of the layers, too: the one exposed by
 
     tab  Q   W   E   R   T       Y   U   I   O   P   !
     bsp  A   S   D   F   G       H   J   K   L   :   "
-         Z   X   C   V   B       N   M   <   >   ?
+    cmp  Z   X   C   V   B       N   M   <   >   ?  del
 
 #### ◇ Symbol
 
@@ -65,7 +65,7 @@ The *symbol* layer has been crammed full with the remaining symbols.
 
     tab  |   [   ]   +   #       ^   4   5   6   @   *
     bsp  \   (   )   -   =       ~   1   2   3   0   `
-         &   {   }   _   $       %   7   8   9   /
+    cmp  &   {   }   _   $       %   7   8   9   /  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
@@ -78,7 +78,7 @@ in conjunction with numbers.
 #### ✲ Function / 🮰 Navigation
 
     XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
-    bsp  ←   ↓   →  pgd del     XXX XXX XXX XXX XXX del
+    XXX  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
     XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
 
 The function layer has a *navigation cluster* in the top right, placed 
@@ -96,7 +96,7 @@ focusing windows.
 
 ## Power keys
 
-Your eight fingers maneuver the alpha keys, while your thumbs handle 
+Your eight fingers maneuver the symbol keys, while your thumbs handle 
 power keys. These are:
 
 1.  On the left-hand side, from left to right:
