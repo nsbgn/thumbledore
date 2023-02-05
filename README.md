@@ -14,8 +14,17 @@ constraints of a laptop keyboard.
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** There is only one additional layer for 
     symbols, plus one for navigation/function keys.
--   **Enables graceful degradation.** You can keep a somewhat consistent 
-    layout even when you're stuck on a laptop keyboard.
+-   **Graceful degradation.** You can keep a somewhat consistent layout 
+    even when you're stuck on a laptop keyboard.
+-   **Progressive learning.** You don't have to learn everything all at 
+    once --- or ever. Start with just the symbol layer, assigned to 
+    `altgr`.
+-   **One-handed control.** The number pad can be controlled with just 
+    the right hand. Arrow keys, and window controls that would 
+    reasonably complement mouse actions, can be controlled with 
+    exclusively your left hand.
+    (If your left hand is dominant, you may want to mirror the symbol 
+    and function layers.)
 
 The *power keys* are controlled with your two thumbs. Their location 
 depends on what's convenient based on your keyboard, your hands, and 
@@ -34,10 +43,10 @@ now.
 Don't worry, the alpha keys themselves don't change from what you're 
 used to (be it QWERTY or something else). The major difference is that 
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
-usually make. To make space for extra symbols, there is a tilde where 
-`[` used to be.
+usually make. To make space for extra symbols, there is an asterisk 
+where `[` used to be.
 
-    tab  q   w   e   r   t       y   u   i   o   p   ~
+    tab  q   w   e   r   t       y   u   i   o   p   *
     bsp  a   s   d   f   g       h   j   k   l   ;   '
          z   x   c   v   b       n   m   ,   .   /
 
@@ -54,9 +63,9 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  |   [   ]   *   #       ^   4   5   6   $   @
-    bsp  \   (   )   -   =       .   1   2   3   0   `
-         &   {   }   _   +       %   7   8   9   /
+    tab  |   [   ]   +   #       ^   4   5   6   @   *
+    bsp  \   (   )   -   =       ~   1   2   3   0   `
+         &   {   }   _   $       %   7   8   9   /
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
@@ -69,19 +78,20 @@ in conjunction with numbers.
 #### ✲ Function / 🮰 Navigation
 
     XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
-    bsp  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX del
-     f1  f2  f3  f4  f5  f6      f7  f8  f9 f10 f11 f12
+    bsp  ←   ↓   →  pgd del     XXX XXX XXX XXX XXX del
+    XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
 
 The function layer has a *navigation cluster* in the top right, placed 
 so that you can control it with one hand. It contains directional keys, 
-`home`/`end`, and `pageup`/`pagedown`. The bottom row has the function 
-keys.
+`home`/`end`, and `pageup`/`pagedown`. Combining it with the `symbol` 
+key gets you `f1`, `f2`, etcetera, on the number keys.
 
 The remaining keys act as if they were pressed with a `super` modifier. 
 This is convenient as the one key for all non-application-specific 
 shortcuts that you might want to set. For example, I set 
 `super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for 
 focusing windows.
+
 
 
 ## Power keys
