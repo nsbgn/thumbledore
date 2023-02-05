@@ -43,10 +43,10 @@ to (be it QWERTY or something else). The major difference is that
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
 usually make. Left shift, for compatibility with standard keyboards, 
 will continue to function as `shift` when held, but it will emit the 
-`compose` key when tapped. Right space becomes `delete`. Finally, to 
-make space for extra symbols, there is an asterisk where `[` used to be.
+`compose` key when tapped. Right space becomes `delete`. Finally, the 
+square brackets are dropped so that the backslash can scoot over.
 
-    tab  q   w   e   r   t       y   u   i   o   p   *
+    tab  q   w   e   r   t       y   u   i   o   p   \
     bsp  a   s   d   f   g       h   j   k   l   ;   '
     cmp  z   x   c   v   b       n   m   ,   .   /  del
 
@@ -55,7 +55,7 @@ make space for extra symbols, there is an asterisk where `[` used to be.
 You're already familiar with one of the layers, too: the one exposed by 
 *shift*.
 
-    tab  Q   W   E   R   T       Y   U   I   O   P   !
+    tab  Q   W   E   R   T       Y   U   I   O   P   |
     bsp  A   S   D   F   G       H   J   K   L   :   "
     cmp  Z   X   C   V   B       N   M   <   >   ?  del
 
@@ -63,15 +63,20 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  |   [   ]   +   #       ^   4   5   6   @   *
-    bsp  \   (   )   -   =       ~   1   2   3   0   `
-    cmp  &   {   }   _   $       %   7   8   9   /  del
+    tab  /   [   ]   +   $       ^   @   7   8   9   &
+    bsp  #   (   )   -   *       ~   =   4   5   6   `
+    cmp  !   {   }   _   .       %   0   1   2   3  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
 except for number pad, which can be controlled entirely with your right 
-hand. There are two duplicate keys: `/` and `.`, which are often needed 
-in conjunction with numbers.
+hand. There are two duplicate keys: `/` and `.`, which are also on the 
+default layer but often needed in conjunction with numbers.
+
+The numpad is more comfortable to use when you move your hand one unit 
+to the right. This mitigates the awkward inward thumb otherwise demanded 
+by the right alt key (and it exposes more comfortable keys for other 
+symbols).
 
 [^1]: According to the frequency with which I personally need them.
 
@@ -82,9 +87,11 @@ in conjunction with numbers.
     XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
 
 The function layer has a *navigation cluster* in the top right, placed 
-so that you can control it with one hand. It contains directional keys, 
-`home`/`end`, and `pageup`/`pagedown`. Combining it with the `symbol` 
-key gets you `f1`, `f2`, etcetera, on the number keys.
+so that you can control it with one hand. 
+
+It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. 
+Combining it with the `symbol` key gets you `f1`, `f2`, etcetera, on the 
+number keys.
 
 The remaining keys act as if they were pressed with a `super` modifier. 
 This is convenient as the one key for all non-application-specific 
@@ -141,3 +148,8 @@ was, next to `ctrl`.
 
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and copy 
 `keyd/default.conf` to `/etc/keyd/`.
+
+
+## Other
+
+-   [Seniply](https://stevep99.github.io/seniply/) has similar goals.
