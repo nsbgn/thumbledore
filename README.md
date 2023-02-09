@@ -63,15 +63,16 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  /   [   ]   +   $       ^   @   7   8   9   &
-    bsp  #   (   )   -   *       ~   =   4   5   6   `
-    cmp  !   {   }   _   .       %   0   1   2   3  del
+    tab  [   !   #   $   ]       ^   4   5   6   @   &
+    bsp  (   *   -   =   )       ~   1   2   3   0   `
+    cmp  {   /   +   _   }       %   7   8   9  .:  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
 except for number pad, which can be controlled entirely with your right 
 hand. There are two duplicate keys: `/` and `.`, which are also on the 
-default layer but often needed in conjunction with numbers.
+default layer but often needed in conjunction with numbers. For the same 
+reason, you can get `:` by tapping `.` twice.
 
 The numpad is more comfortable to use when you move your hand one unit 
 to the right. This mitigates the awkward inward thumb otherwise demanded 
