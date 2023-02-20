@@ -63,9 +63,9 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  [   !   #   $   ]       ^   4   5   6   @   &
-    bsp  (   *   -   =   )       ~   1   2   3   0   `
-    cmp  {   /   +   _   }       %   7   8   9  .:  del
+    tab  {   [   ]   }   #       ^   4   5   6   @   &
+    bsp  (   *   -   )   =       ~   1   2   3   0   `
+    cmp  !   /   +   _   $       %   7   8   9  .:  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
