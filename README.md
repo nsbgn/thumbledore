@@ -13,23 +13,22 @@ constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** There is only one additional layer for 
-    symbols, plus one for navigation/function keys.
+    symbols, one for navigation keys, and one for functions.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a laptop keyboard.
 -   **Progressive learning.** You don't have to learn everything all at 
     once --- or ever. Start with just the symbol layer, assigned to 
     `altgr`.
 -   **One-handed control.** The number pad can be controlled with just 
-    the right hand. Arrow keys, and window controls that would 
-    reasonably complement mouse actions, can be controlled with 
-    exclusively your left hand.
+    the right hand. Navigation keys that complement mouse actions can be 
+    controlled with exclusively your left hand.
     (If your left hand is dominant, you may want to mirror the symbol 
     and function layers.)
 
 The *power keys* are controlled with your two thumbs. Their location 
-depends on what's convenient based on your keyboard, your hands, and 
-your habits. The *symbol keys* remain consistent across keyboards and 
-are controlled with the remaining fingers.
+depends on what's convenient based on your keyboard, hands, and habits. 
+The *symbol keys* remain consistent across keyboards and are controlled 
+with the remaining fingers.
 
 
 ## Symbol keys
@@ -44,7 +43,8 @@ to (be it QWERTY or something else). The major difference is that
 usually make. Left shift, for compatibility with standard keyboards, 
 will continue to function as `shift` when held, but it will emit the 
 `compose` key when tapped. Right space becomes `delete`. Finally, the 
-square brackets are dropped so that the backslash can scoot over.
+square brackets on the top right are dropped so that the backslash can 
+scoot over.
 
     tab  q   w   e   r   t       y   u   i   o   p   \
     bsp  a   s   d   f   g       h   j   k   l   ;   '
@@ -63,9 +63,9 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  {   [   #   ]   }       ^   4   5   6   @   &
-    bsp  (   *   -   =   )       ~   1   2   3   0   `
-    cmp  !   /   +   _   $       %   7   8   9  .:  del
+    tab  {   [   #   ]   }       ^   7   8   9   @   &
+    bsp  (   *   -   =   )       ~   4   5   6   0   `
+    cmp  !   +   _   $   /       %   1   2   3  .:  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols[^1] --- 
@@ -81,25 +81,43 @@ symbols).
 
 [^1]: According to the frequency with which I personally need them.
 
-#### ✲ Function / 🮰 Navigation
+#### 🮰 Navigation / ⌘ Meta
 
-    XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
-    XXX  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
-    XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
+    XXX hom  ↑  end pgu ter     XXX XXX XXX XXX XXX XXX
+    bsp  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
+    XXX clo men des lay XXX     XXX XXX XXX XXX XXX XXX
 
 The function layer has a *navigation cluster* in the top right, placed 
-so that you can control it with one hand. 
+so that you can control it with one hand. It contains directional keys, 
+`home`/`end`, and `pageup`/`pagedown`.
 
-It contains directional keys, `home`/`end`, and `pageup`/`pagedown`. 
-Combining it with the `symbol` key gets you `f1`, `f2`, etcetera, on the 
-number keys.
+The remaining keys on the left side are for opening a `ter`minal, 
+`clo`sing a window, opening the `men`u, shifting the virtual `des`ktop, 
+changing the window `lay`out.
 
-The remaining keys act as if they were pressed with a `super` modifier. 
+The right side acts as if they were pressed with a `super` modifier. 
 This is convenient as the one key for all non-application-specific 
-shortcuts that you might want to set. For example, I set 
-`super`+{`h`,`l`} for focusing workspaces and `super`+{`j`,`k`} for 
-focusing windows.
+shortcuts that you might want to set.
 
+You can still reach the rest of the `super`-enhanced keys by combining 
+or prepending it with `space`. For example, `meta/esc`+`space`+`f` will 
+yield `super+f`, not `pagedown`.
+
+
+#### ✲ Function / ⌘ Meta
+
+Finally, the function layer can be reached by holding the `meta/esc` and 
+`symbol` keys simultaneously. This layer contains the F keys, media 
+controls, screen brightness, as well as toggles for wireless, touchpad, 
+keyboard layout, headphones...
+
+     📶  ⏮   🔊  ⏭   ◼  🔆     sclk f7  f8  f9 f12 srq
+     🖰   ⏪  🔉  ⏩  ⏯  🔅     prsc f4  f5  f6 f11 ins
+     ᛒᚼ  🎙️   🔇  🎧 ♫  ⌨     paus f1  f2  f3 f10 del
+
+Just like in the navigation layer, you can reach underlying `super` keys 
+by combining with space. For example, `meta/esc`+`symbol`+`space`+`j` 
+will yield `super+4`, not `f4`.
 
 
 ## Power keys
@@ -113,10 +131,10 @@ power keys. These are:
         gets an additional function when you *tap* rather than hold it: 
         it triggers `escape`, useful for modal applications like `vim`.
     2.  `space`. When held along `meta`, it exposes the `meta`-modified 
-        keys that were hidden under the navigational cluster, and it 
-        also allows you to access function keys.
+        keys that were hidden under the navigational cluster.
     3.  `ctrl/enter`. Tapping gets you `enter`, the logical counterpart 
-        to `escape`.
+        to `escape`. You can still get repeating enters by double 
+        tapping and holding.
 2.  On the right hand, from right to left:
     1.  `shift`. This is a one-shot key: when you tap it, it will be 
         activated for the following keypress. In conjunction with `meta` 
@@ -136,15 +154,6 @@ keys can stay where they are. Since there is a dedicated `enter`, your
 was, next to `ctrl`.
 
 
-## Additional ideas
-
--   Toggle layout between Qwerty and Workman by pressing all thumb keys 
-    simultaneously?
--   So that you can reach the symbol layer on a normal keyboard and so 
-    that you can also activate it with your left hand, the meta key plus 
-    space also gets you to the symbol layer?
-
-
 ## Usage
 
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and copy 
@@ -154,3 +163,6 @@ Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and copy
 ## Other
 
 -   [Seniply](https://stevep99.github.io/seniply/) has similar goals.
+-   [KeymapDB](https://keymapdb.com/) compiles keymaps.
+-   [Keyboard 
+    symbols](http://xahlee.info/comp/unicode_computing_symbols.html)
