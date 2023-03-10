@@ -27,8 +27,37 @@ constraints of a laptop keyboard.
 
 The *power keys* are controlled with your two thumbs. Their location 
 depends on what's convenient based on your keyboard, hands, and habits. 
-The *symbol keys* remain consistent across keyboards and are controlled 
-with the remaining fingers.
+The *character keys* remain consistent across keyboards and are 
+controlled with the remaining fingers.
+
+
+## Power keys
+
+1.  On the left-hand side, from left to right:
+    1.  `nav`. This key accesses a layer with the direction keys, and 
+        the rest of the layer is filled with `meta`-modified keys, 
+        useful for binding actions in your window manager. It gets an 
+        additional function when you *tap* rather than hold it: it 
+        triggers `escape`, useful for modal applications like `vim`.
+    2.  `space`. When held alongside `nav`, the `meta` keys that were 
+        hidden under the directional keys are exposed.
+    3.  `ctrl`. Tapping gets you `enter`, the logical counterpart to 
+        `escape`. You can still get repeating enters by double tapping 
+        and holding.
+2.  On the right hand, from right to left:
+    1.  `shift`. This is a one-shot key: when you tap it, it will be 
+        activated for the following keypress.
+    2.  `sym`. Accesses a layer for the remaining characters. Also a 
+        one-shot key.
+    3.  `alt`. Tapping it generates the `compose` key, allowing you to 
+        type special characters by typing intuitive keys in succession 
+        (e.g. `alt ' e` becomes `é`).
+
+On a standard laptop keyboard, your thumbs hover over `alt_l`, `space` 
+and `alt_r`, so for easy access, it makes sense to turn `alt_l` into 
+`nav`, and `alt_r` into the `sym` key. The `shift` and `ctrl` keys can 
+stay where they are. `alt` can be tucked away in the bottom left corner 
+where the `meta` key was, left of the original `alt`.
 
 
 ## Symbol keys
@@ -83,7 +112,7 @@ symbols).
 
 #### 🮰 Navigation / ⌘ Meta
 
-    XXX hom  ↑  end pgu ter     XXX XXX XXX XXX XXX XXX
+    XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
     bsp  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
     XXX clo men des lay XXX     XXX XXX XXX XXX XXX XXX
 
@@ -91,67 +120,31 @@ The function layer has a *navigation cluster* in the top right, placed
 so that you can control it with one hand. It contains directional keys, 
 `home`/`end`, and `pageup`/`pagedown`.
 
-The remaining keys on the left side are for opening a `ter`minal, 
-`clo`sing a window, opening the `men`u, shifting the virtual `des`ktop, 
-changing the window `lay`out.
+The remaining keys on the left side are for `clo`sing a window, opening 
+the `men`u, shifting the virtual `des`ktop, changing the window 
+`lay`out.
 
-The right side acts as if they were pressed with a `super` modifier. 
+The remaining keys act as if they were pressed with a `meta` modifier. 
 This is convenient as the one key for all non-application-specific 
 shortcuts that you might want to set.
 
-You can still reach the rest of the `super`-enhanced keys by combining 
-or prepending it with `space`. For example, `meta/esc`+`space`+`f` will 
-yield `super+f`, not `pagedown`.
+Tapping `space` in this layer exposes the remaining keys that you might 
+want to send with a `meta` modifier. For example, although pressing 
+`nav+f` would generate `pgdn`, you can instead get to `meta+pgdn` via 
+`nav+space+f`. Finally, pressing `nav+space` and *then* `f` will send 
+`meta+f`.
 
 
 #### ✲ Function / ⌘ Meta
 
-Finally, the function layer can be reached by holding the `meta/esc` and 
-`symbol` keys simultaneously. This layer contains the F keys, media 
+Finally, the function layer can be reached by holding the `nav` and 
+`sym` keys simultaneously. This layer contains the F keys, media 
 controls, screen brightness, as well as toggles for wireless, touchpad, 
 keyboard layout, headphones...
 
      📶  ⏮   🔊  ⏭   ◼  🔆     sclk f7  f8  f9 f12 srq
      🖰   ⏪  🔉  ⏩  ⏯  🔅     prsc f4  f5  f6 f11 ins
-     ᛒᚼ  🎙️   🔇  🎧 ♫  ⌨     paus f1  f2  f3 f10 del
-
-Just like in the navigation layer, you can reach underlying `super` keys 
-by combining with space. For example, `meta/esc`+`symbol`+`space`+`j` 
-will yield `super+4`, not `f4`.
-
-
-## Power keys
-
-Your eight fingers maneuver the symbol keys, while your thumbs handle 
-power keys. These are:
-
-1.  On the left-hand side, from left to right:
-    1.  `meta/esc`. The `meta` key is useful for binding actions in your 
-        window manager, and it is also used to get to the arrow keys. It 
-        gets an additional function when you *tap* rather than hold it: 
-        it triggers `escape`, useful for modal applications like `vim`.
-    2.  `space`. When held along `meta`, it exposes the `meta`-modified 
-        keys that were hidden under the navigational cluster.
-    3.  `ctrl/enter`. Tapping gets you `enter`, the logical counterpart 
-        to `escape`. You can still get repeating enters by double 
-        tapping and holding.
-2.  On the right hand, from right to left:
-    1.  `shift`. This is a one-shot key: when you tap it, it will be 
-        activated for the following keypress. In conjunction with `meta` 
-        or `ctrl`, you get `M-F1` or `C-F1`, for additional bindings.
-    2.  `symbol`. Also a one-shot key, and additional variants are 
-        `M-F2`/`C-F2`.
-    3.  `alt`. Tapping it generates the `compose` key, allowing you to 
-        type special characters by typing intuitive keys in succession 
-        (e.g. `symbol symbol ' e` becomes `é`). Additional variants are 
-        `M-F2`/`C-F2`.
-
-On a standard laptop keyboard, your thumbs hover over `alt_l`, `space` 
-and `alt_r`, so it makes sense, for easy access, to turn `alt_l` into 
-`meta/esc` and `alt_r` into the `symbol` key. The `shift` and `control` 
-keys can stay where they are. Since there is a dedicated `enter`, your 
-`alt` can be tucked away in the bottom left corner where the `super` key 
-was, next to `ctrl`.
+     ᛒᚼ  🎙️   🔇  🎧  ⏺  ⌨     paus f1  f2  f3 f10 del
 
 
 ## Usage
