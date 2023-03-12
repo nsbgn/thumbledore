@@ -157,6 +157,4 @@ Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and copy
 ## Other
 
 -   [Seniply](https://stevep99.github.io/seniply/) has similar goals.
--   [KeymapDB](https://keymapdb.com/) compiles keymaps.
--   [Keyboard 
-    symbols](http://xahlee.info/comp/unicode_computing_symbols.html)
+
