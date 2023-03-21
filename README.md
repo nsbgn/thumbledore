@@ -83,7 +83,9 @@ There are 6x3 symbol keys for each hand.
 #### ✎ Default layer
 
 Don't worry, the default layer don't change much from what you're used 
-to (be it QWERTY or something else). The major difference is that 
+to (which may be QWERTY or something else --- I recommend 
+[Colemak-DH](https://colemakmods.github.io/mod-dh/) or 
+[Workman](https://workmanlayout.org/)). The major difference is that 
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
 usually make. Right space becomes `delete`. Finally, the square brackets 
 on the top right are dropped so that the backslash can scoot over.
