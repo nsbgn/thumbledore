@@ -8,7 +8,8 @@ idle while your weakest finger contorts to reach keys like `escape` and
 `backspace`. Exotic keyboards can remedy this, but lack portability.
 
 `thumbledore` is a 42-key layout that is meant for keyboards like the 
-Corne, but that *also* fits within the constraints of a laptop keyboard.
+Corne, but that *also* fits broadly within the constraints of a laptop 
+keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** There is only one additional layer for 
@@ -35,15 +36,17 @@ Assuming you have at least 3 thumb keys on either hand, these are the
 power keys with their suggested locations:
 
 1.  On the left-hand side, from left to right:
-    1.  `meta/esc`. This key accesses the **Nav/Meta** layer that 
-        contains direction keys. The rest of this layer simply activates 
-        the `meta`-modifier, useful for binding actions in your window 
+    1.  `meta/esc`. This key accesses the **Meta** layer that contains 
+        direction keys, and otherwise activates the `super` and 
+        `control` modifiers, useful for binding actions in your window 
         manager. The key gets an additional function when you *tap* 
         rather than hold it: it then triggers `escape`, useful for modal 
         applications like `vim`.
-    2.  `space`.
-    3.  `ctrl/menu`. When tapped, this will generate a bare keypress of 
-        the `meta` key, which is handy for bringing up the menu.
+    2.  `space`. When combined with `meta`, this is the `super` key, 
+        which brings up a menu when tapped in most operating systems.
+    3.  `ctrl/compose`. will emit the `compose` key when tapped, 
+        allowing you to type special characters by typing intuitive keys 
+        in succession (e.g. `compose ' e` becomes `é`).
 2.  On the right hand, from left to right:
     1.  `shift`. This is technically a modifier, but you could also see 
         it as providing access to the **Shift** layer. It is a sticky 
@@ -57,6 +60,7 @@ power keys with their suggested locations:
         everywhere.
 
 
+
 #### Graceful degradation
 
 On a standard laptop keyboard, your thumbs hover over `alt_l`, `space` 
@@ -66,13 +70,11 @@ where it is. `alt` can be tucked away in the bottom left corner where
 the `meta` key was, between `ctrl` and the original `alt`.
 
 If you have a split spacebar, one of the spacebars can be used for 
-`sym`, allowing `alt/enter` to scoot into `alt_r`.
+`sym`, allowing `alt/enter` to be put into `alt_r`.
 
-Left shift, for compatibility with standard keyboards that don't have a 
-thumb key for it, could continue to function as `shift` when held --- 
-but it will emit the `compose` key when tapped, allowing you to type 
-special characters by typing intuitive keys in succession (e.g. `compose 
-' e` becomes `é`).
+Left shift stays in place, for compatibility with keyboards that have no 
+thumb key for it, and also so that you can control some key combinations 
+with only your left hand.
 
 
 ## Character keys
@@ -87,12 +89,12 @@ to (which may be QWERTY or something else --- I recommend
 [Colemak-DH](https://colemakmods.github.io/mod-dh/) or 
 [Workman](https://workmanlayout.org/)). The major difference is that 
 `capslock` becomes `backspace`, avoiding the huge move your pinky would 
-usually make. Right space becomes `delete`. Finally, the square brackets 
+usually make. Right shift becomes `delete`. Finally, the square brackets 
 on the top right are dropped so that the backslash can scoot over.
 
     tab  q   w   e   r   t       y   u   i   o   p   \
     bsp  a   s   d   f   g       h   j   k   l   ;   '
-    cmp  z   x   c   v   b       n   m   ,   .   /  del
+    sft  z   x   c   v   b       n   m   ,   .   /  del
 
 
 #### ⇧ Shift
@@ -102,51 +104,50 @@ You're already familiar with one of the layers, too: the one exposed by
 
     tab  Q   W   E   R   T       Y   U   I   O   P   |
     bsp  A   S   D   F   G       H   J   K   L   :   "
-    cmp  Z   X   C   V   B       N   M   <   >   ?  del
+    sft  Z   X   C   V   B       N   M   <   >   ?  del
 
 
 #### ◇ Symbol
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  {   [   #   ]   }       ^   7   8   9   @   &
-    bsp  (   *   -   =   )       ~   4   5   6   0   `
-    cmp  !   +   $   _   /       %   1   2   3  .:  del
+    tab  @   [   $   #   ]       ^   7   8   9   .:  &
+    bsp  *   (   -   =   )       ~   4   5   6   0   `
+    sft  !   {   +   _   }       %   1   2   3   /  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols (according 
-to personal usage) --- except for number pad, which can be controlled 
-entirely with your right hand. There are two duplicate keys: `/` and 
-`.`, which are also on the default layer but often needed in conjunction 
-with numbers. For the same reason, you can get `:` by tapping `.` twice.
+to personal usage) --- except for number pad, which can now be 
+controlled entirely with your right hand. There are two duplicate keys: 
+`/` and `.`, which are also on the default layer but often needed in 
+conjunction with numbers. For the same reason, you can get `:` by 
+tapping `.` twice.
 
 
-#### 🮰 Nav / Meta
+#### 🮰 Meta
 
-    Atab hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
+     XXX hom  ↑  end pgu XXX     XXX XXX XXX XXX XXX XXX
      bsp  ←   ↓   →  pgd XXX     XXX XXX XXX XXX XXX XXX
-     XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX XXX
+     XXX XXX XXX XXX XXX XXX     XXX XXX XXX XXX XXX del
 
-The meta/nav layer has a *navigation cluster* in the top right, placed 
-so that you can control it with one hand. It contains directional keys, 
-`home`/`end`, and `pageup`/`pagedown`. To placate muscle memory, `tab` 
-is this layer is just `alt+tab`.
+The *meta* layer has a *navigation cluster* in the top right, placed so 
+that you can control it with one hand. It contains directional keys, 
+`home`/`end`, and `pageup`/`pagedown`.
 
-The remaining keys act as if they were pressed with a `meta` modifier. 
-This is convenient as the one key for all non-application-specific 
+The remaining keys act as if they were pressed with both `super` and 
+`control` modifiers. This is convenient as the one key for all general 
 shortcuts that you might want to set, such as navigating desktops and 
 closing windows.
 
-For completeness, tapping `space` in this layer exposes the remaining 
-keys that you might want to send with a `meta` modifier. For example, 
-although pressing `meta+f` would generate `pgdn`, you can instead get to 
-`meta+pgdn` via `meta+space+f`, while pressing `meta+space` and *then* 
-`f` will send `meta+f`.
+Pressing `space` in this layer turns it into "just" a `super` modifier. 
+For example, while pressing `meta+f` would generate `pgdn`, you can 
+instead get to `super+f` via `meta+space+f`. `meta+space` itself opens a 
+menu in many desktop environments. 
 
 
 #### ✲ Function
 
-Finally, the function layer can be reached by holding the `meta` and 
+Finally, the *function* layer can be reached by holding the `meta` and 
 `sym` keys simultaneously. This layer contains the F keys, media 
 controls, screen brightness, as well as toggles for wireless, touchpad, 
 keyboard layout, headphones...
