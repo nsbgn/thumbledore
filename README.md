@@ -111,9 +111,9 @@ You're already familiar with one of the layers, too: the one exposed by
 
 The *symbol* layer has been crammed full with the remaining symbols.
 
-    tab  @   [   $   #   ]       ^   7   8   9   .:  &
+    tab  !   [   +   #   ]       ^   7   8   9   .:  &
     bsp  *   (   -   =   )       ~   4   5   6   0   `
-    sft  !   {   +   _   }       %   1   2   3   /  del
+    sft  @   {   $   _   }       %   1   2   3   /  del
 
 Because the symbol key is usually pressed with your right-hand thumb, 
 the left-hand side is preferred for the most common symbols (according 
@@ -152,10 +152,14 @@ Finally, the *function* layer can be reached by holding the `meta` and
 controls, screen brightness, as well as toggles for wireless, touchpad, 
 keyboard layout, headphones...
 
-     📶  ⏮   🔊  ⏭   ◼  🔆    lock f7  f8  f9 f12 ⌨
-     🖰   ⏪  🔉  ⏩  ⏯  🔅    prsc f4  f5  f6 f11 ins
-    caps 🎙️   🔇  🎧  ⏺  ?    paus f1  f2  f3 f10 del
+    XXXX prev volm next stop lght    scrl                     lay-
+    XXXX song  up  song       up     lock  F7   F8   F9   F12 out
 
+    XXXX re-  volm for- play lght    prnt                      in-
+    XXXX wind down ward paus down    scrn  F4   F5   F6   F11 sert
+
+    caps mute mute XXXX XXXX XXXX    paus                     blue
+    lock  mic spkr XXXX XXXX XXXX    brk   F1   F3   F3   F10 toot
 
 ## Usage
 
