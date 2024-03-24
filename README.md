@@ -7,22 +7,28 @@ Typing on a standard keyboard is not a great experience. Your thumbs
 idle while your weakest finger contorts to reach keys like `escape` and 
 `backspace`. Exotic keyboards can remedy this, but lack portability.
 
-`thumbledore` is a 42-key layout that is meant for keyboards with thumb 
-keys like the Corne, but that *also* fits broadly within the constraints 
-of a laptop keyboard.
+`thumbledore` is a layout with 40±2 keys that is meant for keyboards 
+with at least 2 or ideally 3 thumb keys per hand, but that *also* fits 
+broadly within the constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a laptop keyboard.
--   **Easy to remember.** There is only one additional layer for 
-    symbols, one for navigation keys, and you combine them for the 
-    function keys.
+-   **Easy to remember.** There is only *one* additional layer for 
+    symbols and *one* for navigation and function keys. That's it.
 -   **One-handed control.** The number pad can be controlled with just 
     the right hand. Navigation keys can be controlled with just the 
     left.
--   **Progressive learning.** You don't have to learn everything all at 
-    once --- or ever. I've found the symbol layer to be most important, 
-    so start with that.
+-   **Progressive learning.** You don't need to learn everything all at 
+    once. I've found the symbol layer to be most important, so start 
+    with that.
+-   **No regressions.** Modifiers stack in a sensible way, and all 
+    common keys that you might want to press are still available --- for 
+    example, you can still emit a bare press of the right control key.
+-   **No homerow mods**. Overloading letter keys necessarily introduces 
+    time-based disambiguation, which can be fickle and introduces visual 
+    delay. You can use tricks to mitigate this and train yourself to 
+    work with it, but I have avoided them here.
 
 
 ## Keys
@@ -64,34 +70,38 @@ with the home row highlighted in thick borders:
     ├───╆━━━┿━━━┿━━━┿━━━╅───┤  ├───╆━━━┿━━━┿━━━┿━━━╅───┤
     │BSP┃a *│r (│s -│t =┃g )│  │m ~┃n 4│e 5│i 6│o 0┃'"`│
     ├───╄━━━┿━━━┿━━━┿━━━╃───┤  ├───╄━━━┿━━━┿━━━┿━━━╃───┤
-    │   │z &│x {│c $│d _│v }│  │k %│h 1│,<2│.>3│/? │   │
-    └───┴ctl┴alt┴───┴───┴───┘  └───┴───┴───┴alt┴ctl┴───┘
+    │sft│z &│x {│c $│d _│v }│  │k %│h 1│,<2│.>3│/? │sft│
+    └───┴───┴───┴───┴───┴───┘  └───┴───┴───┴───┴───┴───┘
                 ┌┄┄┄┲┅┅┅┱┄┄┄┐  ┌┄┄┄┲┅┅┅┱┄┄┄┐
-                ┊ESC┋SPC┋CMB┊  ┊SFT┋SYM┋RTN┊
-                └fn┄┺┅┅┅┹┄┄┄┘  └sft┺sym┹┄fn┘
+                ┊ESC┋SPC┋CMB┊  ┊SFT┋sym┋RTN┊
+                └fn┄┺┅┅┅┹┄┄┄┘  └┄┄┄┺┅┅┅┹┄fn┘
 
 However, on a standard keyboard without a split spacebar, you don't have 
 access to so many thumb keys. To alleviate this, we **move the right 
-hand one key further right**. (For a tactile reminder, I recommend 
-putting stickers on the homerow.) Hopefully, this makes your right thumb 
-rest on the alt key, rather than on the spacebar. The remapping then 
-looks like this:
+hand one key further along**. For a tactile reminder, I recommend 
+putting a sticker on your right index finger's home key. The remapping 
+then looks like this:
 
     ┌────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
     │TAB │q !│w [│f +│p #│b ]┊   │j ^│l 7│u 8│y 9│;:.│\|@│   │
     ├────┴┲━━┷┯━━┷┯━━┷┯━━┷┱──┴┬──┴┬──┴┲━━┷┯━━┷┯━━┷┯━━┷┱──┴───┤
     │BSP  ┃a *│r (│s -│t =┃g )┊   │m ~┃n 4│e 5│i 6│o 0┃  '"` │
     ├─────┺┯━━┷┯━━┷┯━━┷┯━━┹┬──┴┬──┴┬──┺┯━━┷┯━━┷┯━━┷┯━━┹──────┤
-    │SFT   │z &│x {│c $│d _│v }┊   │k %│h 1│,<2│.>3│      /? │
-    ├sft──┬┴ctl┴alt┴┄┄┲┷┅┅┅┷┅┅┅┷┅┅┅┷┅┅┅┷┅┳┅┷┅┅┅╅alt┴┄┬────ctl┤
-    │CTL  │ALT  ┊ ESC ┋       SPC        ┃ SYM ┋ RTN ┊       │
-    └─────┴─────┴┄┄fn┄┺┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┻┅sym┅┹┄┄fn┄┴───────┘
+    │shft  │z &│x {│c $│d _│v }┊   │k %│h 1│,<2│.>3│      /? │
+    ├─────┬┴───┴┬┄┄┴┄┄┲┷┅┅┅┷┅┅┅┷┅┅┅┷┅┅┅┷┅┳┅┷┅┅┅╅┄┄┄┴┄┬───────┤
+    │ctl  │alt  ┊ ESC ┋       SPC        ┃ sym ┋ RTN ┊       │
+    └─────┴─────┴┄┄fn┄┺┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┻┅┅┅┅┅┹┄┄fn┄┴───────┘
 
-Now, making an inward motion with your thumbs has the same result as on 
-the ortholinear board. The outward motion is no longer possible, except 
-by also holding the opposite `fn` key. That is, `ESC/fn + SPC` activates 
-`sft` and `RTN/fn + SPC` yields `CMB`. There is also still a `SFT` in 
-the usual place at the bottom left.
+Hopefully, this makes your right thumb rest on AltGr, rather than on the 
+spacebar. Now, making an inward motion with your thumbs has the same 
+result as on the ortholinear board. These (6×3 + 2) × 2 = 40 keys are 
+the only ones you'll really *need* to access any key you'd find on a 
+generic keyboard --- but you if you *do* have access to more thumb keys, 
+like on a Corne, you can make your life easier with thumb access to 
+Shift, Control, Alt or Compose.
+
+Of course, on a laptop keyboard, Control and Alt are still also 
+available in the bottom left.
 
 
 ## Layers
@@ -106,12 +116,8 @@ usually make.
 
 ### ◇ Symbol
 
-The *symbol* layer has been crammed full with the remaining numbers and 
-symbols:
-
-    !   [   +   #   ]       ^   7   8   9   .:  &
-    *   (   -   =   )       ~   4   5   6   0   `
-    @   {   $   _   }       %   1   2   3   /
+The **Sym** layer has been crammed full with the remaining numbers and 
+symbols.
 
 Because the `SYM` key is pressed with your right-hand thumb, the 
 left-hand side is preferred for the most common symbols (according to 
@@ -123,41 +129,33 @@ with numbers. For the same reason, you can get `:` by tapping `.` twice.
 
 ### 🮰 Function
 
-The **Function** layer can be activated either via `ESC/fn` on the left 
-or via `RTN/fn` on the right. Pressing both generates a bare tap of the 
-`Super` key, which opens a menu in many desktop environments. 
+The **Fn** layer contains a navigation cluster, placed so that you can 
+control it with one hand. It contains directional keys, `home`/`end`, 
+and `pageup`/`pagedown`.
 
-If activated on the left side, the left side itself contains a 
-*navigation cluster*, placed so that you can control it with one hand. 
-It contains directional keys, `home`/`end`, and `pageup`/`pagedown`:
+The layer also has the *function keys* and provides access to the 
+modifiers: tapping the keys labeled `alt`, `ctrl` and `meta` activates 
+the corresponding modifiers for the remainder of the time that **Fn** is 
+pressed.
 
-    ┌───┬───┬───┬───┬───┬┄┈
-    │DEL│HOM│ ▲ │END│PG▴│
-    ├───╆━━━┿━━━┿━━━┿━━━╅┄┈
-    │BSP┃ ◀ │ ▼ │ ▶ │PG▾┃
-    ├───╄━━━┿━━━┿━━━┿━━━╃┈┈
-    ┊   ┊   ┊   ┊   ┊   ┊
+This layer can be activated either via `ESC/fn` on the left or via 
+`RTN/fn` on the right --- but it will only be activated for the keys 
+pressed with the same hand! The keys on the other side will act as if 
+they were pressed with the `Super+Control` modifier. This is convenient 
+for quick access to window-manager shortcuts that you might want to set, 
+such as navigating desktops and closing windows.
 
-The remaining keys act as if they were pressed with the `Super` 
-modifier. This is convenient as the one key for all general shortcuts 
-that you might want to set, such as navigating desktops and closing 
-windows.
+Pressing both *Fn* keys allows you to combine modifiers with the keys on 
+the *Fn* layer itself, or to generate bare taps of said modifiers.
 
+    ┌────┬────┬────┬────┬────┬────┐  ┌────┬────┬────┬────┬────┬────┐
+    │DEL │HOME│UP  │END │PGUP│PAUS│  │  F7│  F8│  F9│ F10│ F11│ F12│
+    ├────╆━━━━┿━━━━┿━━━━┿━━━━╅────┤  ├────╆━━━━┿━━━━┿━━━━┿━━━━╅────┤
+    │BKSP┃LEFT│DOWN│RGHT│PGDN┃SCLK│  │  F1┃  F2│  F3│  F4│  F5┃  F6│
+    ├────╄━━━━┿━━━━┿━━━━┿━━━━╃────┤  ├────╄━━━━┿━━━━┿━━━━┿━━━━╃────┤
+    │shft│MENU│alt │ctrl│meta│SYRQ│  │INSR│meta│ctrl│alt │CAPS│shft│
+    └────┴────┴────┴────┴────┴────┘  └────┴────┴────┴────┴────┴────┘
 
-### ✲ Function + Symbol
-
-Finally, the combined **Fn/Symbol** layer contains the F keys, media 
-controls, screen brightness, as well as toggles for wireless, touchpad, 
-keyboard layout, headphones...
-
-    XXXX prev volm next stop lght    scrl                     lay-
-    XXXX song  up  song       up     lock  F7   F8   F9   F12 out
-
-    XXXX re-  volm for- play lght    prnt                      in-
-    XXXX wind down ward paus down    scrn  F4   F5   F6   F11 sert
-
-    caps mute mute XXXX XXXX XXXX    paus                     blue
-    lock  mic spkr XXXX XXXX XXXX    brk   F1   F3   F3   F10 toot
 
 
 ## Usage
