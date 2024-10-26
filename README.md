@@ -30,6 +30,7 @@ broadly within the constraints of a laptop keyboard.
     delay. You can use tricks to mitigate this and train yourself to 
     work with it, but I have avoided them here.
 
+![The thumbledore-qwerty keyboard layout.](kb.svg)
 
 ## Keys
 
