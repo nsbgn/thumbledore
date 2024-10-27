@@ -2,111 +2,111 @@
 <svg width="800" height="264" version="1.1" viewBox="-2 -2 400 132" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 11px; text-anchor: middle; font-family: monospace; }
+text { font-size: 18px; text-anchor: middle; font-family: monospace; }
 .mod { font-style: italic; }
-.c0 { transform: translate(15, 0); }
-.c1 { transform: translate(47, 0); }
-.c2 { transform: translate(79, 0); }
-.c3 { transform: translate(111, 0); }
-.c4 { transform: translate(143, 0); }
-.c5 { transform: translate(175, 0); }
-.r0 { transform: translate(0, 19); }
-.r1 { transform: translate(0, 51); }
-.r2 { transform: translate(0, 83); }
-.r3 { transform: translate(0, 115); }
-.tiny { font-size: 0.7em; }
+.c0 { transform: translate(15px, 0); }
+.c1 { transform: translate(47px, 0); }
+.c2 { transform: translate(79px, 0); }
+.c3 { transform: translate(111px, 0); }
+.c4 { transform: translate(143px, 0); }
+.c5 { transform: translate(175px, 0); }
+.r0 { transform: translate(0, 19px); }
+.r1 { transform: translate(0, 51px); }
+.r2 { transform: translate(0, 83px); }
+.r3 { transform: translate(0, 115px); }
+.tiny { font-size: 9px; }
 ]]></style>
-<rect id="key" width="30" height="30" ry="4" fill="#ccc"/>
-<g id="3x1">
-<use href="#key" x="0"   y="0"/>
-<use href="#key" x="32"  y="0"/>
-<use href="#key" x="64"  y="0"/>
-</g>
-<g id="6x1">
-<use href="#3x1" x="0"   y="0"/>
-<use href="#3x1" x="96"  y="0"/>
-</g>
-<g id="left">
-<use href="#6x1" x="0" y="0"/>
-<use href="#6x1" x="0" y="32"/>
-<use href="#6x1" x="0" y="64"/>
-<use href="#3x1" x="96" y="96"/>
-<use href="#key" x="128" y="32" stroke="black" stroke-dasharray="2,1"/>
-</g>
-<g id="right">
-<use href="#6x1" x="0" y="0"/>
-<use href="#6x1" x="0" y="32"/>
-<use href="#6x1" x="0" y="64"/>
-<use href="#3x1" x="0" y="96"/>
-<use href="#key" x="32" y="32" stroke="black" stroke-dasharray="2,1"/>
-</g>
+  <rect id="key" width="30" height="30" ry="4" fill="#ccc"/>
+  <g id="3x1">
+    <use href="#key" x="0"  y="0"/>
+    <use href="#key" x="32" y="0"/>
+    <use href="#key" x="64" y="0"/>
+  </g>
+  <g id="6x1">
+    <use href="#3x1" x="0"  y="0"/>
+    <use href="#3x1" x="96" y="0"/>
+  </g>
+  <g id="left">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+    <use href="#3x1" x="96" y="96"/>
+    <use href="#key" x="128" y="32" stroke="black" stroke-dasharray="2,1"/>
+  </g>
+  <g id="right">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+    <use href="#3x1" x="0" y="96"/>
+    <use href="#key" x="32" y="32" stroke="black" stroke-dasharray="2,1"/>
+  </g>
 </defs>
 
-<g>
-<use href="#left"/>
-<g class="r0">
-<text class="c0 tiny">tab</text>
-<text class="c1">q</text>
-<text class="c2">w</text>
-<text class="c3">e</text>
-<text class="c4">r</text>
-<text class="c5">t</text>
+<g id="left-keyboard">
+  <use href="#left"/>
+  <g class="r0">
+    <text class="c0 tiny">tab</text>
+    <text class="c1">q</text>
+    <text class="c2">w</text>
+    <text class="c3">e</text>
+    <text class="c4">r</text>
+    <text class="c5">t</text>
+  </g>
+  <g class="r1">
+    <text class="c0 tiny">bksp</text>
+    <text class="c1">a</text>
+    <text class="c2">s</text>
+    <text class="c3">d</text>
+    <text class="c4">f</text>
+    <text class="c5">g</text>
+  </g>
+  <g class="r2">
+    <text class="c0 tiny">multi</text>
+    <text class="c1">z</text>
+    <text class="c2">x</text>
+    <text class="c3">c</text>
+    <text class="c4">v</text>
+    <text class="c5">b</text>
+  </g>
+  <g class="r3">
+    <text class="c3 tiny mod">ctrl</text>
+    <text class="c4">
+      <tspan x="0" dy="-6" class="tiny">esc</tspan><tspan x="0" dy="12" class="tiny mod">fn</tspan>
+    </text>
+    <text class="c5 tiny">space</text>
+  </g>
 </g>
-<g class="r1">
-<text class="c0 tiny">bksp</text>
-<text class="c1">a</text>
-<text class="c2">s</text>
-<text class="c3">d</text>
-<text class="c4">f</text>
-<text class="c5">g</text>
-</g>
-<g class="r2">
-<text class="c0 tiny">compose</text>
-<text class="c1">z</text>
-<text class="c2">x</text>
-<text class="c3">c</text>
-<text class="c4">v</text>
-<text class="c5">b</text>
-</g>
-<g class="r3">
-<text class="c3 tiny mod">ctrl</text>
-<text class="c4">
-<tspan x="0" dy="-6">esc</tspan>
-<tspan x="0" dy="12" class="tiny mod">fn</tspan>
-</text>
-<text class="c5 tiny">space</text>
-</g>
-</g>
-<g transform="translate(200, 0)">
-<use href="#right"/>
-<g class="r0">
-<text class="c0">y</text>
-<text class="c1">u</text>
-<text class="c2">i</text>
-<text class="c3">o</text>
-<text class="c4">p</text>
-<text class="c5">\</text>
-</g>
-<g class="r1">
-<text class="c0">h</text>
-<text class="c1">j</text>
-<text class="c2">k</text>
-<text class="c3">l</text>
-<text class="c4">;</text>
-<text class="c5">'</text>
-</g>
-<g class="r2">
-<text class="c0">n</text>
-<text class="c1">m</text>
-<text class="c2">,</text>
-<text class="c3">.</text>
-<text class="c4">/</text>
-<text class="c5 tiny">enter</text>
-</g>
-<g class="r3">
-<text class="c0 tiny mod">shift</text>
-<text class="c1 tiny mod">sym</text>
-<text class="c2 tiny mod">alt</text>
-</g>
-</g>
+
+<g id="right-keyboard" transform="translate(200, 0)">
+  <use href="#right"/>
+  <g class="r0">
+    <text class="c0">y</text>
+    <text class="c1">u</text>
+    <text class="c2">i</text>
+    <text class="c3">o</text>
+    <text class="c4">p</text>
+    <text class="c5">\</text>
+  </g>
+  <g class="r1">
+    <text class="c0">h</text>
+    <text class="c1">j</text>
+    <text class="c2">k</text>
+    <text class="c3">l</text>
+    <text class="c4">;</text>
+    <text class="c5">'</text>
+  </g>
+  <g class="r2">
+    <text class="c0">n</text>
+    <text class="c1">m</text>
+    <text class="c2">,</text>
+    <text class="c3">.</text>
+    <text class="c4">/</text>
+    <text class="c5 tiny">enter</text>
+  </g>
+  <g class="r3">
+    <text class="c0 tiny mod">shift</text>
+    <text class="c1 tiny mod">altgr</text>
+    <text class="c2 tiny mod">alt</text>
+  </g>
+  </g>
 </svg>
