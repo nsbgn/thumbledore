@@ -1,96 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="800" height="264" version="1.1" viewBox="-2 -2 400 132" xmlns="http://www.w3.org/2000/svg">
-   <defs>
-      <style type="text/css"><![CDATA[
-text {
-   font-size: 12px;
-   text-anchor: middle;
-   font-family: monospace;
-}
-.layer {
-   font-style: italic;
-}
-      ]]></style>
+<defs>
+<style type="text/css"><![CDATA[
+text { font-size: 11px; text-anchor: middle; font-family: monospace; }
+.mod { font-style: italic; }
+.c0 { transform: translate(15, 0); }
+.c1 { transform: translate(47, 0); }
+.c2 { transform: translate(79, 0); }
+.c3 { transform: translate(111, 0); }
+.c4 { transform: translate(143, 0); }
+.c5 { transform: translate(175, 0); }
+.r0 { transform: translate(0, 19); }
+.r1 { transform: translate(0, 51); }
+.r2 { transform: translate(0, 83); }
+.r3 { transform: translate(0, 115); }
+.tiny { font-size: 0.7em; }
+]]></style>
+<rect id="key" width="30" height="30" ry="4" fill="#ccc"/>
+<g id="3x1">
+<use href="#key" x="0"   y="0"/>
+<use href="#key" x="32"  y="0"/>
+<use href="#key" x="64"  y="0"/>
+</g>
+<g id="6x1">
+<use href="#3x1" x="0"   y="0"/>
+<use href="#3x1" x="96"  y="0"/>
+</g>
+<g id="left">
+<use href="#6x1" x="0" y="0"/>
+<use href="#6x1" x="0" y="32"/>
+<use href="#6x1" x="0" y="64"/>
+<use href="#3x1" x="96" y="96"/>
+<use href="#key" x="128" y="32" stroke="black" stroke-dasharray="2,1"/>
+</g>
+<g id="right">
+<use href="#6x1" x="0" y="0"/>
+<use href="#6x1" x="0" y="32"/>
+<use href="#6x1" x="0" y="64"/>
+<use href="#3x1" x="0" y="96"/>
+<use href="#key" x="32" y="32" stroke="black" stroke-dasharray="2,1"/>
+</g>
+</defs>
 
-      <rect id="key" width="30" height="30" ry="5" fill="#ccc"/>
-      <g id="3x1">
-         <use href="#key" x="0"   y="0"/>
-         <use href="#key" x="32"  y="0"/>
-         <use href="#key" x="64"  y="0"/>
-      </g>
-      <g id="6x1">
-         <use href="#3x1" x="0"   y="0"/>
-         <use href="#3x1" x="96"  y="0"/>
-      </g>
-      <g id="left">
-         <use href="#6x1" x="0" y="0"/>
-         <use href="#6x1" x="0" y="32"/>
-         <use href="#6x1" x="0" y="64"/>
-         <use href="#3x1" x="96" y="96"/>
-         <use href="#key" x="128" y="32" stroke="black" stroke-dasharray="2,1"/>
-      </g>
-      <g id="right">
-         <use href="#6x1" x="0" y="0"/>
-         <use href="#6x1" x="0" y="32"/>
-         <use href="#6x1" x="0" y="64"/>
-         <use href="#3x1" x="0" y="96"/>
-         <use href="#key" x="32" y="32" stroke="black" stroke-dasharray="2,1"/>
-      </g>
-   </defs>
-
-   <g>
-      <use href="#left"/>
-      <text x="15"  y="18">tab</text>
-      <text x="47"  y="18">q</text>
-      <text x="79"  y="18">w</text>
-      <text x="111" y="18">e</text>
-      <text x="143" y="18">r</text>
-      <text x="175" y="18">t</text>
-
-      <text x="15"  y="50">bksp</text>
-      <text x="47"  y="50">a</text>
-      <text x="79"  y="50">s</text>
-      <text x="111" y="50">d</text>
-      <text x="143" y="50">f</text>
-      <text x="175" y="50">g</text>
-
-      <text x="15"  y="82">cmp</text>
-      <text x="47"  y="82">z</text>
-      <text x="79"  y="82">x</text>
-      <text x="111" y="82">c</text>
-      <text x="143" y="82">v</text>
-      <text x="175" y="82">b</text>
-
-      <text x="111" y="120" class="layer">ctrl</text>
-      <text x="143" y="108">esc</text>
-      <text x="143" y="120" class="layer">fn</text>
-      <text x="175" y="114">spce</text>
-   </g>
-   <g transform="translate(200, 0)">
-      <use href="#right"/>
-      <text x="15"  y="18">y</text>
-      <text x="47"  y="18">u</text>
-      <text x="79"  y="18">i</text>
-      <text x="111" y="18">o</text>
-      <text x="143" y="18">p</text>
-      <text x="175" y="18">\</text>
-
-      <text x="15"  y="50">h</text>
-      <text x="47"  y="50">j</text>
-      <text x="79"  y="50">k</text>
-      <text x="111" y="50">l</text>
-      <text x="143" y="50">;</text>
-      <text x="175" y="50">'</text>
-
-      <text x="15"  y="82">n</text>
-      <text x="47"  y="82">m</text>
-      <text x="79"  y="82">,</text>
-      <text x="111" y="82">.</text>
-      <text x="143" y="82">/</text>
-      <text x="175" y="82">ret</text>
-
-      <text x="15" y="120" class="layer">shft</text>
-      <text x="47" y="120" class="layer">sym</text>
-      <text x="79" y="120" class="layer">alt</text>
-   </g>
+<g>
+<use href="#left"/>
+<g class="r0">
+<text class="c0 tiny">tab</text>
+<text class="c1">q</text>
+<text class="c2">w</text>
+<text class="c3">e</text>
+<text class="c4">r</text>
+<text class="c5">t</text>
+</g>
+<g class="r1">
+<text class="c0 tiny">bksp</text>
+<text class="c1">a</text>
+<text class="c2">s</text>
+<text class="c3">d</text>
+<text class="c4">f</text>
+<text class="c5">g</text>
+</g>
+<g class="r2">
+<text class="c0 tiny">compose</text>
+<text class="c1">z</text>
+<text class="c2">x</text>
+<text class="c3">c</text>
+<text class="c4">v</text>
+<text class="c5">b</text>
+</g>
+<g class="r3">
+<text class="c3 tiny mod">ctrl</text>
+<text class="c4">
+<tspan x="0" dy="-6">esc</tspan>
+<tspan x="0" dy="12" class="tiny mod">fn</tspan>
+</text>
+<text class="c5 tiny">space</text>
+</g>
+</g>
+<g transform="translate(200, 0)">
+<use href="#right"/>
+<g class="r0">
+<text class="c0">y</text>
+<text class="c1">u</text>
+<text class="c2">i</text>
+<text class="c3">o</text>
+<text class="c4">p</text>
+<text class="c5">\</text>
+</g>
+<g class="r1">
+<text class="c0">h</text>
+<text class="c1">j</text>
+<text class="c2">k</text>
+<text class="c3">l</text>
+<text class="c4">;</text>
+<text class="c5">'</text>
+</g>
+<g class="r2">
+<text class="c0">n</text>
+<text class="c1">m</text>
+<text class="c2">,</text>
+<text class="c3">.</text>
+<text class="c4">/</text>
+<text class="c5 tiny">enter</text>
+</g>
+<g class="r3">
+<text class="c0 tiny mod">shift</text>
+<text class="c1 tiny mod">sym</text>
+<text class="c2 tiny mod">alt</text>
+</g>
+</g>
 </svg>
