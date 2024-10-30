@@ -1,20 +1,19 @@
-1L5   = oneshot(oneshotmeta)
-1L4   = home
-1L3   = up
-1L2   = end
-1L1   = pageup
+q = oneshot(oneshotmeta)
+w = home
+e = up
+r = end
+t = pageup
 
-2L5   = delete
-2L4   = left
-2L3   = down
-2L2   = right
-2L1   = pagedown
+a = delete
+s = left
+d = down
+f = right
+g = pagedown
 
-3L6   = overload(shift, S-enter)
-3L5   = M-z
-3L4   = M-x
-3L3   = M-c
-3L2   = layer(meta)
-3L1   = M-b
+z = M-z
+x = M-x
+c = M-c
+v = layer(meta)
+b = M-b
 
 # scrolllock, sysrq, pause, insert, compose, capslock
