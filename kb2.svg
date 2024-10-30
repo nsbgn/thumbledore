@@ -2,7 +2,7 @@
 <svg width="800" height="264" version="1.1" viewBox="-2 -2 400 132" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 18px; text-anchor: middle; font-family: monospace; }
+text { font-size: 14px; text-anchor: middle; font-family: monospace; }
 .mod { font-style: italic; }
 .c0 { transform: translate(15px, 0); }
 .c1 { transform: translate(47px, 0); }
@@ -15,8 +15,23 @@ text { font-size: 18px; text-anchor: middle; font-family: monospace; }
 .r2 { transform: translate(0, 83px); }
 .r3 { transform: translate(0, 115px); }
 .tiny { font-size: 9px; }
+.tiny text { font-size: 9px; }
+
+g.kb > g > g > text:nth-child(1) {
+  fill: #ff00ff;
+  transform: translate(-8px, -6px);
+}
+g.kb > g > g > text:nth-child(2) {
+  fill: #ff00ff;
+  transform: translate(8px, -4px);
+}
+g.kb > g > g > text:nth-child(3) {
+  fill: #ff00ff;
+  transform: translate(0px, 6px);
+}
+
 ]]></style>
-  <rect id="key" width="30" height="30" ry="4" fill="#ccc"/>
+  <rect id="key" width="30" height="30" ry="4" fill="#ddd"/>
   <g id="3x1">
     <use href="#key" x="0"  y="0"/>
     <use href="#key" x="32" y="0"/>
@@ -42,31 +57,91 @@ text { font-size: 18px; text-anchor: middle; font-family: monospace; }
   </g>
 </defs>
 
-<g id="left-keyboard">
+<g class="kb" id="left-keyboard">
   <use href="#left"/>
   <g class="r0">
     <text class="c0 tiny">tab</text>
-    <text class="c1">q</text>
-    <text class="c2">w</text>
-    <text class="c3">e</text>
-    <text class="c4">r</text>
-    <text class="c5">t</text>
+    <text class="c1"><!--
+      --><tspan x="-8px" y="-6px">q</tspan><!--
+      --><tspan x="8px" y="-6x">Q</tspan><!--
+      --><tspan x="0px" y="6px">!</tspan><!--
+    --></text>
+    <text class="c2"><!--
+      --><tspan x="-8px" y="-6px">w</tspan><!--
+      --><tspan x="8px" y="-6x">W</tspan><!--
+      --><tspan x="0px" y="6px">[</tspan><!--
+    --></text>
+    <text class="c3"><!--
+      --><tspan x="-8px" y="-6px">e</tspan><!--
+      --><tspan x="8px" y="-6x">E</tspan><!--
+      --><tspan x="0px" y="6px">+</tspan><!--
+    --></text>
+    <text class="c4"><!--
+      --><tspan x="-8px" y="-6px">r</tspan><!--
+      --><tspan x="8px" y="-6x">R</tspan><!--
+      --><tspan x="0px" y="6px">#</tspan><!--
+    --></text>
+    <text class="c5"><!--
+      --><tspan x="-8px" y="-6px">t</tspan><!--
+      --><tspan x="8px" y="-6x">T</tspan><!--
+      --><tspan x="0px" y="6px">]</tspan><!--
+    --></text>
   </g>
   <g class="r1">
     <text class="c0 tiny">bksp</text>
-    <text class="c1">a</text>
-    <text class="c2">s</text>
-    <text class="c3">d</text>
-    <text class="c4">f</text>
-    <text class="c5">g</text>
+    <text class="c1"><!--
+      --><tspan x="-8px" y="-6px">a</tspan><!--
+      --><tspan x="8px" y="-6x">A</tspan><!--
+      --><tspan x="0px" y="6px">*</tspan><!--
+    --></text>
+    <text class="c2"><!--
+      --><tspan x="-8px" y="-6px">s</tspan><!--
+      --><tspan x="8px" y="-6x">S</tspan><!--
+      --><tspan x="0px" y="6px">(</tspan><!--
+    --></text>
+    <text class="c3"><!--
+      --><tspan x="-8px" y="-6px">d</tspan><!--
+      --><tspan x="8px" y="-6x">D</tspan><!--
+      --><tspan x="0px" y="6px">-</tspan><!--
+    --></text>
+    <text class="c4"><!--
+      --><tspan x="-8px" y="-6px">f</tspan><!--
+      --><tspan x="8px" y="-6x">F</tspan><!--
+      --><tspan x="0px" y="6px">=</tspan><!--
+    --></text>
+    <text class="c5"><!--
+      --><tspan x="-8px" y="-6px">g</tspan><!--
+      --><tspan x="8px" y="-6x">G</tspan><!--
+      --><tspan x="0px" y="6px">)</tspan><!--
+    --></text>
   </g>
   <g class="r2">
     <text class="c0 tiny">multi</text>
-    <text class="c1">z</text>
-    <text class="c2">x</text>
-    <text class="c3">c</text>
-    <text class="c4">v</text>
-    <text class="c5">b</text>
+    <text class="c1"><!--
+      --><tspan x="-8px" y="-6px">z</tspan><!--
+      --><tspan x="8px" y="-6x">ℤ</tspan><!--
+      --><tspan x="0px" y="6px">&amp;</tspan><!--
+    --></text>
+    <text class="c2"><!--
+      --><tspan x="-8px" y="-6px">x</tspan><!--
+      --><tspan x="8px" y="-6x">X</tspan><!--
+      --><tspan x="0px" y="6px">{</tspan><!--
+    --></text>
+    <text class="c3"><!--
+      --><tspan x="-8px" y="-6px">c</tspan><!--
+      --><tspan x="8px" y="-6x">C</tspan><!--
+      --><tspan x="0px" y="6px">$</tspan><!--
+    --></text>
+    <text class="c4"><!--
+      --><tspan x="-8px" y="-6px">v</tspan><!--
+      --><tspan x="8px" y="-6x">V</tspan><!--
+      --><tspan x="0px" y="6px">_</tspan><!--
+    --></text>
+    <text class="c5"><!--
+      --><tspan x="-8px" y="-6px">b</tspan><!--
+      --><tspan x="8px" y="-6x">B</tspan><!--
+      --><tspan x="0px" y="6px">}</tspan><!--
+    --></text>
   </g>
   <g class="r3">
     <text class="c3 tiny mod">ctrl</text>
@@ -77,31 +152,41 @@ text { font-size: 18px; text-anchor: middle; font-family: monospace; }
   </g>
 </g>
 
-<g id="right-keyboard" transform="translate(200, 0)">
+<g class="kb" id="right-keyboard" transform="translate(200, 0)">
   <use href="#right"/>
   <g class="r0">
-    <text class="c0">y</text>
-    <text class="c1">u</text>
-    <text class="c2">i</text>
-    <text class="c3">o</text>
-    <text class="c4">p</text>
-    <text class="c5">\</text>
+    <g class="c0">
+      <text>y</text>
+      <text>Y</text>
+      <text>^</text>
+    </g>
+    <g class="c1">
+      <text>u</text>
+    </g>
+    <g class="c2">
+      <text>i</text>
+    </g>
+    <g class="c3">
+      <text>o</text>
+    </g>
+    <g class="c4"><text>p</text></g>
+    <g class="c5"><text>\</text></g>
   </g>
   <g class="r1">
-    <text class="c0">h</text>
-    <text class="c1">j</text>
-    <text class="c2">k</text>
-    <text class="c3">l</text>
-    <text class="c4">;</text>
-    <text class="c5">'</text>
+    <g class="c0"><text>h</text></g>
+    <g class="c1"><text>j</text></g>
+    <g class="c2"><text>k</text></g>
+    <g class="c3"><text>l</text></g>
+    <g class="c4"><text>;</text></g>
+    <g class="c5"><text>'</text></g>
   </g>
   <g class="r2">
-    <text class="c0">n</text>
-    <text class="c1">m</text>
-    <text class="c2">,</text>
-    <text class="c3">.</text>
-    <text class="c4">/</text>
-    <text class="c5 tiny">enter</text>
+    <g class="c0"><text>n</text></g>
+    <g class="c1"><text>m</text></g>
+    <g class="c2"><text>,</text></g>
+    <g class="c3"><text>.</text></g>
+    <g class="c4"><text>/</text></g>
+    <g class="c5 tiny"><text>enter</text></g>
   </g>
   <g class="r3">
     <text class="c0 tiny mod">shift</text>
