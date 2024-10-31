@@ -1,0 +1,50 @@
+partial alphanumeric_keys
+xkb_symbols "thumbledore-qwerty" {
+    name[Group1]= "English (Thumbledore, QWERTY)";
+
+    # Row 1
+    key <AD01> { [ q, Q, exclam ] };
+    key <AD02> { [ w, W, bracketleft ] };
+    key <AD03> { [ e, E, plus ] };
+    key <AD04> { [ r, R, numbersign ] };
+    key <AD05> { [ t, T, bracketright ] };
+
+    key <AD06> { [ y, Y, asciicircum ] };
+    key <AD07> { [ u, U, 7 ] };
+    key <AD08> { [ i, I, 8 ] };
+    key <AD09> { [ o, O, 9 ] };
+    key <AD10> { [ p, P, period ] };
+    # ...
+    key <AD13> { [ backslash, bar, at ] };
+
+    # Row 2
+    key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ]};
+    key <AC01> { [ a, A, asterisk ] };
+    key <AC02> { [ s, S, parenleft] };
+    key <AC03> { [ d, D, minus ] };
+    key <AC04> { [ f, F, equal ] };
+    key <AC05> { [ g, G, parenright ] };
+
+    key <AC06> { [ h, H, asciitilde ] };
+    key <AC07> { [ j, J, 4 ] };
+    key <AC08> { [ k, K, 5 ] };
+    key <AC09> { [ l, L, 6 ] };
+    key <AC10> { [ semicolon, colon, 0 ] };
+    key <AC11> { [ apostrophe, quotedbl, grave ] };
+
+    # Row 3
+    key <AB01> { [ z, Z, ampersand ] };
+    key <AB02> { [ x, X, braceleft ] };
+    key <AB03> { [ c, C, dollar ] };
+    key <AB04> { [ v, V, underscore ] };
+    key <AB05> { [ b, B, braceright ] };
+
+    key <AB06> { [ n, N, percent ] };
+    key <AB07> { [ m, M, 1 ] };
+    key <AB08> { [ comma, less, 2 ] };
+    key <AB09> { [ period, greater, 3 ] };
+    key <AB10> { [ slash, question, slash ] };
+
+    include "level3(ralt_switch)"
+
+};
