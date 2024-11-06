@@ -1,0 +1,111 @@
+# Because there is no oneshotswap (see issue
+# <https://github.com/rvaiya/keyd/issues/673>)
+
+[customcontrol:C]
+q = C-q
+w = C-w
+e = C-e
+r = C-r
+t = C-t
+y = C-y
+u = C-u
+i = C-i
+o = C-o
+p = C-p
+\ = C-\
+
+a = C-a
+s = C-s
+d = C-d
+f = C-f
+g = C-g
+h = C-h
+j = C-j
+k = C-k
+l = C-l
+; = C-;
+' = C-'
+
+z = C-z
+x = overload(alt, C-x)
+c = overload(control, C-c)
+v = overload(meta, C-v)
+b = C-b
+n = C-n
+m = overload(meta, C-m)
+, = overload(control, C-,)
+. = overload(alt, C-.)
+/ = C-/
+
+[custommeta:M]
+q = M-q
+w = M-w
+e = M-e
+r = M-r
+t = M-t
+y = M-y
+u = M-u
+i = M-i
+o = M-o
+p = M-p
+\ = M-\
+
+a = M-a
+s = M-s
+d = M-d
+f = M-f
+g = M-g
+h = M-h
+j = M-j
+k = M-k
+l = M-l
+; = M-;
+' = M-'
+
+z = M-z
+x = overload(alt, M-x)
+c = overload(control, M-c)
+v = overload(meta, M-v)
+b = M-b
+n = M-n
+m = overload(meta, M-m)
+, = overload(control, M-,)
+. = overload(alt, M-.)
+/ = M-/
+
+[customalt:A]
+q = A-q
+w = A-w
+e = A-e
+r = A-r
+t = A-t
+y = A-y
+u = A-u
+i = A-i
+o = A-o
+p = A-p
+\ = A-\
+
+a = A-a
+s = A-s
+d = A-d
+f = A-f
+g = A-g
+h = A-h
+j = A-j
+k = A-k
+l = A-l
+; = A-;
+' = A-'
+
+z = A-z
+x = overload(alt, A-x)
+c = overload(control, A-c)
+v = overload(meta, A-v)
+b = A-b
+n = A-n
+m = overload(meta, A-m)
+, = overload(control, A-,)
+. = overload(alt, A-.)
+/ = A-/
+

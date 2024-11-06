@@ -1,4 +1,4 @@
-q = oneshot(oneshotmeta)
+q = noop
 w = home
 e = up
 r = end
@@ -11,9 +11,9 @@ f = right
 g = pagedown
 
 z = M-z
-x = M-x
-c = M-c
-v = layer(meta)
+x = oneshot(customalt)
+c = oneshot(customcontrol)
+v = layer(custommeta)
 b = M-b
 
 # scrolllock, sysrq, pause, insert, compose, capslock
