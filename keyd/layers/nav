@@ -1,0 +1,43 @@
+# Left
+
+q = noop
+w = home
+e = up
+r = end
+t = pageup
+
+a = delete
+s = left
+d = down
+f = right
+g = pagedown
+
+z = M-z
+x = oneshot(customalt)
+c = oneshot(customcontrol)
+v = oneshot(custommeta)
+b = M-b
+
+# Right
+
+y = M-y
+u = M-u
+i = M-i
+o = M-o
+p = M-p
+\ = M-\
+
+h = M-h
+j = M-j
+k = M-k
+l = M-l
+; = M-;
+' = M-'
+
+n = M-n
+m = overload(custommeta, rightmeta)
+, = overload(customcontrol, rightcontrol)
+. = overload(customalt, rightalt)
+/ = M-/
+
+# scrolllock, sysrq, pause, insert, compose, capslock
