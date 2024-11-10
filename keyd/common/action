@@ -22,19 +22,19 @@ b = M-b
 
 # Right
 
-y = M-y
-u = M-u
-i = M-i
-o = M-o
-p = M-p
-\ = M-\
+y = f7
+u = f8
+i = f9
+o = f10
+p = f11
+\ = f12
 
-h = M-h
-j = M-j
-k = M-k
-l = M-l
-; = M-;
-' = M-'
+h = f1
+j = f2
+k = f3
+l = f4
+; = f5
+' = f6
 
 n = M-n
 m = overload(custommeta, rightmeta)
