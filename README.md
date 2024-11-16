@@ -1,139 +1,142 @@
-# thumbledore
+# Thumbledore
 
-*I only uploaded this so that it may serve as inspiration. It is still being 
-tweaked.*
+*I only uploaded this so that it may serve as inspiration. It is still 
+being tweaked. Thumbledore currently only supports Linux.*
 
-Typing on a standard keyboard is not a great experience. Your thumbs 
-idle while your weakest finger contorts to reach keys like `escape` and 
-`backspace`. Common symbols like numbers require you to abandon the 
-homerow entirely. Exotic keyboards can remedy all this, but lack 
-portability.
+Touch typing on a standard keyboard is not a great experience. Your 
+thumbs idle while your weakest finger contorts to reach keys like `esc` 
+and `bksp`. Numbers and other common symbols require you to abandon a 
+comfortable hand position entirely. Exotic keyboards can remedy all 
+this, but lack portability.
 
-Thumbledore is a keyboard layout that is meant for keyboards with at 
-least 2 or ideally 3 thumb keys per hand, but that *also* fits broadly 
-within the constraints of a laptop keyboard.
+Thumbledore is a keyboard layout that works well for fancy keyboards 
+with 2 or more thumb keys per hand, but that *also* fits broadly within 
+the constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** All symbols are accessible with just the 
     normal `shift` and `altgr` modifiers. There is only *one* additional 
-    layer for navigation/function keys. That's it. No wild key 
-    combinations.
--   **One-handed control.** The number pad can be controlled with just 
-    the right hand. Navigation keys can be controlled with just the 
-    left.
+    *Action* layer for navigation/function keys --- and that's it. No 
+    crazy combinations.
+-   **One-handed control.** The number pad can be operated with just the 
+    right hand. Navigation keys and the `control+{z,x,c,v,s}` shortcuts 
+    can be reached with just the left.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
-    even when you're stuck on a normal keyboard. As a concession to 
-    laptop keyboards, the bottom-left key still doubles as a `leftshift` 
-    there (despite being `compose` when tapped).
+    even when you're stuck on a mainstream keyboard. Only `compose` and 
+    `shift` are in a truly different spot.
 -   **Progressive learning.** You don't need to learn everything all at 
     once. I've found the `altgr` symbols to be the most ergonomically 
     significant, so start with that.
--   **No regressions.** Modifiers stack in a sensible way, and all 
-    common keys that you might want to press are still available --- for 
-    example, you can still emit a bare press of the right control key.
+-   **Regressions are avoided.** When stuffing so much functionality in 
+    a limited area, it is inevitable that some key events will become 
+    harder to generate. However, care has been taken to make as few 
+    assumptions as possible:
+    -   No reasonable shortcut should be impossible or cumbersome to 
+        type. For example, pulling up the application menu or escaping a 
+        virtual machine often involves tapping a modifier on its own --- 
+        you should be able to.
+    -   Modifiers should still stack in a sensible, consistent and 
+        intuitive way. If a program wants you to press, say, 
+        `control`-`alt`-`1` for some purpose or other, the user should 
+        not be confused as to how to achieve that.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempted overload of alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
     cause misfiring. There are [ways][urob] to mitigate it and train 
     yourself to work with it, but I have not made that sacrifice here.
--   **Overloading is used sparingly.** There is only *one* overloaded 
-    key: the `fn` key doubles as `esc` when tapped. To mitigate the 
-    downsides of overloading, the `esc` is only registered when the tap 
-    is shorter than *x* milliseconds.
+-   **Overloading is used sparingly.** Even on non-alpha keys, 
+    overloading has the above downsides, albeit to a lesser degree. 
+    Therefore, only *one* key has been overloaded: the Action key 
+    doubles as `esc` when tapped. <!-- This is considered safe because 
+    the key is not associated with a modifier, and the `esc` is only 
+    registered when the tap is shorter than *x* milliseconds. -->
 
 
 ## Symbols
 
-You might not need to change what you're used to. In the 
-Thumbledore-Qwerty variant, all symbols stay in the same place relative 
-to the standard en-US Qwerty layout. The major addition is that the 
-Level-3 variants (which can be accessed by the AltGr modifier) have been 
-crammed full with numbers and symbols that you would otherwise have had 
-to abandon the standard hand position for.
+Are you currently using a US Qwerty layout or similar? Then there isn't 
+much of a barrier to entry: in Thumbledore's Qwerty variant, all 
+characters stay in the same place. The major addition is that the 
+Level-3 symbols (which can be accessed by the AltGr modifier) have been 
+crammed full with numbers and other symbols for which you would normally 
+have had to abandon the standard hand position.
 
 ![The thumbledore-qwerty keyboard layout.](kb-qwerty.svg)
 
-The other big difference is that `capslock` becomes `backspace`, 
-avoiding the huge move your pinky would have made.
+<!-- Symbols were placed according to how often I personally need them, 
+drawing inspiration from the [Workman] layout on which keys to assign 
+preference.
 
 Because AltGr is pressed with your right-hand thumb, the left-hand side 
 of the keyboard is preferred for things like parentheses, while the 
-number pad can now be controlled entirely with your right-hand.
+number pad can now be controlled entirely with your right-hand. -->
 
-<!--
-There are two duplicate keys: `/` and `.`, which are also on the default 
-layer but often needed in conjunction with numbers. For the same reason, 
-you can get `:` by tapping `.` twice.
--->
+- `bksp` is put in the place of `caps`, avoiding the huge move your 
+  pinky would have made.
 
-[^1]: When you press a key, your keyboard will send a *scancode* to the 
+- Shift and AltGr are modifiers, but unlike Control and Alt, they don't 
+  provide shortcuts --- they simply access more symbols. To make for a 
+  more comfortable typing experience, these these keys are made *sticky* 
+  (or *oneshot*). This removes the need to consciously wait to release 
+  the modifier in the short interval *after* pressing the key to be 
+  modified but *before* the next one. MUch better!
+
+- You will often need a decimal point while typing numbers, but it is 
+  cumbersome to exit the numpad just to grab one and come back. For this 
+  reason, if you are typing a number and release and then immediately 
+  press AltGr again, a `.` or `,` will be emitted (depending on your 
+  layout).
+
+- The *compose* (or *multi*) key allows you to type special characters 
+  by typing intuitive keys in succession. For example,  `multi` `'` `e` 
+  becomes `é`.
+
+## Action
+
+`esc` is given an easily accessible spot, since it is useful for modal 
+applications like Vim.
+
+![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
+
+The remaining keys are hidden in the *Action* layer, which can be 
+accessed by *holding* instead of tapping `esc`. This layer contains a 
+navigation cluster on the left, placed so that you can control the 
+directional keys with one hand.
+
+The other modifiers are also available here: tapping the keys labeled 
+`alt`, `ctrl` and `meta` activates the corresponding modifiers for the 
+remainder of the time that *Action* is active.
+
+Finally, the layer has the *function keys*. This is convenient for quick 
+access to window-manager shortcuts that you might want to set, such as 
+navigating desktops and closing windows.
+
+
+# Technical considerations
+
+When you press a key, your keyboard will send a *scancode* to the 
 computer; the kernel maps that to a *keycode*; and finally, your 
-keyboard layout considers that key (along with the active modifiers) and 
-emits a *keysym*. Thumbledore remaps symbol keys at the keysym level, 
-while additional tricks are mapped at the keycode or scancode-level. 
-This allows us to tease the two apart.
+keyboard layout considers that keycode (along with the active modifiers) 
+and emits a *keysym*.
 
-<!--
-## Keys
+Thumbledore remaps *symbols* at this keysym level, while other keys are 
+mapped at the scan- or keycode-level. Teasing the two apart like this 
+has several benefits:
 
-*Special keys* are mostly controlled with your thumbs, whereas the keys 
-for letters are symbols are controlled with the remaining symbols. These 
-are the special keys:
-
-1.  `ESC/fn`. This key accesses the **Function** layer that contains the 
-    navigation keys and otherwise activates the `Super` modifier, useful 
-    for binding actions in your window manager. The key gets an 
-    additional function when you *tap* rather than hold it: it then 
-    triggers `Escape`, useful for modal applications.
-2.  `RTN/fn`. The logical counterpart to `ESC/fn`: tapping this one gets 
-    you `Enter` (`Return`). Ideally, you can still get repeating enters 
-    by double tapping and holding, but this isn't implemented 
-    everywhere.
-3.  The symbol key `SYM` accesses the **Symbol** layer for all the 
-    characters that would usually involve finger contortions. It is a 
-    sticky key: when you tap it, it will be activated for the following 
-    keypress.
-4.  The familiar shift key `SFT` is technically a modifier, but you 
-    could also see it as providing access to the **Shift** layer. It has 
-    also been turned into a sticky key.
-5.  The Control and Alt modifiers have been overloaded on the `z/`, and 
-    `x.` keys respectively. On a standard keyboard, they are still 
-    accessible as regular keys.
-6.  The compose key (or combo key) `CMB` allows you to type special 
-    characters by typing intuitive keys in succession. For example,  
-    `CMB ' e` becomes `é`.
-
-
-
-### 🮰 Function
-
-The **Fn** layer contains a navigation cluster, placed so that you can 
-control it with one hand. It contains directional keys, `home`/`end`, 
-and `pageup`/`pagedown`.
-
-The layer also has the *function keys* and provides access to the 
-modifiers: tapping the keys labeled `alt`, `ctrl` and `meta` activates 
-the corresponding modifiers for the remainder of the time that **Fn** is 
-pressed.
-
-This layer can be activated either via `ESC/fn` on the left or via 
-`RTN/fn` on the right --- but it will only be activated for the keys 
-pressed with the same hand! The keys on the other side will act as if 
-they were pressed with the `Super+Control` modifier. This is convenient 
-for quick access to window-manager shortcuts that you might want to set, 
-such as navigating desktops and closing windows.
-
-Pressing both *Fn* keys allows you to combine modifiers with the keys on 
-the *Fn* layer itself, or to generate bare taps of said modifiers.
-
-    ┌────┬────┬────┬────┬────┬────┐  ┌────┬────┬────┬────┬────┬────┐
-    │DEL │HOME│UP  │END │PGUP│PAUS│  │  F7│  F8│  F9│ F10│ F11│ F12│
-    ├────╆━━━━┿━━━━┿━━━━┿━━━━╅────┤  ├────╆━━━━┿━━━━┿━━━━┿━━━━╅────┤
-    │BKSP┃LEFT│DOWN│RGHT│PGDN┃SCLK│  │  F1┃  F2│  F3│  F4│  F5┃  F6│
-    ├────╄━━━━┿━━━━┿━━━━┿━━━━╃────┤  ├────╄━━━━┿━━━━┿━━━━┿━━━━╃────┤
-    │shft│MENU│alt │ctrl│meta│SYRQ│  │INSR│meta│ctrl│alt │CAPS│shft│
-    └────┴────┴────┴────┴────┴────┘  └────┴────┴────┴────┴────┴────┘
--->
+- At the scan- and keycode-level, more tricks can be applied, like 
+  overloading.
+- Your operating system knows what symbol layout you are using, and you 
+  can switch between them in the standard way.
+- Users can try the `altgr` symbols, without committing to the rest.
+- All keyboards, regardless of firmware, will type the same symbols.
+- It becomes easier to reason to reason about composition: we don't have 
+  to explicitly write rules for how the various layers and modifiers 
+  combine. Suppose, for example, you want to zoom in with `control`-`+` 
+  --- your muscle memory will know that `altgr`-`e` is `+`, so you have 
+  your keyboard send `altgr`-`control`-`e`, and your programs will hear 
+  `control`-`+`.
+- You are able to choose the decimal point `.` or `,` at the layout 
+  level.
 
 
 ## Usage and installation

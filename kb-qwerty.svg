@@ -35,28 +35,28 @@ g.kb > g > g > text:nth-child(3) {
 
 ]]></style>
   <rect id="key" width="30" height="30" ry="4" fill="#ddd"/>
-  <g id="3x1">
+  <g id="6x1">
     <use href="#key" x="0"  y="0"/>
     <use href="#key" x="32" y="0"/>
     <use href="#key" x="64" y="0"/>
-  </g>
-  <g id="6x1">
-    <use href="#3x1" x="0"  y="0"/>
-    <use href="#3x1" x="96" y="0"/>
+    <use href="#key" x="96"  y="0"/>
+    <use href="#key" x="128" y="0"/>
+    <use href="#key" x="160" y="0"/>
   </g>
   <g id="left">
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#3x1" x="96" y="96"/>
-
+    <use href="#key" x="128" y="96"/>
+    <use href="#key" x="160" y="96"/>
     <rect x="127.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
   <g id="right">
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#3x1" x="0" y="96"/>
+    <use href="#key" x="0" y="96"/>
+    <use href="#key" x="32" y="96"/>
     <rect x="31.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
 </defs>
@@ -148,7 +148,6 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r3">
-    <text class="c3 tiny mod">ctrl</text>
     <text class="c4">
       <tspan x="0" dy="-6" class="tiny">esc</tspan><tspan x="0" dy="12" class="tiny mod">fn</tspan>
     </text>
@@ -253,7 +252,6 @@ g.kb > g > g > text:nth-child(3) {
   <g class="r3">
     <text class="c0 tiny mod">shift</text>
     <text class="c1 tiny mod">altgr</text>
-    <text class="c2 tiny mod">alt</text>
   </g>
   </g>
 </svg>
