@@ -27,14 +27,13 @@ l = C-l
 ' = C-'
 
 z = C-z
-x = overload(alt, C-x)
-c = overload(control, C-c)
-v = overload(meta, C-v)
+x = C-x
+c = C-c
+v = C-v
 b = C-b
 n = C-n
-m = overload(meta, C-m)
-, = overload(control, C-,)
-. = overload(alt, C-.)
+m = C-,
+. = C-.
 / = C-/
 
 [custommeta:M]
@@ -63,14 +62,14 @@ l = M-l
 ' = M-'
 
 z = M-z
-x = overload(alt, M-x)
-c = overload(control, M-c)
-v = overload(meta, M-v)
+x = M-x
+c = M-c
+v = M-v
 b = M-b
 n = M-n
-m = overload(meta, M-m)
-, = overload(control, M-,)
-. = overload(alt, M-.)
+m = M-m
+, = M-,
+. = M-.
 / = M-/
 
 [customalt:A]
@@ -99,13 +98,13 @@ l = A-l
 ' = A-'
 
 z = A-z
-x = overload(alt, A-x)
-c = overload(control, A-c)
-v = overload(meta, A-v)
+x = A-x
+c = A-c
+v = A-v
 b = A-b
 n = A-n
-m = overload(meta, A-m)
-, = overload(control, A-,)
-. = overload(alt, A-.)
+m = A-m
+, = A-,
+. = A-.
 / = A-/
 

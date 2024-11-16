@@ -2,7 +2,7 @@
 <svg width="784" height="254" version="1.1" viewBox="0 0 392 128" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 10px; text-anchor: middle; font-family: monospace; }
+text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
 .mod { font-style: italic; }
 .c0 { transform: translate(15px, 0); }
 .c1 { transform: translate(47px, 0); }
@@ -69,27 +69,27 @@ g.kb > g > g > text:nth-child(3) {
   <use href="#left"/>
   <g class="r0">
     <text class="c0">tab</text>
-    <text class="c1"></text>
+    <text class="c1 mod">os</text>
     <text class="c2">home</text>
     <text class="c3">up</text>
     <text class="c4">end</text>
-    <text class="c5">pgup</text>
+    <text class="c5">ins</text>
   </g>
   <g class="r1">
     <text class="c0">bksp</text>
-    <text class="c1">del</text>
+    <text class="c1 mod">ctrl</text>
     <text class="c2">left</text>
     <text class="c3">down</text>
     <text class="c4">right</text>
-    <text class="c5">pgdn</text>
+    <text class="c5">del</text>
   </g>
   <g class="r2">
     <text class="c0">multi</text>
-    <text class="c1"></text>
-    <text class="c2">alt</text>
-    <text class="c3">ctrl</text>
-    <text class="c4">super</text>
-    <text class="c5"></text>
+    <text class="c1 mod">alt</text>
+    <text class="c2">pause</text>
+    <text class="c3">pgup</text>
+    <text class="c4">pgdn</text>
+    <text class="c5">menu</text>
   </g>
   <g class="r3">
     <text class="c4">
@@ -102,31 +102,31 @@ g.kb > g > g > text:nth-child(3) {
 <g class="kb" id="right-keyboard" transform="translate(200, 0)">
   <use href="#right"/>
   <g class="r0">
-    <text class="c0">f7</text>
-    <text class="c1">f8</text>
-    <text class="c2">f9</text>
-    <text class="c3">f10</text>
-    <text class="c4">f11</text>
-    <text class="c5">f12</text>
+    <text class="c0">f12</text>
+    <text class="c1">f7</text>
+    <text class="c2">f8</text>
+    <text class="c3">f9</text>
+    <text class="c4 mod">os</text>
+    <text class="c5"><tspan x="0" y="-6">scr</tspan><tspan x="0" y="6">lck</tspan></text>
   </g>
   <g class="r1">
-    <text class="c0">f1</text>
-    <text class="c1">f2</text>
-    <text class="c2">f3</text>
-    <text class="c3">f4</text>
-    <text class="c4">f5</text>
-    <text class="c5">f6</text>
+    <text class="c0">f11</text>
+    <text class="c1">f4</text>
+    <text class="c2">f5</text>
+    <text class="c3">f6</text>
+    <text class="c4 mod">ctrl</text>
+    <text class="c5"><tspan x="0" y="-6">prt</tspan><tspan x="0" y="6">scr</tspan></text>
   </g>
   <g class="r2">
-    <text class="c0"></text>
-    <text class="c1">super</text>
-    <text class="c2">ctrl</text>
-    <text class="c3">alt</text>
-    <text class="c4"></text>
-    <text class="c5"></text>
+    <text class="c0">f10</text>
+    <text class="c1">f1</text>
+    <text class="c2">f2</text>
+    <text class="c3">f3</text>
+    <text class="c4 mod">alt</text>
+    <text class="c5">enter</text>
   </g>
   <g class="r3">
-    <text class="c0 tiny mod">shift</text>
+    <text class="c0 tiny mod"><tspan>shift</tspan><tspan x="6" y="6">caps*</tspan></text>
     <text class="c1 tiny mod">altgr</text>
   </g>
   </g>

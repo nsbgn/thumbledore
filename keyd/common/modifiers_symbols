@@ -26,14 +26,14 @@ l = C-6
 ' = C-`
 
 z = C-&
-x = overload(alt, C-{)
-c = overload(control, C-$)
-v = overload(meta, C-_)
+x = C-{
+c = C-$
+v = C-_
 b = C-}
 n = C-%
-m = overload(meta, C-1)
-, = overload(control, C-2)
-. = overload(alt, C-3)
+m = C-1
+, = C-2
+. = C-3
 / = C-/
 
 [customalt+altgr]
@@ -62,14 +62,14 @@ l = A-6
 ' = A-`
 
 z = A-&
-x = overload(alt, A-{)
-c = overload(control, A-$)
-v = overload(meta, A-_)
+x = A-{
+c = A-$
+v = A-_
 b = A-}
 n = A-%
-m = overload(meta, A-1)
-, = overload(control, A-2)
-. = overload(alt, A-3)
+m = A-1
+, = A-2
+. = A-3
 / = A-/
 
 [custommeta+altgr]
@@ -98,12 +98,12 @@ l = M-6
 ' = M-`
 
 z = M-&
-x = overload(alt, M-{)
-c = overload(control, M-$)
-v = overload(meta, M-_)
+x = M-{
+c = M-$
+v = M-_
 b = M-}
 n = M-%
-m = overload(meta, M-1)
-, = overload(control, M-2)
-. = overload(alt, M-3)
+m = M-1
+, = M-2
+. = M-3
 / = M-/

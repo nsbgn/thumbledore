@@ -2,44 +2,43 @@ space = M-space
 
 # Left
 
-q = noop
+q = layer(custommeta)
 w = home
 e = up
 r = end
-t = pageup
+t = insert
 
-a = delete
+a = layer(customcontrol)
 s = left
 d = down
 f = right
-g = pagedown
+g = delete
 
-z = M-z
-x = oneshot(customalt)
-c = oneshot(customcontrol)
-v = oneshot(custommeta)
-b = M-b
+z = layer(customalt)
+x = pause
+c = pageup
+v = pagedown
+# this is menu
+b = compose
 
 # Right
 
-y = f7
-u = f8
-i = f9
-o = f10
-p = f11
-\ = f12
+y = f12
+u = f7
+i = f8
+o = f9
+p = overload(custommeta, rightmeta)
+\ = scrolllock
 
-h = f1
-j = f2
-k = f3
-l = f4
-; = f5
-' = f6
+h = f11
+j = f4
+k = f5
+l = f6
+; = overload(customcontrol, rightcontrol)
+' = sysrq
 
-n = M-n
-m = overload(custommeta, rightmeta)
-, = overload(customcontrol, rightcontrol)
-. = overload(customalt, rightalt)
-/ = M-/
-
-# scrolllock, sysrq, pause, insert, compose, capslock
+n = f10
+m = f1
+, = f2
+. = f3
+/ = overload(customalt, rightalt)
