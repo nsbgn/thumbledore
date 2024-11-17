@@ -2,4 +2,4 @@
 chord_timeout = 50
 overload_tap_timeout = 300
 oneshot_timeout = 500
-disable_modifier_guard = 0
+disable_modifier_guard = 1

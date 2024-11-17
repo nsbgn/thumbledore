@@ -8,13 +8,13 @@ e = up
 r = end
 t = insert
 
-a = layer(customcontrol)
+a = oneshot(customcontrol)
 s = left
 d = down
 f = right
 g = delete
 
-z = layer(customalt)
+z = oneshot(customalt)
 x = pause
 c = pageup
 v = pagedown
