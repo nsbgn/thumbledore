@@ -1,7 +1,8 @@
-partial alphanumeric_keys
-xkb_symbols "thumbledore-qwerty" {
-    include "us(basic)";
+default partial alphanumeric_keys
+xkb_symbols "basic" {
     name[Group1]= "English (Thumbledore, QWERTY)";
+
+    include "us(basic)"
 
     key <AD01> { [ q, Q, exclam ] };
     key <AD02> { [ w, W, bracketleft ] };
