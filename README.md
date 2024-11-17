@@ -4,10 +4,10 @@
 being tweaked. Thumbledore currently only supports Linux.*
 
 Touch typing on a standard keyboard is not a great experience. Your 
-thumbs idle while your weakest finger contorts to reach keys like `esc` 
-and `bksp`. Numbers and other common symbols require you to abandon a 
-comfortable hand position entirely. Exotic keyboards can remedy all 
-this, but lack portability.
+thumbs idle while your weakest finger contorts to reach keys like 
+<kbd>Esc</kbd> and <kbd>BackSpace</kbd>. Numbers and other common 
+symbols require you to abandon a comfortable hand position entirely. 
+Exotic keyboards can remedy all this, but lack portability.
 
 Thumbledore is a keyboard layout that works well for fancy keyboards 
 with 2 or more thumb keys per hand, but that *also* fits broadly within 
@@ -15,18 +15,19 @@ the constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** All symbols are accessible with just the 
-    normal `shift` and `altgr` modifiers. There is only *one* additional 
-    *Action* layer for navigation/function keys --- and that's it. No 
-    crazy combinations.
+    normal <kbd>Shift</kbd> and <kbd>AltGr</kbd> modifiers. There is 
+    only *one* additional *Action* layer for navigation/function keys 
+    --- and that's it. No crazy combinations.
 -   **One-handed control.** The number pad can be operated with just the 
     right hand. Navigation keys and the `control+{z,x,c,v,s}` shortcuts 
     can be reached with just the left.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
-    even when you're stuck on a mainstream keyboard. Only `compose` and 
-    `shift` are in a truly different spot.
+    even when you're stuck on a mainstream keyboard. Only 
+    <kbd>Compose</kbd> and <kbd>Shift</kbd> are in a truly different 
+    spot.
 -   **Progressive learning.** You don't need to learn everything all at 
-    once. I've found the `altgr` symbols to be the most ergonomically 
-    significant, so start with that.
+    once. I've found the <kbd>AltGr</kbd> symbols to be the most 
+    ergonomically significant, so start with that.
 -   **Regressions are avoided.** When stuffing so much functionality in 
     a limited area, it is inevitable that some key events will become 
     harder to generate. However, care has been taken to make as few 
@@ -47,9 +48,9 @@ the constraints of a laptop keyboard.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
     Therefore, only *one* key has been overloaded: the Action key 
-    doubles as `esc` when tapped. <!-- This is considered safe because 
-    the key is not associated with a modifier, and the `esc` is only 
-    registered when the tap is shorter than *x* milliseconds. -->
+    doubles as <kbd>Esc</kbd> when tapped. <!-- This is considered safe 
+    because the key is not associated with a modifier, and the `esc` is 
+    only registered when the tap is shorter than *x* milliseconds. -->
 
 
 ## Symbols
@@ -71,15 +72,16 @@ Because AltGr is pressed with your right-hand thumb, the left-hand side
 of the keyboard is preferred for things like parentheses, while the 
 number pad can now be controlled entirely with your right-hand. -->
 
-- `bksp` is put in the place of `caps`, avoiding the huge move your 
-  pinky would have made.
+- <kbd>BackSpace</kbd> is put in the place of <kbd>CapsLock</kbd>, 
+  avoiding the huge move your pinky would have made.
 
-- Shift and AltGr are modifiers, but unlike Control and Alt, they don't 
-  provide shortcuts --- they simply access more symbols. To make for a 
-  more comfortable typing experience, these these keys are made *sticky* 
-  (or *oneshot*). This removes the need to consciously wait to release 
-  the modifier in the short interval *after* pressing the key to be 
-  modified but *before* the next one. MUch better!
+- <kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
+  <kbd>Control</kbd> and <kbd>Alt</kbd>, they don't provide shortcuts 
+  --- they simply access more symbols. To make for a more comfortable 
+  typing experience, these these keys are made *sticky* (or *oneshot*). 
+  This removes the need to consciously wait to release the modifier in 
+  the short interval *after* pressing the key to be modified but 
+  *before* the next one. MUch better!
 
 - You will often need a decimal point while typing numbers, but it is 
   cumbersome to exit the numpad just to grab one and come back. For this 
@@ -88,24 +90,25 @@ number pad can now be controlled entirely with your right-hand. -->
   layout).
 
 - The *compose* (or *multi*) key allows you to type special characters 
-  by typing intuitive keys in succession. For example,  `multi` `'` `e` 
-  becomes `é`.
+  by typing intuitive keys in succession. For example,  
+  <kbd>Multi</kbd><kbd>C</kbd><kbd>=</kbd> becomes `€`.
 
 ## Action
 
-`esc` is given an easily accessible spot, since it is useful for modal 
-applications like Vim.
+<kbd>Escape</kbd> is given an easily accessible spot, since it is useful 
+for modal applications like Vim.
 
 ![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
 
 The remaining keys are hidden in the *Action* layer, which can be 
-accessed by *holding* instead of tapping `esc`. This layer contains a 
-navigation cluster on the left, placed so that you can control the 
-directional keys with one hand.
+accessed by *holding* instead of tapping <kbd>Escape</kbd>. This layer 
+contains a navigation cluster on the left, placed so that you can 
+control the directional keys with one hand.
 
 The other modifiers are also available here: tapping the keys labeled 
-`alt`, `ctrl` and `meta` activates the corresponding modifiers for the 
-remainder of the time that *Action* is active.
+<kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>OS</kbd> activates the 
+corresponding modifiers for the remainder of the time that *Action* is 
+active.
 
 Finally, the layer has the *function keys*. This is convenient for quick 
 access to window-manager shortcuts that you might want to set, such as 
@@ -127,22 +130,26 @@ has several benefits:
   overloading.
 - Your operating system knows what symbol layout you are using, and you 
   can switch between them in the standard way.
-- Users can try the `altgr` symbols, without committing to the rest.
+- Users can try the <kbd>AltGr</kbd> symbols, without committing to the 
+  rest.
 - All keyboards, regardless of firmware, will type the same symbols.
 - It becomes easier to reason to reason about composition: we don't have 
   to explicitly write rules for how the various layers and modifiers 
-  combine. Suppose, for example, you want to zoom in with `control`-`+` 
-  --- your muscle memory will know that `altgr`-`e` is `+`, so you have 
-  your keyboard send `altgr`-`control`-`e`, and your programs will hear 
-  `control`-`+`.
+  combine. Suppose, for example, you want to zoom in with 
+  <kbd>Ctrl</kbd><kbd>+</kbd> --- your muscle memory will know that 
+  <kbd>AltGr</kbd><kbd>e</kbd<kbd>AltGr</kbd><kbd>e</kbd>> is `+`, so 
+  you have your keyboard send 
+  <kbd>AltGr</kbd><kbd>Ctrl</kbd><kbd>e</kbd>, and your programs will 
+  hear <kbd>Ctrl</kbd><kbd>+</kbd>.
 - You are able to choose the decimal point `.` or `,` at the layout 
   level.
 
 
 ## Usage and installation
 
-Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and copy 
-`keyd/default.conf` to `/etc/keyd/`.
+Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
+`sudo make install`. Activate the `thumbledore` layout in your 
+environment.
 
 <!--
 ## Other
