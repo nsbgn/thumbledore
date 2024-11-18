@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="784" height="254" version="1.1" viewBox="-1 -1 394 130" xmlns="http://www.w3.org/2000/svg">
+<svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
 text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
@@ -10,28 +10,12 @@ text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
 .c3 { transform: translate(111px, 0); }
 .c4 { transform: translate(143px, 0); }
 .c5 { transform: translate(175px, 0); }
-.r0 { transform: translate(0, 19px); }
-.r1 { transform: translate(0, 51px); }
-.r2 { transform: translate(0, 83px); }
-.r3 { transform: translate(0, 115px); }
+.r0 { transform: translate(0, 18px); }
+.r1 { transform: translate(0, 50px); }
+.r2 { transform: translate(0, 82px); }
+.r3 { transform: translate(0, 114px); }
 .tiny { font-size: 9px; }
 .tiny text { font-size: 9px; }
-
-g.kb > g > g > text:nth-child(1) {
-  font-size: 10px;
-  text-anchor: middle;
-}
-g.kb > g > g > text:nth-child(2) {
-  font-size: 10px;
-  transform: translate(2px, -6px);
-  text-anchor: start;
-}
-g.kb > g > g > text:nth-child(3) {
-  font-size: 10px;
-  fill: #004488;
-  transform: translate(0px, 6px);
-}
-
 ]]></style>
   <g id="key">
     <rect width="29" height="28" ry="5" x="0.5" y="1.5" fill="#454C54" stroke="#454C54" stroke-width="1px"/>
@@ -72,23 +56,23 @@ g.kb > g > g > text:nth-child(3) {
   <use href="#left"/>
   <g class="r0">
     <text class="c0">tab</text>
-    <text class="c1 mod">os</text>
+    <text class="c1 mod">OS</text>
     <text class="c2">home</text>
-    <text class="c3">up</text>
+    <text class="c3">▲</text>
     <text class="c4">end</text>
-    <text class="c5">ins</text>
+    <text class="c5"><tspan x="0" y="-6">in-</tspan><tspan x="0" y="6">sert</tspan></text>
   </g>
   <g class="r1">
-    <text class="c0">bksp</text>
-    <text class="c1 mod">ctrl</text>
-    <text class="c2">left</text>
-    <text class="c3">down</text>
-    <text class="c4">right</text>
+    <text class="c0 tiny"><tspan x="0" y="-6">back-</tspan><tspan x="0" y="6">space</tspan></text>
+    <text class="c1 mod">Ctrl</text>
+    <text class="c2">◀</text>
+    <text class="c3">▼</text>
+    <text class="c4">▶</text>
     <text class="c5">del</text>
   </g>
   <g class="r2">
-    <text class="c0">multi</text>
-    <text class="c1 mod">alt</text>
+    <text class="c0 tiny"><tspan x="0" y="-6">com-</tspan><tspan x="0" y="6">pose</tspan></text>
+    <text class="c1 mod">Alt</text>
     <text class="c2">pause</text>
     <text class="c3">pgup</text>
     <text class="c4">pgdn</text>
@@ -102,14 +86,14 @@ g.kb > g > g > text:nth-child(3) {
   </g>
 </g>
 
-<g class="kb" id="right-keyboard" transform="translate(200, 0)">
+<g class="kb" id="right-keyboard" transform="translate(196, 0)">
   <use href="#right"/>
   <g class="r0">
     <text class="c0">f12</text>
     <text class="c1">f7</text>
     <text class="c2">f8</text>
     <text class="c3">f9</text>
-    <text class="c4 mod">os</text>
+    <text class="c4 mod">OS</text>
     <text class="c5"><tspan x="0" y="-6">scr</tspan><tspan x="0" y="6">lck</tspan></text>
   </g>
   <g class="r1">
@@ -117,7 +101,7 @@ g.kb > g > g > text:nth-child(3) {
     <text class="c1">f4</text>
     <text class="c2">f5</text>
     <text class="c3">f6</text>
-    <text class="c4 mod">ctrl</text>
+    <text class="c4 mod">Ctrl</text>
     <text class="c5"><tspan x="0" y="-6">prt</tspan><tspan x="0" y="6">scr</tspan></text>
   </g>
   <g class="r2">
@@ -125,12 +109,12 @@ g.kb > g > g > text:nth-child(3) {
     <text class="c1">f1</text>
     <text class="c2">f2</text>
     <text class="c3">f3</text>
-    <text class="c4 mod">alt</text>
-    <text class="c5">enter</text>
+    <text class="c4 mod">Alt</text>
+    <text class="c5 tiny">enter</text>
   </g>
   <g class="r3">
-    <text class="c0 tiny mod"><tspan>shift</tspan><tspan x="6" y="6">caps*</tspan></text>
-    <text class="c1 tiny mod">altgr</text>
+    <text class="c0 tiny mod"><tspan>Shift</tspan><tspan x="6" y="6">caps*</tspan></text>
+    <text class="c1 tiny mod">AltGr</text>
   </g>
   </g>
 </svg>

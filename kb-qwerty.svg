@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="784" height="254" version="1.1" viewBox="-1 -1 394 130" xmlns="http://www.w3.org/2000/svg">
+<svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
 text { font-size: 14px; text-anchor: middle; font-family: monospace; }
@@ -10,12 +10,12 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; }
 .c3 { transform: translate(111px, 0); }
 .c4 { transform: translate(143px, 0); }
 .c5 { transform: translate(175px, 0); }
-.r0 { transform: translate(0, 19px); }
-.r1 { transform: translate(0, 51px); }
-.r2 { transform: translate(0, 83px); }
-.r3 { transform: translate(0, 115px); }
-.tiny { font-size: 9px; }
-.tiny text { font-size: 9px; }
+.r0 { transform: translate(0, 18px); }
+.r1 { transform: translate(0, 50px); }
+.r2 { transform: translate(0, 82px); }
+.r3 { transform: translate(0, 114px); }
+.tiny { font-size: 8px; }
+.tiny text { font-size: 8px; }
 
 g.kb > g > g > text:nth-child(1) {
   font-size: 10px;
@@ -26,11 +26,18 @@ g.kb > g > g > text:nth-child(2) {
   font-size: 10px;
   transform: translate(2px, -6px);
   text-anchor: start;
+  fill: #225500;
 }
 g.kb > g > g > text:nth-child(3) {
   font-size: 10px;
   fill: #004488;
   transform: translate(0px, 6px);
+}
+.shift {
+  fill: #225500;
+}
+.altgr {
+  fill: #004488;
 }
 
 ]]></style>
@@ -95,7 +102,7 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r1">
-    <text class="c0 tiny">bksp</text>
+    <text class="c0 tiny"><tspan x="0" y="-6">back-</tspan><tspan x="0" y="6">space</tspan></text>
     <g class="c1">
       <text>a</text>
       <text>A</text>
@@ -123,7 +130,7 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r2">
-    <text class="c0 tiny">multi</text>
+    <text class="c0 tiny"><tspan x="0" y="-6">com-</tspan><tspan x="0" y="6">pose</tspan></text>
     <g class="c1">
       <text>z</text>
       <text>Z</text>
@@ -158,7 +165,7 @@ g.kb > g > g > text:nth-child(3) {
   </g>
 </g>
 
-<g class="kb" id="right-keyboard" transform="translate(200, 0)">
+<g class="kb" id="right-keyboard" transform="translate(195, 0)">
   <use href="#right"/>
   <g class="r0">
     <g class="c0">
@@ -253,8 +260,8 @@ g.kb > g > g > text:nth-child(3) {
     <text class="c5 tiny">enter</text>
   </g>
   <g class="r3">
-    <text class="c0 tiny mod">shift</text>
-    <text class="c1 tiny mod">altgr</text>
+    <text class="c0 tiny shift mod">Shift</text>
+    <text class="c1 tiny altgr mod">AltGr</text>
   </g>
   </g>
 </svg>
