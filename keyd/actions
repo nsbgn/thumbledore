@@ -8,7 +8,7 @@ e = up
 r = end
 t = insert
 
-a = oneshot(customcontrol)
+a = overload(customcontrol, escape)
 s = left
 d = down
 f = right
