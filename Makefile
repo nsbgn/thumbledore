@@ -10,6 +10,4 @@ install-xkb:
 	install -m644 xkb/symbols/* "${XKB}/symbols/"
 
 install-keyd:
-	mkdir -p "${KEYD}/common"
-	install -m644 keyd/common/* "${KEYD}/common/"
-	install -m644 keyd/*.conf "${KEYD}/"
+	install -m644 keyd/* "${KEYD}/"

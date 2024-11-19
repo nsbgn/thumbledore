@@ -2,6 +2,7 @@
 # <https://github.com/rvaiya/keyd/issues/673>)
 
 [customcontrol:C]
+space = C-space
 q = C-q
 w = C-w
 e = C-e
@@ -37,6 +38,8 @@ m = C-,
 / = C-/
 
 [custommeta:M]
+space = M-space
+
 q = M-q
 w = M-w
 e = M-e
@@ -73,6 +76,8 @@ m = M-m
 / = M-/
 
 [customalt:A]
+space = A-space
+
 q = A-q
 w = A-w
 e = A-e

@@ -5,9 +5,9 @@ being tweaked. It currently only supports Linux.*
 
 Touch typing on a standard keyboard is not a great experience. Your 
 thumbs idle while your weakest finger contorts to reach keys like 
-<kbd>Esc</kbd> and <kbd>Backspace</kbd>. Numbers and other common 
-symbols require you to abandon a comfortable hand position entirely. 
-Exotic keyboards can remedy all this, but lack portability.
+<kbd>esc</kbd> and <kbd>bksp</kbd>. Numbers and other common symbols 
+require you to abandon a comfortable hand position entirely. Exotic 
+keyboards can remedy all this, but lack portability.
 
 Thumbledore and Handalf are keyboard layouts that works well for fancy 
 keyboards with 2 or more thumb keys per hand, but that *also* fit 
@@ -23,7 +23,7 @@ broadly within the constraints of a laptop keyboard.
     <kbd>Ctrl</kbd><kbd>c</kbd> can be reached with just the left.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a mainstream keyboard. Only 
-    <kbd>Compose</kbd> and <kbd>Shift</kbd> are in a truly different 
+    <kbd>compose</kbd> and <kbd>Shift</kbd> are in a truly different 
     spot.
 -   **Incremental learning.** You don't need to learn everything all at 
     once. I've found the <kbd>AltGr</kbd> symbols to be the most 
@@ -42,19 +42,19 @@ broadly within the constraints of a laptop keyboard.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
     Therefore, only *one* key has been overloaded: the Action key 
-    doubles as <kbd>Esc</kbd> when tapped. <!-- This is considered safe 
+    doubles as <kbd>esc</kbd> when tapped. <!-- This is considered safe 
     because the key is not associated with a modifier, and the `esc` is 
     only registered when the tap is shorter than *x* milliseconds. -->
 
 
 ## Symbols
 
-Are you currently using a US Qwerty layout or similar? Then there isn't 
-much of a barrier to entry: in Thumbledore's Qwerty variant, all 
-characters stay in the same place. The major addition is that the 
-Level-3 symbols (which can be accessed by the AltGr modifier) have been 
-crammed full with numbers and other symbols for which you would normally 
-have had to abandon the standard hand position.
+Are you currently using a Qwerty layout or similar? Then there isn't 
+much of a barrier to entry: in the Thumbledore variant, all characters 
+stay in the same place. The major addition is that the Level-3 symbols 
+(accessed through <kbd>AltGr</kbd>) have been crammed full with numbers 
+and other symbols for which you would normally have had to abandon the 
+standard hand position.
 
 ![The thumbledore-qwerty keyboard layout.](kb-qwerty.svg)
 
@@ -66,11 +66,11 @@ Because AltGr is pressed with your right-hand thumb, the left-hand side
 of the keyboard is preferred for things like parentheses, while the 
 number pad can now be controlled entirely with your right-hand. -->
 
-- <kbd>Backspace</kbd> is put in the place of <kbd>CapsLock</kbd>, 
-  avoiding the huge move your pinky would have made.
+- <kbd>bksp</kbd> is put in the place of <kbd>caps</kbd>, avoiding the 
+  huge move your pinky would have made.
 
 - <kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
-  <kbd>Control</kbd> and <kbd>Alt</kbd>, they don't provide shortcuts — 
+  <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't provide shortcuts — 
   they simply access more symbols. To make for a more comfortable typing 
   experience, these keys are made *sticky* (or *oneshot*). You no longer 
   need to consciously wait to release <kbd>Shift</kbd> in the short 
@@ -83,19 +83,19 @@ number pad can now be controlled entirely with your right-hand. -->
   press <kbd>AltGr</kbd> again, a `.` or `,` will be emitted (depending 
   on your locale).
 
-- The <kbd>Compose</kbd> key allows you to type special characters by 
+- The <kbd>compose</kbd> key allows you to type special characters by 
   typing intuitive keys in succession. For example,  
-  <kbd>Compose</kbd><kbd>C</kbd><kbd>=</kbd> becomes `€`.
+  <kbd>compose</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
 
 ## Action
 
-<kbd>Esc</kbd> is given an easily accessible spot, since it is useful 
+<kbd>esc</kbd> is given an easily accessible spot, since it is useful 
 for modal applications like Vim.
 
 ![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
 
 The remaining keys are hidden in the *Action* layer, which can be 
-accessed by *holding* instead of tapping <kbd>Esc</kbd>. This layer 
+accessed by *holding* instead of tapping <kbd>esc</kbd>. This layer 
 contains a navigation cluster on the left, placed so that you can 
 control the directional keys with one hand.
 
