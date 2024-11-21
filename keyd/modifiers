@@ -30,7 +30,7 @@ l = C-l
 ; = C-;
 ' = C-'
 
-z = leftcontrol
+z = macro(leftcontrol)
 x = C-x
 c = C-c
 v = C-v
@@ -55,7 +55,7 @@ o = M-o
 p = M-p
 \ = M-\
 
-a = leftmeta
+a = noop
 s = M-s
 d = M-d
 f = M-f
@@ -81,7 +81,7 @@ m = M-m
 [leftalt:A]
 space = A-space
 
-q = leftalt
+q = macro(leftalt)
 w = A-w
 e = A-e
 r = A-r
@@ -151,7 +151,7 @@ b = rightcontrol+b
 n = rightcontrol+n
 m = rightcontrol+,
 . = rightcontrol+.
-/ = rightcontrol
+/ = macro(rightcontrol)
 
 [rightmeta:M]
 space = rightmeta+space
@@ -203,7 +203,7 @@ y = A-y
 u = A-u
 i = A-i
 o = A-o
-p = rightalt
+p = macro(rightalt)
 \ = A-\
 
 a = A-a
