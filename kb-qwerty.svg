@@ -74,7 +74,7 @@ g.kb > g > g > text:nth-child(3) {
 <g class="kb" id="left-keyboard">
   <use href="#left"/>
   <g class="r0">
-    <text class="c0 tiny">tab</text>
+    <text class="c0 tiny">Tab</text>
     <g class="c1">
       <text>q</text>
       <text>Q</text>
@@ -102,7 +102,7 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r1">
-    <text class="c0 tiny"><tspan x="0" y="-6">back-</tspan><tspan x="0" y="6">space</tspan></text>
+    <text class="c0 tiny">BkSp</text>
     <g class="c1">
       <text>a</text>
       <text>A</text>
@@ -158,10 +158,8 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r3">
-    <text class="c4">
-      <tspan x="0" dy="-6" class="tiny">esc</tspan><tspan x="0" dy="12" class="tiny mod">fn</tspan>
-    </text>
-    <text class="c5 tiny">space</text>
+    <text class="c4 tiny">Esc</text>
+    <text class="c5 tiny">Space</text>
   </g>
 </g>
 
@@ -257,7 +255,7 @@ g.kb > g > g > text:nth-child(3) {
       <text>?</text>
       <text>/</text>
     </g>
-    <text class="c5 tiny">enter</text>
+    <text class="c5 tiny">Enter</text>
   </g>
   <g class="r3">
     <text class="c0 tiny shift mod">Shift</text>

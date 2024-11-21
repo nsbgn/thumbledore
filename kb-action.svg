@@ -2,7 +2,7 @@
 <svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
+text { font-size: 9px; text-anchor: middle; font-family: monospace; }
 .mod { font-style: italic; }
 .c0 { transform: translate(15px, 0); }
 .c1 { transform: translate(47px, 0); }
@@ -14,8 +14,15 @@ text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
 .r1 { transform: translate(0, 50px); }
 .r2 { transform: translate(0, 82px); }
 .r3 { transform: translate(0, 114px); }
-.tiny { font-size: 9px; }
-.tiny text { font-size: 9px; }
+.tiny { font-size: 7px; }
+.tiny text { font-size: 7px; }
+
+.active rect {
+  stroke: "#E6EAEF";
+  fill: "#454C54";
+}
+
+
 ]]></style>
   <g id="key">
     <rect width="29" height="28" ry="5" x="0.5" y="1.5" fill="#454C54" stroke="#454C54" stroke-width="1px"/>
@@ -36,9 +43,6 @@ text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
     <use href="#6x1" x="0" y="64"/>
     <use href="#key" x="128" y="96"/>
     <use href="#key" x="160" y="96"/>
-
-
-    <rect x="127.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
   <g id="right">
     <use href="#6x1" x="0" y="0"/>
@@ -46,75 +50,70 @@ text { font-size: 9.5px; text-anchor: middle; font-family: monospace; }
     <use href="#6x1" x="0" y="64"/>
     <use href="#key" x="0" y="96"/>
     <use href="#key" x="32" y="96"/>
-
-
-    <rect x="31.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
 </defs>
 
 <g class="kb" id="left-keyboard">
   <use href="#left"/>
   <g class="r0">
-    <text class="c0">tab</text>
-    <text class="c1 mod">OS</text>
-    <text class="c2">home</text>
+    <text class="c0">Tab</text>
+    <text class="c1 mod">Alt</text>
+    <text class="c2">Home</text>
     <text class="c3">▲</text>
-    <text class="c4">end</text>
-    <text class="c5"><tspan x="0" y="-6">in-</tspan><tspan x="0" y="6">sert</tspan></text>
+    <text class="c4">End</text>
+    <text class="c5">Insrt</text>
   </g>
   <g class="r1">
-    <text class="c0 tiny"><tspan x="0" y="-6">back-</tspan><tspan x="0" y="6">space</tspan></text>
-    <text class="c1 mod">Ctrl</text>
+    <text class="c0">BkSp</text>
+    <text class="c1 mod">OS</text>
     <text class="c2">◀</text>
     <text class="c3">▼</text>
     <text class="c4">▶</text>
-    <text class="c5">del</text>
+    <text class="c5">Del</text>
   </g>
   <g class="r2">
-    <text class="c0 tiny"><tspan x="0" y="-6">com-</tspan><tspan x="0" y="6">pose</tspan></text>
-    <text class="c1 mod">Alt</text>
-    <text class="c2">pause</text>
-    <text class="c3">pgup</text>
-    <text class="c4">pgdn</text>
-    <text class="c5">menu</text>
+    <text class="c0 mod">Shift</text>
+    <text class="c1 mod">Ctrl</text>
+    <text class="c2">Pause</text>
+    <text class="c3">PgUp</text>
+    <text class="c4">PgDn</text>
+    <text class="c5">Menu</text>
   </g>
   <g class="r3">
-    <text class="c4">
-      <tspan x="0" dy="-6" class="tiny">esc</tspan><tspan x="0" dy="12" class="tiny mod">fn</tspan>
-    </text>
-    <text class="c5 tiny">space</text>
+    <text class="c4">Esc</text>
+    <text class="c5">Space</text>
   </g>
 </g>
 
 <g class="kb" id="right-keyboard" transform="translate(196, 0)">
   <use href="#right"/>
   <g class="r0">
-    <text class="c0">f12</text>
-    <text class="c1">f7</text>
-    <text class="c2">f8</text>
-    <text class="c3">f9</text>
-    <text class="c4 mod">OS</text>
-    <text class="c5"><tspan x="0" y="-6">scr</tspan><tspan x="0" y="6">lck</tspan></text>
+    <text class="c0">F12</text>
+    <text class="c1">F7</text>
+    <text class="c2">F8</text>
+    <text class="c3">F9</text>
+    <text class="c4 mod">Alt</text>
+    <text class="c5"><tspan x="0" y="-6">Scr</tspan><tspan x="0" y="6">Lck</tspan></text>
   </g>
   <g class="r1">
-    <text class="c0">f11</text>
-    <text class="c1">f4</text>
-    <text class="c2">f5</text>
-    <text class="c3">f6</text>
-    <text class="c4 mod">Ctrl</text>
-    <text class="c5"><tspan x="0" y="-6">prt</tspan><tspan x="0" y="6">scr</tspan></text>
+    <text class="c0">F11</text>
+    <text class="c1">F4</text>
+    <text class="c2">F5</text>
+    <text class="c3">F6</text>
+    <text class="c4 mod">OS</text>
+    <text class="c5"><tspan x="0" y="-6">Prt</tspan><tspan x="0" y="6">Scn</tspan></text>
   </g>
   <g class="r2">
-    <text class="c0">f10</text>
-    <text class="c1">f1</text>
-    <text class="c2">f2</text>
-    <text class="c3">f3</text>
-    <text class="c4 mod">Alt</text>
-    <text class="c5 tiny">enter</text>
+    <text class="c0">F10</text>
+    <text class="c1">F1</text>
+    <text class="c2">F2</text>
+    <text class="c3">F3</text>
+    <text class="c4 mod">Ctrl</text>
+    <text class="c5">Enter</text>
   </g>
   <g class="r3">
-    <text class="c0 tiny mod"><tspan>Shift</tspan><tspan x="6" y="6">caps*</tspan></text>
-    <text class="c1 tiny mod">AltGr</text>
+    <text class="c0 mod"><tspan>Shift</tspan><tspan x="6" y="6">caps*</tspan></text>
+    <text class="c1 mod">AltGr</text>
   </g>
   </g>
 </svg>
