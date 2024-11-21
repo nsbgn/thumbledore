@@ -1,9 +1,12 @@
 # Because there is no oneshotswap (see issue
 # <https://github.com/rvaiya/keyd/issues/673>)
 
-[customcontrol:C]
+# Note: tap-holding automatically combines the action keys with modifiers
+
+[leftcontrol:C]
 space = C-space
-q = C-q
+
+q = oneshot(alt)
 w = C-w
 e = C-e
 r = C-r
@@ -15,7 +18,7 @@ o = C-o
 p = C-p
 \ = C-\
 
-a = C-a
+a = oneshot(meta)
 s = C-s
 d = C-d
 f = C-f
@@ -27,7 +30,7 @@ l = C-l
 ; = C-;
 ' = C-'
 
-z = C-z
+z = leftcontrol
 x = C-x
 c = C-c
 v = C-v
@@ -37,10 +40,10 @@ m = C-,
 . = C-.
 / = C-/
 
-[custommeta:M]
+[leftmeta:M]
 space = M-space
 
-q = M-q
+q = oneshot(alt)
 w = M-w
 e = M-e
 r = M-r
@@ -52,7 +55,7 @@ o = M-o
 p = M-p
 \ = M-\
 
-a = M-a
+a = leftmeta
 s = M-s
 d = M-d
 f = M-f
@@ -64,7 +67,7 @@ l = M-l
 ; = M-;
 ' = M-'
 
-z = M-z
+z = oneshot(control)
 x = M-x
 c = M-c
 v = M-v
@@ -75,10 +78,10 @@ m = M-m
 . = M-.
 / = M-/
 
-[customalt:A]
+[leftalt:A]
 space = A-space
 
-q = A-q
+q = leftalt
 w = A-w
 e = A-e
 r = A-r
@@ -90,7 +93,7 @@ o = A-o
 p = A-p
 \ = A-\
 
-a = A-a
+a = oneshot(meta)
 s = A-s
 d = A-d
 f = A-f
@@ -102,7 +105,7 @@ l = A-l
 ; = A-;
 ' = A-'
 
-z = A-z
+z = oneshot(control)
 x = A-x
 c = A-c
 v = A-v
@@ -113,3 +116,115 @@ m = A-m
 . = A-.
 / = A-/
 
+[rightcontrol:C]
+space = rightcontrol+space
+
+q = rightcontrol+q
+w = rightcontrol+w
+e = rightcontrol+e
+r = rightcontrol+r
+t = rightcontrol+t
+y = rightcontrol+y
+u = rightcontrol+u
+i = rightcontrol+i
+o = rightcontrol+o
+p = oneshot(alt)
+\ = rightcontrol+\
+
+a = rightcontrol+a
+s = rightcontrol+s
+d = rightcontrol+d
+f = rightcontrol+f
+g = rightcontrol+g
+h = rightcontrol+h
+j = rightcontrol+j
+k = rightcontrol+k
+l = rightcontrol+l
+; = oneshot(meta)
+' = rightcontrol+'
+
+z = rightcontrol+z
+x = rightcontrol+x
+c = rightcontrol+c
+v = rightcontrol+v
+b = rightcontrol+b
+n = rightcontrol+n
+m = rightcontrol+,
+. = rightcontrol+.
+/ = rightcontrol
+
+[rightmeta:M]
+space = rightmeta+space
+
+q = rightmeta+q
+w = rightmeta+w
+e = rightmeta+e
+r = rightmeta+r
+t = rightmeta+t
+y = rightmeta+y
+u = rightmeta+u
+i = rightmeta+i
+o = rightmeta+o
+p = oneshot(alt)
+\ = rightmeta+\
+
+a = rightmeta+a
+s = rightmeta+s
+d = rightmeta+d
+f = rightmeta+f
+g = rightmeta+g
+h = rightmeta+h
+j = rightmeta+j
+k = rightmeta+k
+l = rightmeta+l
+; = rightmeta
+' = rightmeta+'
+
+z = rightmeta+z
+x = rightmeta+x
+c = rightmeta+c
+v = rightmeta+v
+b = rightmeta+b
+n = rightmeta+n
+m = rightmeta+m
+, = rightmeta+,
+. = rightmeta+.
+/ = oneshot(control)
+
+[rightalt:A]
+space = A-space
+
+q = A-q
+w = A-w
+e = A-e
+r = A-r
+t = A-t
+y = A-y
+u = A-u
+i = A-i
+o = A-o
+p = rightalt
+\ = A-\
+
+a = A-a
+s = A-s
+d = A-d
+f = A-f
+g = A-g
+h = A-h
+j = A-j
+k = A-k
+l = A-l
+; = oneshot(meta)
+' = A-'
+
+z = A-z
+x = A-x
+c = A-c
+v = A-v
+b = A-b
+n = A-n
+m = A-m
+, = A-,
+. = A-.
+/ = oneshot(control)

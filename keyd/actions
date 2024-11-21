@@ -2,19 +2,19 @@ space = M-space
 
 # Left
 
-q = layer(custommeta)
+q = oneshot(leftalt)
 w = home
 e = up
 r = end
 t = insert
 
-a = overload(customcontrol, escape)
+a = layer(leftmeta)
 s = left
 d = down
 f = right
 g = delete
 
-z = oneshot(customalt)
+z = oneshot(leftcontrol)
 x = pause
 c = pageup
 v = pagedown
@@ -27,18 +27,18 @@ y = f12
 u = f7
 i = f8
 o = f9
-p = overload(custommeta, rightmeta)
+p = oneshot(rightalt)
 \ = scrolllock
 
 h = f11
 j = f4
 k = f5
 l = f6
-; = overload(customcontrol, rightcontrol)
+; = oneshot(rightmeta)
 ' = sysrq
 
 n = f10
 m = f1
 , = f2
 . = f3
-/ = overload(customalt, rightalt)
+/ = oneshot(rightcontrol)
