@@ -5,7 +5,7 @@ being tweaked. It currently only supports Linux.*
 
 Touch typing on a standard keyboard is not a great experience. Your 
 thumbs idle while your weakest finger contorts to reach keys like 
-<kbd>esc</kbd> and <kbd>bksp</kbd>. Numbers and other common symbols 
+<kbd>Esc</kbd> and <kbd>BkSp</kbd>. Numbers and other common symbols 
 require you to abandon a comfortable hand position entirely. Exotic 
 keyboards can remedy all this, but lack portability.
 
@@ -23,8 +23,7 @@ broadly within the constraints of a laptop keyboard.
     <kbd>Ctrl</kbd><kbd>c</kbd> can be reached with just the left.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a mainstream keyboard. Only 
-    <kbd>compose</kbd> and <kbd>Shift</kbd> are in a truly different 
-    spot.
+    <kbd>Multi</kbd> and <kbd>Shift</kbd> are in a truly different spot.
 -   **Incremental learning.** You don't need to learn everything all at 
     once. I've found the <kbd>AltGr</kbd> symbols to be the most 
     ergonomically significant, so that is a great place to start.
@@ -41,8 +40,8 @@ broadly within the constraints of a laptop keyboard.
     yourself to work with it, but I have not made that sacrifice here.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
-    Therefore, only *one* key has been overloaded: the Action key 
-    doubles as <kbd>esc</kbd> when tapped. <!-- This is considered safe 
+    Therefore, only *one* key has been overloaded: <kbd>Esc</kbd> 
+    accesses the Action layer when held. <!-- This is considered safe 
     because the key is not associated with a modifier, and the `esc` is 
     only registered when the tap is shorter than *x* milliseconds. -->
 
@@ -66,8 +65,8 @@ Because AltGr is pressed with your right-hand thumb, the left-hand side
 of the keyboard is preferred for things like parentheses, while the 
 number pad can now be controlled entirely with your right-hand. -->
 
-- <kbd>bksp</kbd> is put in the place of <kbd>caps</kbd>, avoiding the 
-  huge move your pinky would have made.
+- <kbd>BkSp</kbd> takes the place of <kbd>Caps</kbd>, avoiding the huge 
+  move your pinky would have made.
 
 - <kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
   <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't provide shortcuts — 
@@ -83,29 +82,29 @@ number pad can now be controlled entirely with your right-hand. -->
   press <kbd>AltGr</kbd> again, a `.` or `,` will be emitted (depending 
   on your locale).
 
-- The <kbd>compose</kbd> key allows you to type special characters by 
-  typing intuitive keys in succession. For example,  
-  <kbd>compose</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
+- The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
+  special characters by typing intuitive keys in succession. For 
+  example,  <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
 
 ## Action
 
-<kbd>esc</kbd> is given an easily accessible spot, since it is useful 
+<kbd>Esc</kbd> is given an easily accessible spot, since it is useful 
 for modal applications like Vim.
 
 ![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
 
 The remaining keys are hidden in the *Action* layer, which can be 
-accessed by *holding* instead of tapping <kbd>esc</kbd>. This layer 
+accessed by *holding* instead of tapping <kbd>Esc</kbd>. This layer 
 contains a navigation cluster on the left, placed so that you can 
 control the directional keys with one hand.
 
 The other modifiers are also available here: tapping the keys labeled 
-<kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>OS</kbd> activates the 
+<kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>Super</kbd> activates the 
 corresponding modifiers for the remainder of the time that *Action* is 
 active.
 
-Finally, the layer has the *function keys*. This is convenient for quick 
-access to window-manager shortcuts that you might want to set, such as 
+Finally, the layer has the F-keys. This is convenient for quick access 
+to window-manager shortcuts that you might want to set, such as 
 navigating desktops and closing windows.
 
 Pulling up the application menu or escaping a virtual machine often 

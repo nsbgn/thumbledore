@@ -130,7 +130,7 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r2">
-    <text class="c0 tiny"><tspan x="0" y="-6">com-</tspan><tspan x="0" y="6">pose</tspan></text>
+    <text class="c0 tiny">Multi</text>
     <g class="c1">
       <text>z</text>
       <text>Z</text>

@@ -65,7 +65,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r1">
     <text class="c0">BkSp</text>
-    <text class="c1 mod">OS</text>
+    <text class="c1 mod">Super</text>
     <text class="c2">◀</text>
     <text class="c3">▼</text>
     <text class="c4">▶</text>
@@ -100,7 +100,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c1">F4</text>
     <text class="c2">F5</text>
     <text class="c3">F6</text>
-    <text class="c4 mod">OS</text>
+    <text class="c4 mod">Super</text>
     <text class="c5"><tspan x="0" y="-6">Prt</tspan><tspan x="0" y="6">Scn</tspan></text>
   </g>
   <g class="r2">
