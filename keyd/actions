@@ -1,4 +1,4 @@
-space = M-space
+space = space
 
 # Left
 
@@ -16,10 +16,10 @@ g = pagedown
 
 z = oneshot(leftcontrol)
 # this is menu
-x = compose
+x = insert
 c = pause
 v = delete
-b = insert
+b = enter
 
 # Right
 
