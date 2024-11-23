@@ -1,3 +1,19 @@
+[global]
+
+chord_timeout = 50
+overload_tap_timeout = 300
+oneshot_timeout = 500
+disable_modifier_guard = 0
+
+
+[main]
+
+ESC = timeout(overload(escape, esc), 150, layer(escape))
+SHIFT = oneshot(shift)
+ALTGR = oneshot(altgr)
+
+
+[escape]
 space = space
 
 # Left
