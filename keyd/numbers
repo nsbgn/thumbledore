@@ -1,0 +1,35 @@
+# Assuming that you are using a keyboard layout in which
+# `AltGr+{u,i,o,j,k,l,;,m,comma,dot}` emit keysyms for numbers, and your
+# numlock is on, this will emit a `dot` or `comma` when you press `AltGr`
+# immediately after typing a number.
+
+[altgr:G]
+u = oneshotm(number, G-u)
+i = oneshotm(number, G-i)
+o = oneshotm(number, G-o)
+
+j = oneshotm(number, G-j)
+k = oneshotm(number, G-k)
+l = oneshotm(number, G-l)
+; = oneshotm(number, G-semicolon)
+
+m = oneshotm(number, G-m)
+, = oneshotm(number, G-comma)
+. = oneshotm(number, G-dot)
+
+[number:G]
+ALTGR = oneshotm(altgr, kpdot)
+
+# [altgrdot:G]
+# u = swapm(altgr, macro(kpdot G-u))
+# i = swapm(altgr, macro(kpdot G-i))
+# o = swapm(altgr, macro(kpdot G-o))
+# 
+# j = swapm(altgr, macro(kpdot G-j))
+# k = swapm(altgr, macro(kpdot G-k))
+# l = swapm(altgr, macro(kpdot G-l))
+# ; = swapm(altgr, macro(kpdot G-semicolon))
+# 
+# m = swapm(altgr, macro(kpdot G-m))
+# , = swapm(altgr, macro(kpdot G-comma))
+# . = swapm(altgr, macro(kpdot G-dot))
