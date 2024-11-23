@@ -3,7 +3,7 @@
 <defs>
 <style type="text/css"><![CDATA[
 text { font-size: 14px; text-anchor: middle; font-family: monospace; }
-.mod { font-style: italic; }
+.mod { font-weight: bold; }
 .c0 { transform: translate(15px, 0); }
 .c1 { transform: translate(47px, 0); }
 .c2 { transform: translate(79px, 0); }
@@ -59,7 +59,6 @@ g.kb > g > g > text:nth-child(3) {
     <use href="#6x1" x="0" y="64"/>
     <use href="#key" x="128" y="96"/>
     <use href="#key" x="160" y="96"/>
-    <rect x="127.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
   <g id="right">
     <use href="#6x1" x="0" y="0"/>
@@ -67,7 +66,6 @@ g.kb > g > g > text:nth-child(3) {
     <use href="#6x1" x="0" y="64"/>
     <use href="#key" x="0" y="96"/>
     <use href="#key" x="32" y="96"/>
-    <rect x="31.5" y="31.5" width="31" height="31" ry="4" fill="none" stroke="#ccc" stroke-dasharray="2,1"/>
   </g>
 </defs>
 
@@ -158,7 +156,7 @@ g.kb > g > g > text:nth-child(3) {
     </g>
   </g>
   <g class="r3">
-    <text class="c4 tiny">Esc</text>
+    <text class="c4 tiny mod">Esc</text>
     <text class="c5 tiny">Space</text>
   </g>
 </g>
