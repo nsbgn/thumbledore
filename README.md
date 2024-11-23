@@ -1,4 +1,4 @@
-# 🧙 Thumbledore ⌨️
+# 🧙 Thumbledore
 
 *I only uploaded this so that it may serve as inspiration. It is still 
 being tweaked. It currently only supports Linux.*
@@ -41,21 +41,21 @@ broadly within the constraints of a laptop keyboard.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
     Therefore, only *one* key has been overloaded: <kbd>Esc</kbd> 
-    accesses the Action layer when held. <!-- This is considered safe 
-    because the key is not associated with a modifier, and the `esc` is 
-    only registered when the tap is shorter than *x* milliseconds. -->
+    accesses a layer when held. <!-- This is considered safe because the 
+    key is not associated with a modifier, and the `esc` is only 
+    registered when the tap is shorter than *x* milliseconds. -->
 
 
 ## Symbols
+
+![The thumbledore-qwerty keyboard layout.](kb-qwerty.svg)
 
 Are you currently using a Qwerty layout or similar? Then there isn't 
 much of a barrier to entry: in the Thumbledore variant, all characters 
 stay in the same place. The major addition is that the Level-3 symbols 
 (accessed through <kbd>AltGr</kbd>) have been crammed full with numbers 
-and other symbols for which you would normally have had to abandon the 
-standard hand position.
-
-![The thumbledore-qwerty keyboard layout.](kb-qwerty.svg)
+and the other ASCII symbols for which you would normally have had 
+contort your hands.
 
 <!-- Symbols were placed according to how often I personally need them, 
 drawing inspiration from the [Workman] layout on which keys to assign 
@@ -69,12 +69,12 @@ number pad can now be controlled entirely with your right-hand. -->
   move your pinky would have made.
 
 - <kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
-  <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't provide shortcuts — 
-  they simply access more symbols. To make for a more comfortable typing 
-  experience, these keys are made *sticky* (or *oneshot*). You no longer 
-  need to consciously wait to release <kbd>Shift</kbd> in the short 
-  interval *after* pressing the key to be modified but *before* the next 
-  one. MUch better!
+  <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't access shortcuts — they 
+  simply provide more symbols. To make for a more comfortable typing 
+  experience, these keys are made *sticky* (or *oneshot*). Instead of 
+  holding and consciously releasing them *just* before pressing the next 
+  unmodified key, you can just tap once and forget about it. MUch 
+  better!
 
 - You will often need a decimal point while typing numbers, but it is 
   cumbersome to exit the numpad just to grab one and return. For this 
@@ -84,31 +84,41 @@ number pad can now be controlled entirely with your right-hand. -->
 
 - The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
   special characters by typing intuitive keys in succession. For 
-  example,  <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
+  example, <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
 
-## Action
 
-<kbd>Esc</kbd> is given an easily accessible spot, since it is useful 
-for modal applications like Vim.
+## Escape
 
 ![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
 
-The remaining keys are hidden in the *Action* layer, which can be 
-accessed by *holding* instead of tapping <kbd>Esc</kbd>. This layer 
-contains a navigation cluster on the left, placed so that you can 
-control the directional keys with one hand.
+<kbd>Esc</kbd> is given an easily accessible spots for your left thumb, 
+since it is useful for modal applications like Vim. However, when you 
+*hold it*, it reveals a layer with the remaining 'action' keys: a 
+navigation cluster, F-keys, and modifiers.
 
-The other modifiers are also available here: tapping the keys labeled 
-<kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>Super</kbd> activates the 
-corresponding modifiers for the remainder of the time that *Action* is 
-active.
+- The navigation cluster is placed so that you can control the 
+  directional keys with one hand.
 
-Finally, the layer has the F-keys. This is convenient for quick access 
-to window-manager shortcuts that you might want to set, such as 
-navigating desktops and closing windows.
+- F-keys are not used so often in modern applications, so I map these in 
+  my window manager for actions such as navigating desktops and closing 
+  windows.
 
-Pulling up the application menu or escaping a virtual machine often 
-involves tapping a modifier on its own --- you should be able to.
+- The keys labeled <kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>Super</kbd> 
+  activate the corresponding modifier for any subsequent keypress that 
+  occurs shortly after, or until you release the key.
+    - Tapping two modifiers on the same side will activate both of them.
+    - Pulling up the application menu or escaping a virtual machine 
+      often involves tapping a modifier on its own --- this is achieved 
+      by simply double-tapping.
+    - In general, the **Escape** layer is deactivated while a modifier 
+      is active, so that, for example, 
+      <kbd>Esc</kbd><kbd>z</kbd><kbd>f</kbd> will generate 
+      <kbd>Ctrl</kbd><kbd>f</kbd>. If you instead really do want to 
+      combine a modifier with a key from the **Escape** layer, tap and 
+      hold that modifier: 
+      <kbd>Esc</kbd><kbd>z</kbd><kbd>z</kbd><kbd>f</kbd> yields 
+      <kbd>Ctrl</kbd><kbd>▶</kbd>.
+
 
 # Technical considerations
 
@@ -123,21 +133,19 @@ has several benefits:
 
 - At the scan- and keycode-level, more tricks can be applied, like 
   overloading.
-- Your operating system knows what symbol layout you are using, and you 
-  can switch between them in the standard way.
-- Users can try the <kbd>AltGr</kbd> symbols, without committing to the 
-  rest.
-- All keyboards, regardless of firmware, will type the same symbols.
-- It becomes easier to reason to reason about composition: we don't have 
-  to explicitly write rules for how the various layers and modifiers 
-  combine. Suppose, for example, you want to zoom in with 
-  <kbd>Ctrl</kbd><kbd>+</kbd> --- your muscle memory will know that 
-  <kbd>AltGr</kbd><kbd>e</kbd><kbd>AltGr</kbd><kbd>e</kbd> is `+`, so 
-  you have your keyboard send 
-  <kbd>AltGr</kbd><kbd>Ctrl</kbd><kbd>e</kbd>, and your programs will 
-  hear <kbd>Ctrl</kbd><kbd>+</kbd>.
+- But at the keysym-level, you can switch between symbol layouts in the 
+  standard way --- and they will apply to all keyboards, regardless of 
+  firmware.
 - The decimal point `.` or `,` is locale-dependent, so it makes sense to 
   choose it at the layout level.
+- Users can try the <kbd>AltGr</kbd> symbols, without committing to the 
+  rest.
+- It becomes easier to reason to reason about key composition. We don't 
+  have to explicitly write and remember rules for how the various layers 
+  and modifiers combine. Suppose, for example, you want to zoom in with 
+  <kbd>Ctrl</kbd><kbd>+</kbd> --- you can rely on your muscle memory to 
+  type that first key as <kbd>Esc</kbd><kbd>z</kbd> and the second as 
+  <kbd>AltGr</kbd>e</kbd>.
 
 
 ## Usage and installation
