@@ -3,7 +3,7 @@
 <defs>
 <style type="text/css"><![CDATA[
 text { font-size: 9px; text-anchor: middle; font-family: monospace; }
-.mod { font-style: italic; }
+.mod { font-weight: bold; }
 .c0 { transform: translate(15px, 0); }
 .c1 { transform: translate(47px, 0); }
 .c2 { transform: translate(79px, 0); }
@@ -61,7 +61,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">Home</text>
     <text class="c3">▲</text>
     <text class="c4">End</text>
-    <text class="c5">Insrt</text>
+    <text class="c5">PgUp</text>
   </g>
   <g class="r1">
     <text class="c0">BkSp</text>
@@ -69,15 +69,15 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">◀</text>
     <text class="c3">▼</text>
     <text class="c4">▶</text>
-    <text class="c5">Del</text>
+    <text class="c5">PgDn</text>
   </g>
   <g class="r2">
     <text class="c0 mod">Shift</text>
     <text class="c1 mod">Ctrl</text>
-    <text class="c2">Pause</text>
-    <text class="c3">PgUp</text>
-    <text class="c4">PgDn</text>
-    <text class="c5">Menu</text>
+    <text class="c2">Menu</text>
+    <text class="c3">Pause</text>
+    <text class="c4">Del</text>
+    <text class="c5">Ins</text>
   </g>
   <g class="r3">
     <text class="c4">Esc</text>

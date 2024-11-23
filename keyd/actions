@@ -6,20 +6,20 @@ q = oneshot(leftalt)
 w = home
 e = up
 r = end
-t = insert
+t = pageup
 
-a = layer(leftmeta)
+a = oneshot(leftmeta)
 s = left
 d = down
 f = right
-g = delete
+g = pagedown
 
 z = oneshot(leftcontrol)
-x = pause
-c = pageup
-v = pagedown
 # this is menu
-b = compose
+x = compose
+c = pause
+v = delete
+b = insert
 
 # Right
 

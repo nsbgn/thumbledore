@@ -55,7 +55,7 @@ o = M-o
 p = M-p
 \ = M-\
 
-a = noop
+a = macro(leftmeta)
 s = M-s
 d = M-d
 f = M-f
