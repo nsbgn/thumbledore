@@ -33,3 +33,17 @@ ALTGR = oneshotm(altgr, kpdot)
 # m = swapm(altgr, macro(kpdot G-m))
 # , = swapm(altgr, macro(kpdot G-comma))
 # . = swapm(altgr, macro(kpdot G-dot))
+
+[altgr+action]
+u = rightalt+f7
+i = rightalt+f8
+o = rightalt+f9
+
+j = rightalt+f4
+k = rightalt+f5
+l = rightalt+f6
+; = rightalt+rightmeta
+
+m = rightalt+f1
+, = rightalt+f2
+. = rightalt+f3
