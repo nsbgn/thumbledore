@@ -31,6 +31,7 @@ f = right
 g = pagedown
 
 z = oneshot(leftcontrol)
+x = pause
 c = insert
 v = delete
 b = sysrq
