@@ -35,7 +35,7 @@ z = oneshot(leftcontrol)
 x = insert
 c = pause
 v = delete
-b = enter
+b = capslock
 
 # Right
 
