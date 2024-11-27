@@ -31,11 +31,9 @@ f = right
 g = pagedown
 
 z = oneshot(leftcontrol)
-# this is menu
-x = insert
-c = pause
+c = insert
 v = delete
-b = capslock
+b = sysrq
 
 # Right
 
@@ -51,7 +49,7 @@ j = f4
 k = f5
 l = f6
 ; = oneshot(rightmeta)
-' = sysrq
+' = capslock
 
 n = f10
 m = f1

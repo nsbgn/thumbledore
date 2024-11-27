@@ -74,10 +74,10 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   <g class="r2">
     <text class="c0">Menu</text>
     <text class="c1 mod">Ctrl</text>
-    <text class="c2">Ins</text>
-    <text class="c3">Pause</text>
+    <text class="c2">Pause</text>
+    <text class="c3">Ins</text>
     <text class="c4">Del</text>
-    <text class="c5"><tspan x="0" y="-6">Caps</tspan><tspan x="0" y="6">Lock</tspan></text>
+    <text class="c5"><tspan x="0" y="-6">Prt</tspan><tspan x="0" y="6">Scn</tspan></text>
   </g>
   <g class="r3">
     <text class="c4 mod">Esc</text>
@@ -93,7 +93,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F8</text>
     <text class="c3">F9</text>
     <text class="c4 mod">Alt</text>
-    <text class="c5"><tspan x="0" y="-6">Scr</tspan><tspan x="0" y="6">Lck</tspan></text>
+    <text class="c5"><tspan x="0" y="-6">Scr</tspan><tspan x="0" y="6">Lock</tspan></text>
   </g>
   <g class="r1">
     <text class="c0">F11</text>
@@ -101,7 +101,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F5</text>
     <text class="c3">F6</text>
     <text class="c4 mod">Super</text>
-    <text class="c5"><tspan x="0" y="-6">Prt</tspan><tspan x="0" y="6">Scn</tspan></text>
+    <text class="c5"><tspan x="0" y="-6">Caps</tspan><tspan x="0" y="6">Lock</tspan></text>
   </g>
   <g class="r2">
     <text class="c0">F10</text>
