@@ -14,7 +14,7 @@ ALTGR = oneshot(altgr)
 
 
 [escape]
-space = space
+space = M-space
 
 # Left
 
