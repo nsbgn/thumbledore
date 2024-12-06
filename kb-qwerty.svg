@@ -189,11 +189,7 @@ g.kb > g > g > text:nth-child(3) {
       <text>P</text>
       <text>.</text>
     </g>
-    <g class="c5">
-      <text>\</text>
-      <text>|</text>
-      <text>@</text>
-    </g>
+    <text class="c5 tiny">Enter</text>
   </g>
   <g class="r1">
     <g class="c0">
@@ -253,7 +249,11 @@ g.kb > g > g > text:nth-child(3) {
       <text>?</text>
       <text>/</text>
     </g>
-    <text class="c5 tiny">Enter</text>
+    <g class="c5">
+      <text>\</text>
+      <text>|</text>
+      <text>@</text>
+    </g>
   </g>
   <g class="r3">
     <text class="c0 tiny shift mod">Shift</text>

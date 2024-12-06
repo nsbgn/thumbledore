@@ -93,7 +93,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F8</text>
     <text class="c3">F9</text>
     <text class="c4 mod">Alt</text>
-    <text class="c5"><tspan x="0" y="-6">Scr</tspan><tspan x="0" y="6">Lock</tspan></text>
+    <text class="c5">Enter</text>
   </g>
   <g class="r1">
     <text class="c0">F11</text>
@@ -109,7 +109,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F2</text>
     <text class="c3">F3</text>
     <text class="c4 mod">Ctrl</text>
-    <text class="c5">Enter</text>
+    <text class="c5"><tspan x="0" y="-6">Scr</tspan><tspan x="0" y="6">Lock</tspan></text>
   </g>
   <g class="r3">
     <text class="c0 mod">Shift</text>
