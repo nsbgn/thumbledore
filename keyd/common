@@ -5,35 +5,39 @@ overload_tap_timeout = 300
 oneshot_timeout = 500
 disable_modifier_guard = 0
 
-
 [main]
-
-ESC = timeout(overload(escape, esc), 150, layer(escape))
-SHIFT = oneshot(shift)
+# FN = timeout(overload(fn, oneshot(doubletap)), 150, layer(fn))
+FN = timeout(overload(fn, leftmeta), 150, layer(fn))
+SHIFT = timeout(overload(shift, esc), 150, layer(shift))
 ALTGR = oneshot(altgr)
 
+[doubletap]
+FN = timeout(overload(alt, oneshot(tripletap)), 150, layer(alt))
 
-[escape]
-space = M-space
+[tripletap:A]
+FN = layer(fn)
+
+[fn]
+space = M-A-space
 
 # Left
 
-q = oneshot(leftalt)
+q = noop
 w = home
 e = up
 r = end
-t = pageup
+t = noop
 
-a = oneshot(leftmeta)
+a = pageup
 s = left
 d = down
 f = right
-g = pagedown
+g = delete
 
-z = oneshot(leftcontrol)
+z = oneshot(rightcontrol)
 x = pause
 c = insert
-v = delete
+v = pagedown
 b = sysrq
 
 # Right
@@ -42,18 +46,18 @@ y = f12
 u = f7
 i = f8
 o = f9
-p = oneshot(rightalt)
+p = noop
 \ = scrolllock
 
 h = f11
 j = f4
 k = f5
 l = f6
-; = oneshot(rightmeta)
-' = capslock
+; = oneshot(leftalt)
+' = backspace
 
 n = f10
 m = f1
 , = f2
 . = f3
-/ = oneshot(rightcontrol)
+/ = capslock
