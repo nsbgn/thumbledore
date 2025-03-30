@@ -28,17 +28,18 @@ u = 7
 i = 8
 o = 9
 p = .
-\ = @
+\ = `
 
 h = ~
 j = 4
 k = 5
 l = 6
 ; = 0
-' = `
+' = backspace
 
 n = %
 m = 1
 , = 2
 . = 3
 / = /
+rightshift = @
