@@ -8,10 +8,9 @@ disable_modifier_guard = 0
 
 [main]
 
-ESC = timeout(overload(fn, esc), 150, layer(fn))
+FN = timeout(overload(fn, esc), 150, layer(fn))
 SHIFT = oneshot(shift)
 ALTGR = oneshot(altgr)
-
 
 [fn]
 space = M-space
@@ -24,13 +23,13 @@ e = up
 r = end
 t = insert
 
-a = timeout(overload(leftcontrol, oneshot(leftcontrol)), 150, overload(leftcontrol, leftcontrol))
+a = timeout(oneshot(Control), 150, overload(Control, leftcontrol))
 s = left
 d = down
 f = right
 g = delete
 
-z = timeout(overload(leftcontrol, oneshot(leftcontrol)), 150, overload(leftcontrol, rightcontrol))
+z = timeout(oneshot(Control), 150, overload(Control, rightcontrol))
 x = pause
 c = pageup
 v = pagedown
@@ -42,18 +41,18 @@ y = f12
 u = f7
 i = f8
 o = f9
-p = oneshot(rightalt)
+p = noop
 \ = scrolllock
 
 h = f11
 j = f4
 k = f5
 l = f6
-; = oneshot(rightmeta)
+; = timeout(oneshot(Alt), 150, overload(Alt, leftalt))
 ' = capslock
 
 n = f10
 m = f1
 , = f2
 . = f3
-/ = oneshot(rightcontrol)
+/ = timeout(oneshot(Alt), 150, overload(Alt, rightalt))

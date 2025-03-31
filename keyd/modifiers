@@ -3,10 +3,10 @@
 
 # Note: tap-holding automatically combines the action keys with modifiers
 
-[leftcontrol:C]
+[Control:C]
 space = C-space
 
-q = oneshot(alt)
+q = C-q
 w = C-w
 e = C-e
 r = C-r
@@ -18,7 +18,7 @@ o = C-o
 p = C-p
 \ = C-\
 
-a = oneshot(meta)
+a = overload(control, C-a)
 s = C-s
 d = C-d
 f = C-f
@@ -27,10 +27,10 @@ h = C-h
 j = C-j
 k = C-k
 l = C-l
-; = C-;
+; = overload(alt, C-;)
 ' = C-'
 
-z = macro(leftcontrol)
+z = overload(control, C-z)
 x = C-x
 c = C-c
 v = C-v
@@ -38,160 +38,9 @@ b = C-b
 n = C-n
 m = C-,
 . = C-.
-/ = C-/
+/ = overload(alt, C-/)
 
-[leftmeta:M]
-space = M-space
-
-q = oneshot(alt)
-w = M-w
-e = M-e
-r = M-r
-t = M-t
-y = M-y
-u = M-u
-i = M-i
-o = M-o
-p = M-p
-\ = M-\
-
-a = macro(leftmeta)
-s = M-s
-d = M-d
-f = M-f
-g = M-g
-h = M-h
-j = M-j
-k = M-k
-l = M-l
-; = M-;
-' = M-'
-
-z = oneshot(control)
-x = M-x
-c = M-c
-v = M-v
-b = M-b
-n = M-n
-m = M-m
-, = M-,
-. = M-.
-/ = M-/
-
-[leftalt:A]
-space = A-space
-
-q = macro(leftalt)
-w = A-w
-e = A-e
-r = A-r
-t = A-t
-y = A-y
-u = A-u
-i = A-i
-o = A-o
-p = A-p
-\ = A-\
-
-a = oneshot(meta)
-s = A-s
-d = A-d
-f = A-f
-g = A-g
-h = A-h
-j = A-j
-k = A-k
-l = A-l
-; = A-;
-' = A-'
-
-z = oneshot(control)
-x = A-x
-c = A-c
-v = A-v
-b = A-b
-n = A-n
-m = A-m
-, = A-,
-. = A-.
-/ = A-/
-
-[rightcontrol:C]
-space = rightcontrol+space
-
-q = C-q
-w = C-w
-e = C-e
-r = C-r
-t = C-t
-y = C-y
-u = C-u
-i = C-i
-o = C-o
-p = oneshot(alt)
-\ = C-
-
-a = C-a
-s = C-s
-d = C-d
-f = C-f
-g = C-g
-h = C-h
-j = C-j
-k = C-k
-l = C-l
-; = oneshot(meta)
-' = C-'
-
-z = C-z
-x = C-x
-c = C-c
-v = C-v
-b = C-b
-n = C-n
-m = C-,
-. = C-.
-/ = macro(rightcontrol)
-
-[rightmeta:M]
-space = M-space
-
-q = M-q
-w = M-w
-e = M-e
-r = M-r
-t = M-t
-y = M-y
-u = M-u
-i = M-i
-o = M-o
-p = oneshot(alt)
-\ = M-\
-
-a = M-a
-s = M-s
-d = M-d
-f = M-f
-g = M-g
-h = M-h
-j = M-j
-k = M-k
-l = M-l
-; = macro(rightmeta)
-' = M-'
-
-z = M-z
-x = M-x
-c = M-c
-v = M-v
-b = M-b
-n = M-n
-m = M-m
-, = M-,
-. = M-.
-/ = oneshot(control)
-
-[rightalt:A]
+[Alt:A]
 space = A-space
 
 q = A-q
@@ -203,10 +52,10 @@ y = A-y
 u = A-u
 i = A-i
 o = A-o
-p = macro(rightalt)
+p = A-p
 \ = A-\
 
-a = A-a
+a = overload(control, A-a)
 s = A-s
 d = A-d
 f = A-f
@@ -215,10 +64,10 @@ h = A-h
 j = A-j
 k = A-k
 l = A-l
-; = oneshot(meta)
+; = overload(alt, A-;)
 ' = A-'
 
-z = A-z
+z = overload(control, A-z)
 x = A-x
 c = A-c
 v = A-v
@@ -227,4 +76,4 @@ n = A-n
 m = A-m
 , = A-,
 . = A-.
-/ = oneshot(control)
+/ = overload(alt, A-/)
