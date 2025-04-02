@@ -3,7 +3,7 @@
 chord_timeout = 50
 overload_tap_timeout = 300
 oneshot_timeout = 500
-disable_modifier_guard = 0
+disable_modifier_guard = 1
 
 
 [main]
@@ -18,11 +18,11 @@ space = swap(meta)
 
 # Left
 
-q = noop
+q = pageup
 w = home
 e = up
 r = end
-t = insert
+t = noop
 
 a = timeout(oneshot(Control), 150, overload(Control, leftcontrol))
 s = left
@@ -32,7 +32,7 @@ g = delete
 
 z = timeout(oneshot(Control), 150, overload(Control, rightcontrol))
 x = pause
-c = pageup
+c = insert
 v = pagedown
 b = sysrq
 

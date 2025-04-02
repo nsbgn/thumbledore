@@ -57,7 +57,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   <use href="#left"/>
   <g class="r0">
     <text class="c0">Tab</text>
-    <text class="c1">Ins</text>
+    <text class="c1">PgUp</text>
     <text class="c2">Home</text>
     <text class="c3">▲</text>
     <text class="c4">End</text>
@@ -75,13 +75,13 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c0">Enter</text>
     <text class="c1 mod">RCtrl</text>
     <text class="c2">Pause</text>
-    <text class="c3">PgUp</text>
+    <text class="c3">Ins</text>
     <text class="c4">PgDn</text>
     <text class="c5"><tspan x="0" y="-6">Prt</tspan><tspan x="0" y="6">Scn</tspan></text>
   </g>
   <g class="r3">
     <text class="c4 mod">Esc</text>
-    <text class="c5">Space</text>
+    <text class="c5 mod">Meta</text>
   </g>
 </g>
 
@@ -93,7 +93,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F8</text>
     <text class="c3">F9</text>
     <text class="c4"></text>
-    <text class="c5">Enter</text>
+    <text class="c5"></text>
   </g>
   <g class="r1">
     <text class="c0">F11</text>
