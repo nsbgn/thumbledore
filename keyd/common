@@ -14,7 +14,7 @@ SHIFT = timeout(overload(shift, enter), 140, layer(shift))
 ALTGR = oneshot(altgr)
 
 [fn]
-space = M-space
+space = swap(meta)
 
 # Left
 

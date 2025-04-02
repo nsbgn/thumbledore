@@ -20,7 +20,9 @@ broadly within the constraints of a laptop keyboard.
     that's it.
 -   **One-handed control.** The number pad can be operated with just the 
     right hand. Navigation keys and shortcuts like 
-    <kbd>Ctrl</kbd><kbd>c</kbd> can be reached with just the left.
+    <kbd>Ctrl</kbd><kbd>c</kbd> can be reached with just the left, 
+    freeing your hand for the mouse. Unfortunately, this also means that 
+    the layout is biased towards right-handed people.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a mainstream keyboard. Only 
     <kbd>Multi</kbd> and <kbd>Shift</kbd> are in a truly different spot.
@@ -33,17 +35,20 @@ broadly within the constraints of a laptop keyboard.
     assumptions about the programs you will be running. That is, all 
     modifiers should still stack in an intuitive and consistent way, and 
     no reasonable shortcut should be impossible or cumbersome to type.
+-   **Good feeling.** Muscle memory, semantic clustering, and symmetry 
+    are all taken into consideration --- but having often-used keys 
+    *feel* good is the most important.
 -   **No homerow mods.** While typing at speed, keypresses will often 
-    overlap, which means that any attempted overload of alpha keys must 
+    overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
-    cause misfiring. There are [ways][urob] to mitigate it and train 
+    cause misfiring. There are [ways][urob] to mitigate this and train 
     yourself to work with it, but I have not made that sacrifice here.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
     Therefore, only *one* key has been overloaded: <kbd>Esc</kbd> 
-    accesses a layer when held. <!-- This is considered safe because the 
-    key is not associated with a modifier, and the `esc` is only 
-    registered when the tap is shorter than *x* milliseconds. -->
+    accesses a layer when held. This is considered safe because `Esc` 
+    tends to punctuate a keystroke and a misfire is not catastrophic. 
+    The `Esc` is only registered when the tap is short.
 
 
 ## Symbols
