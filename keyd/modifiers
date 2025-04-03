@@ -4,7 +4,7 @@
 # Note: tap-holding automatically combines the action keys with modifiers
 
 [Control:C]
-space = C-space
+space = overload(meta, C-space)
 
 q = C-q
 w = C-w
@@ -41,7 +41,7 @@ m = C-,
 / = overload(alt, C-/)
 
 [Alt:A]
-space = A-space
+space = overload(meta, A-space)
 
 q = A-q
 w = A-w
@@ -77,3 +77,41 @@ m = A-m
 , = A-,
 . = A-.
 / = overload(alt, A-/)
+
+[Meta:M]
+space = M-space
+
+q = M-q
+w = M-w
+e = M-e
+r = M-r
+t = M-t
+y = M-y
+u = M-u
+i = M-i
+o = M-o
+p = M-p
+\ = M-\
+
+a = overload(control, M-a)
+s = M-s
+d = M-d
+f = M-f
+g = M-g
+h = M-h
+j = M-j
+k = M-k
+l = M-l
+; = overload(alt, M-;)
+' = M-'
+
+z = overload(control, M-z)
+x = M-x
+c = M-c
+v = M-v
+b = M-b
+n = M-n
+m = M-m
+, = M-,
+. = M-.
+/ = overload(alt, M-/)
