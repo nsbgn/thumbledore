@@ -10,3 +10,10 @@ FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
 # SHIFT = oneshot(shift)
 SHIFT = timeout(overload(shift, enter), 140, layer(shift))
 ALTGR = oneshot(altgr)
+space = oneshotm(doublespace, space)
+
+[doublespace]
+[doublespace+shift]
+space = macro(backspace _)
+[doublespace+altgr]
+space = macro(backspace kpdot)
