@@ -3,57 +3,10 @@
 chord_timeout = 50
 overload_tap_timeout = 300
 oneshot_timeout = 500
-disable_modifier_guard = 1
-
+disable_modifier_guard = 0
 
 [main]
-
-FN = timeout(overload(fn, esc), 150, layer(fn))
+FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
 # SHIFT = oneshot(shift)
 SHIFT = timeout(overload(shift, enter), 140, layer(shift))
 ALTGR = oneshot(altgr)
-
-[fn]
-space = timeout(layer(Meta), 500, overload(Meta, M-space))
-
-# Left
-
-q = pageup
-w = home
-e = up
-r = end
-t = noop
-
-a = timeout(oneshot(Control), 150, overload(Control, leftcontrol))
-s = left
-d = down
-f = right
-g = delete
-
-z = timeout(oneshot(Control), 150, overload(Control, rightcontrol))
-x = pause
-c = insert
-v = pagedown
-b = sysrq
-
-# Right
-
-y = f12
-u = f7
-i = f8
-o = f9
-p = noop
-\ = scrolllock
-
-h = f11
-j = f4
-k = f5
-l = f6
-; = timeout(oneshot(Alt), 150, overload(Alt, leftalt))
-' = capslock
-
-n = f10
-m = f1
-, = f2
-. = f3
-/ = timeout(oneshot(Alt), 150, overload(Alt, rightalt))
