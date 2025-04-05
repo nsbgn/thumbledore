@@ -35,9 +35,9 @@ broadly within the constraints of a laptop keyboard.
     assumptions about the programs you will be running. That is, all 
     modifiers should still stack in an intuitive and consistent way, and 
     no reasonable shortcut should be impossible or cumbersome to type.
--   **Good feeling.** Muscle memory, semantic clustering, and symmetry 
-    are all taken into consideration --- but having often-used keys 
-    *feel* good is the most important.
+-   **Good feeling.** Muscle memory, simplicity, semantic clustering, 
+    and symmetry are all taken into consideration --- but above all, 
+    keys are placed in such a way that they *feel* good.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
@@ -82,15 +82,16 @@ number pad can now be controlled entirely with your right-hand. -->
   better!
 
 - You will often need a decimal point while typing numbers, but it is 
-  cumbersome to exit the numpad just to grab one and return. For this 
-  reason, if you are typing a number and release and then immediately 
-  press <kbd>AltGr</kbd> again, a `.` or `,` will be emitted (depending 
-  on your locale).
+  cumbersome to exit the numpad just to grab one and return. A similar 
+  observation can be made for the underscore when typing in all-caps. 
+  For this reason, double-tapping <kbd>Space</kbd> while holding 
+  <kbd>AltGr</kbd> will emit a decimal point (resulting in `.` or `,` 
+  depending on your locale), and doing so while holding <kbd>Shift</kbd> 
+  will emit an underscore `_`.
 
 - The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
   special characters by typing intuitive keys in succession. For 
   example, <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
-
 
 ## Escape
 
@@ -98,31 +99,38 @@ number pad can now be controlled entirely with your right-hand. -->
 
 <kbd>Esc</kbd> is given an easily accessible spots for your left thumb, 
 since it is useful for modal applications like Vim. However, when you 
-*hold it*, it reveals a layer with the remaining 'action' keys: a 
+*hold it*, it reveals a **Fn** layer with the remaining 'action' keys: a 
 navigation cluster, F-keys, and modifiers.
 
-- The navigation cluster is placed so that you can control the 
-  directional keys with one hand.
+- Pressing space while in this layer turns it into *Meta* (also 
+  sometimes referred to as the *Super*, *Windows*, *OS* or *GUI*-key). 
+  This plays well with the convention of bringing up some sort of menu 
+  upon tapping *Meta*.
 
-- F-keys are not used so often in modern applications, so I map these in 
-  my window manager for actions such as navigating desktops and closing 
-  windows.
+- It must be confessed that the above is a bit of a simplification. 
+  Observe that, in the **Fn** layer, the navigation cluster is placed so 
+  that you can control the directional keys with only your left hand. On 
+  the other hand (literally), the F-keys are not often used in modern 
+  applications. That is why holding the <kbd>Esc</kbd> key brings up the 
+  **Fn**-layer only on the *left* side, whereas the *right* side instead 
+  exposes *Meta*-keys, easily accessible for mapping actions in your 
+  window manager. When you *also* hold *Space*, this is flipped around, 
+  as the left-hand *Meta*-keys and right-hand F-keys are exposed. This 
+  is, in my opinion, the most distressing aspect of the layout, but it 
+  is worth it for the practical convenience it brings.
 
-- The keys labeled <kbd>Alt</kbd>, <kbd>Ctrl</kbd> and <kbd>Super</kbd> 
-  activate the corresponding modifier for any subsequent keypress that 
-  occurs shortly after, or until you release the key.
-    - Tapping two modifiers on the same side will activate both of them.
-    - Pulling up the application menu or escaping a virtual machine 
-      often involves tapping a modifier on its own --- this is achieved 
-      by simply double-tapping.
-    - In general, the **Escape** layer is deactivated while a modifier 
-      is active, so that, for example, 
-      <kbd>Esc</kbd><kbd>z</kbd><kbd>f</kbd> will generate 
-      <kbd>Ctrl</kbd><kbd>f</kbd>. If you instead really do want to 
-      combine a modifier with a key from the **Escape** layer, tap and 
-      hold that modifier: 
-      <kbd>Esc</kbd><kbd>z</kbd><kbd>z</kbd><kbd>f</kbd> yields 
-      <kbd>Ctrl</kbd><kbd>▶</kbd>.
+- The keys labeled <kbd>Alt</kbd> and <kbd>Ctrl</kbd> activate the 
+  corresponding modifier for any subsequent keypress that occurs shortly 
+  after, or until you release the key.
+    - In general, the **Fn** layer is deactivated while a modifier is 
+      active, so that, for example, 
+      <kbd>Esc</kbd><kbd>a</kbd><kbd>f</kbd> will generate 
+      <kbd>Ctrl</kbd><kbd>f</kbd>. If you instead really do mean to 
+      combine a modifier with a key from the **Fn** layer, simply enter 
+      the layer again while holding the modifier key.
+    - Pulling up a menu or escaping a virtual machine sometimes involves 
+      tapping a modifier on its own --- this is achieved by holding it 
+      on its own for a little longer.
 
 
 # Technical considerations
@@ -141,16 +149,14 @@ has several benefits:
 - But at the keysym-level, you can switch between symbol layouts in the 
   standard way --- and they will apply to all keyboards, regardless of 
   firmware.
-- The decimal point `.` or `,` is locale-dependent, so it makes sense to 
-  choose it at the layout level.
 - Users can try the <kbd>AltGr</kbd> symbols, without committing to the 
   rest.
 - It becomes easier to reason to reason about key composition. We don't 
   have to explicitly write and remember rules for how the various layers 
   and modifiers combine. Suppose, for example, you want to zoom in with 
   <kbd>Ctrl</kbd><kbd>+</kbd> --- you can rely on your muscle memory to 
-  type that first key as <kbd>Esc</kbd><kbd>z</kbd> and the second as 
-  <kbd>AltGr</kbd>e</kbd>.
+  type that first key as <kbd>Esc</kbd><kbd>a</kbd> and the second as 
+  <kbd>AltGr</kbd><kbd>e</kbd>.
 
 
 ## Usage and installation
