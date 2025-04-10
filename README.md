@@ -157,6 +157,8 @@ has several benefits:
   <kbd>Ctrl</kbd><kbd>+</kbd> --- you can rely on your muscle memory to 
   type that first key as <kbd>Esc</kbd><kbd>a</kbd> and the second as 
   <kbd>AltGr</kbd><kbd>e</kbd>.
+- For layout-independent keybindings in your window manager, it is 
+  important that emitted keycodes stay the same even as symbols change.
 
 
 ## Usage and installation
