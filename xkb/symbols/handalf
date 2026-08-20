@@ -25,8 +25,8 @@ partial modifier_keys xkb_symbols "shift_level3_multi" {
 };
 
 partial modifier_keys xkb_symbols "cancel" {
-    key <STOP> { type[Group1]="ONE_LEVEL", [ Cancel ] };
-    key <I231> { type[Group1]="ONE_LEVEL", [ Cancel ] };
+    key <STOP> { type[Group1]="THREE_LEVEL", [ Cancel, Cancel, Cancel ] };
+    key <I231> { type[Group1]="THREE_LEVEL", [ Cancel, Cancel, Cancel ] };
 };
 
 partial alphanumeric_keys xkb_symbols "level3" {
